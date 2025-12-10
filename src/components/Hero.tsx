@@ -63,7 +63,7 @@ export default function Hero() {
             alt="1Mysa Cafe"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background" />
         </motion.div>
       </AnimatePresence>
 
@@ -108,12 +108,12 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-primary/50 mb-8"
           >
             <Star className="w-5 h-5 text-primary fill-primary" />
-            <span className="font-bold text-foreground">4.7</span>
-            <span className="text-muted-foreground">|</span>
-            <span className="text-foreground">{reviewCount} {language === 'en' ? 'Reviews' : 'समीक्षाएं'}</span>
+            <span className="font-bold text-white">4.7</span>
+            <span className="text-white/70">|</span>
+            <span className="text-white">{reviewCount} {language === 'en' ? 'Reviews' : 'समीक्षाएं'}</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -121,16 +121,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6"
+            className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 drop-shadow-lg"
           >
-            <span className="gold-text">{t('hero.tagline')}</span>
+            <span className="gold-text drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">{t('hero.tagline')}</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-8 font-light"
+            className="text-xl md:text-2xl text-white/90 mb-8 font-light drop-shadow-md"
           >
             {t('hero.subtitle')}
           </motion.p>
@@ -146,12 +146,11 @@ export default function Hero() {
               href="https://zomato.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group px-8 py-4 rounded-xl gold-shimmer text-coffee font-semibold text-lg flex items-center gap-3 transition-all duration-300 hover:scale-105 shadow-lg"
+              className="group px-6 py-3 rounded-lg bg-[#E23744] text-white font-semibold text-lg flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:bg-[#c72f3b] shadow-lg"
             >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-              </svg>
+              <span className="w-8 h-8 bg-white rounded flex items-center justify-center">
+                <span className="text-[#E23744] font-bold text-xl">Z</span>
+              </span>
               {t('hero.cta.order')}
             </a>
 
@@ -182,7 +181,7 @@ export default function Hero() {
                 className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 backdrop-blur-md"
               >
                 <feature.icon className="w-5 h-5 text-accent" />
-                <span className="text-foreground font-medium">{t(feature.key)}</span>
+                <span className="text-white font-medium drop-shadow-sm">{t(feature.key)}</span>
               </motion.div>
             ))}
           </motion.div>
