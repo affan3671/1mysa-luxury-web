@@ -47,7 +47,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-20 pb-16 md:pt-24 md:pb-20">
       {/* Background Slider - Faster transition */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -67,8 +67,8 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Subtle Gold Particles - Reduced */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {/* Subtle Gold Particles - Reduced on mobile */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
@@ -91,7 +91,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,12 +103,12 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-primary/40 mb-6"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-black/50 backdrop-blur-sm border border-primary/40 mb-4 sm:mb-6"
           >
-            <Star className="w-5 h-5 text-primary fill-primary" />
-            <span className="font-bold text-white">4.7</span>
+            <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary fill-primary" />
+            <span className="font-bold text-white text-sm sm:text-base">4.7</span>
             <span className="text-white/60">|</span>
-            <span className="text-white">{reviewCount} {language === 'en' ? 'Reviews' : 'समीक्षाएं'}</span>
+            <span className="text-white text-sm sm:text-base">{reviewCount} {language === 'en' ? 'Reviews' : 'समीक्षाएं'}</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -116,7 +116,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-3 sm:mb-4 px-2"
           >
             <span className="gold-text">{language === 'en' ? 'Kunafa. Coffee. Comfort.' : 'कुनाफा। कॉफी। आराम।'}</span>
           </motion.h1>
@@ -125,7 +125,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-white/85 mb-8 font-light"
+            className="text-base sm:text-lg md:text-xl text-white/85 mb-6 sm:mb-8 font-light"
           >
             {language === 'en' ? 'The Heart of Shaheen Bagh' : 'शाहीन बाग का दिल'}
           </motion.p>
@@ -135,16 +135,16 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8"
           >
             <a
               href="https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-3 rounded-lg bg-[#E23744] text-white font-semibold text-base flex items-center gap-3 hover:bg-[#cb303c] shadow-lg"
+              className="w-full sm:w-auto px-5 py-3 rounded-lg bg-[#E23744] text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 hover:bg-[#cb303c] shadow-lg"
             >
-              <span className="w-7 h-7 bg-white rounded flex items-center justify-center">
-                <span className="text-[#E23744] font-bold text-lg">Z</span>
+              <span className="w-6 h-6 sm:w-7 sm:h-7 bg-white rounded flex items-center justify-center flex-shrink-0">
+                <span className="text-[#E23744] font-bold text-base sm:text-lg">Z</span>
               </span>
               {language === 'en' ? 'Order on Zomato' : 'Zomato पर ऑर्डर करें'}
             </a>
@@ -153,9 +153,9 @@ export default function Hero() {
               href="https://maps.google.com/?q=1Mysa+Cafe+Shaheen+Bagh"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-3 rounded-lg bg-white/90 text-coffee font-semibold text-base flex items-center gap-2 hover:bg-white shadow-lg"
+              className="w-full sm:w-auto px-5 py-3 rounded-lg bg-white/90 text-coffee font-semibold text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-white shadow-lg"
             >
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-5 h-5 flex-shrink-0" />
               {language === 'en' ? 'Get Directions' : 'दिशा-निर्देश'}
             </a>
           </motion.div>
@@ -165,15 +165,15 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+            className="flex flex-wrap items-center justify-center gap-2 sm:gap-3"
           >
             {features.map((feature) => (
               <div
                 key={feature.label.en}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20"
+                className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20"
               >
-                <CheckCircle className="w-4 h-4 text-accent" />
-                <span className="text-white text-sm font-medium">
+                <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0" />
+                <span className="text-white text-xs sm:text-sm font-medium">
                   {language === 'en' ? feature.label.en : feature.label.hi}
                 </span>
               </div>

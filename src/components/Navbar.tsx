@@ -43,17 +43,17 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3">
             <img 
               src={logo} 
               alt="1Mysa Cafe" 
-              className="h-12 w-auto rounded-lg shadow-md"
+              className="h-10 sm:h-12 w-auto rounded-lg shadow-md"
             />
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-heading font-bold text-foreground">
+            <div className="hidden md:block">
+              <h1 className="text-lg lg:text-xl font-heading font-bold text-foreground">
                 1Mysa Café
               </h1>
               <p className="text-xs text-muted-foreground">
@@ -80,22 +80,22 @@ export default function Navbar() {
           </div>
 
           {/* Language Toggle & Mobile Menu */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
               <Globe className="w-4 h-4" />
-              <span className="text-sm font-medium">
+              <span className="text-xs sm:text-sm font-medium">
                 {language === 'en' ? 'हिंदी' : 'EN'}
               </span>
             </button>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all"
+              className="lg:hidden p-1.5 sm:p-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
