@@ -34,7 +34,7 @@ const floatingButtons = [
 
 export default function FloatingButtons() {
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <div className="fixed bottom-4 sm:bottom-6 right-3 sm:right-6 z-40 flex flex-col gap-2 sm:gap-3">
       {floatingButtons.map((button, index) => {
         const Icon = button.icon;
         return (
@@ -48,13 +48,13 @@ export default function FloatingButtons() {
             transition={{ delay: 0.5 + button.delay, type: 'spring' }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className={`group relative w-14 h-14 rounded-full ${button.bgColor} text-primary-foreground shadow-lg flex items-center justify-center transition-all pulse-glow`}
+            className={`group relative w-11 h-11 sm:w-14 sm:h-14 rounded-full ${button.bgColor} text-primary-foreground shadow-lg flex items-center justify-center transition-all pulse-glow`}
             aria-label={button.label}
           >
-            <Icon className="w-6 h-6" />
+            <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
             
-            {/* Tooltip */}
-            <span className="absolute right-full mr-3 px-3 py-1 rounded-lg bg-foreground text-background text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            {/* Tooltip - Hidden on mobile */}
+            <span className="hidden sm:block absolute right-full mr-3 px-3 py-1 rounded-lg bg-foreground text-background text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               {button.label}
             </span>
           </motion.a>

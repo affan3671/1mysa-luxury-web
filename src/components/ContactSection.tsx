@@ -27,30 +27,30 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section className="py-12 sm:py-16 md:py-20 bg-secondary/30">
+      <div className="container mx-auto px-3 sm:px-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-3 sm:mb-4">
             <span className="gold-text">{t('contact.title')}</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             {t('contact.subtitle')}
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-4 sm:space-y-6"
           >
             {contactInfo.map((item, index) => (
               <motion.div
@@ -59,14 +59,14 @@ export default function ContactSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex gap-4 p-6 bg-card rounded-2xl border border-border shadow-md"
+                className="flex gap-3 sm:gap-4 p-4 sm:p-6 bg-card rounded-xl sm:rounded-2xl border border-border shadow-md"
               >
-                <div className="w-14 h-14 rounded-xl gold-shimmer flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-6 h-6 text-coffee" />
+                <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl gold-shimmer flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-coffee" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{item.label}</h3>
-                  <p className="text-muted-foreground">{item.value}</p>
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-foreground text-sm sm:text-base mb-1">{item.label}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground break-words">{item.value}</p>
                 </div>
               </motion.div>
             ))}
@@ -77,31 +77,31 @@ export default function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="flex flex-wrap gap-4"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
             >
               <a
                 href="tel:+919310579571"
-                className="flex items-center gap-2 px-6 py-3 rounded-xl gold-shimmer text-coffee font-semibold transition-all hover:scale-105"
+                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg sm:rounded-xl gold-shimmer text-coffee font-semibold text-sm sm:text-base transition-all hover:scale-105"
               >
-                <PhoneCall className="w-5 h-5" />
+                <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" />
                 {t('contact.callnow')}
               </a>
               <a
                 href="https://wa.me/919310579571"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-accent text-accent-foreground font-semibold transition-all hover:scale-105"
+                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg sm:rounded-xl bg-accent text-accent-foreground font-semibold text-sm sm:text-base transition-all hover:scale-105"
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                 {t('contact.whatsapp')}
               </a>
               <a
                 href="https://maps.google.com/?q=1Mysa+Cafe+Shaheen+Bagh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-card border border-border text-foreground font-semibold transition-all hover:scale-105 hover:bg-primary hover:text-primary-foreground"
+                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg sm:rounded-xl bg-card border border-border text-foreground font-semibold text-sm sm:text-base transition-all hover:scale-105 hover:bg-primary hover:text-primary-foreground"
               >
-                <Navigation className="w-5 h-5" />
+                <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
                 {t('contact.directions')}
               </a>
             </motion.div>
@@ -112,7 +112,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="h-[400px] lg:h-full min-h-[400px] rounded-2xl overflow-hidden shadow-xl border border-border"
+            className="h-[280px] sm:h-[350px] lg:h-full lg:min-h-[400px] rounded-xl sm:rounded-2xl overflow-hidden shadow-xl border border-border"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.735955668583!2d77.29632907547285!3d28.554093875712898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45b95c34417%3A0x74e4e8d8f8f5e5a5!2sShaheen%20Bagh%2C%20Okhla%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1702658400000!5m2!1sen!2sin"
