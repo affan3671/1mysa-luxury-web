@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Star, Utensils, Car, Truck } from 'lucide-react';
+import { MapPin, Star, Utensils, Car, Truck, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import heroKunafa from '@/assets/hero-kunafa.jpg';
 import heroCoffee from '@/assets/hero-coffee.jpg';
@@ -9,15 +9,15 @@ import heroBaklava from '@/assets/hero-baklava.jpg';
 const heroImages = [heroKunafa, heroCoffee, heroBaklava];
 
 const features = [
-  { icon: Utensils, key: 'feature.dinein' },
-  { icon: Car, key: 'feature.drivethrough' },
-  { icon: Truck, key: 'feature.delivery' },
+  { icon: Utensils, label: { en: 'Dine-in', hi: 'डाइन-इन' } },
+  { icon: Car, label: { en: 'Drive-through', hi: 'ड्राइव-थ्रू' } },
+  { icon: Truck, label: { en: 'Delivery', hi: 'डिलीवरी' } },
 ];
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [reviewCount, setReviewCount] = useState(0);
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,8 +28,8 @@ export default function Hero() {
 
   useEffect(() => {
     const target = 241;
-    const duration = 2000;
-    const steps = 60;
+    const duration = 1500;
+    const steps = 40;
     const increment = target / steps;
     let current = 0;
 
@@ -48,14 +48,14 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Slider */}
+      {/* Background Slider - Faster transition */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           className="absolute inset-0"
         >
           <img
@@ -63,33 +63,28 @@ export default function Hero() {
             alt="1Mysa Cafe"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
         </motion.div>
       </AnimatePresence>
 
-      {/* Gold Sparkle Particles */}
+      {/* Subtle Gold Particles - Reduced */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 rounded-full bg-primary/60"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-              opacity: 0,
-            }}
+            className="absolute w-1.5 h-1.5 rounded-full bg-primary/50"
             animate={{
-              y: [null, Math.random() * -200],
-              opacity: [0, 1, 0],
+              y: [0, -100],
+              opacity: [0, 0.8, 0],
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
+              duration: 4,
               repeat: Infinity,
-              delay: Math.random() * 3,
+              delay: i * 0.5,
             }}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${50 + Math.random() * 50}%`,
+              left: `${10 + i * 12}%`,
+              top: '80%',
             }}
           />
         ))}
@@ -98,106 +93,105 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
           {/* Rating Badge */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-primary/50 mb-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-primary/40 mb-6"
           >
             <Star className="w-5 h-5 text-primary fill-primary" />
             <span className="font-bold text-white">4.7</span>
-            <span className="text-white/70">|</span>
+            <span className="text-white/60">|</span>
             <span className="text-white">{reviewCount} {language === 'en' ? 'Reviews' : 'समीक्षाएं'}</span>
           </motion.div>
 
           {/* Main Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 drop-shadow-lg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-4"
           >
-            <span className="gold-text drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">{t('hero.tagline')}</span>
+            <span className="gold-text">{language === 'en' ? 'Kunafa. Coffee. Comfort.' : 'कुनाफा। कॉफी। आराम।'}</span>
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="text-xl md:text-2xl text-white/90 mb-8 font-light drop-shadow-md"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-lg md:text-xl text-white/85 mb-8 font-light"
           >
-            {t('hero.subtitle')}
+            {language === 'en' ? 'The Heart of Shaheen Bagh' : 'शाहीन बाग का दिल'}
           </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
           >
             <a
-              href="https://zomato.com"
+              href="https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi"
               target="_blank"
               rel="noopener noreferrer"
-              className="group px-6 py-3 rounded-lg bg-[#E23744] text-white font-semibold text-lg flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:bg-[#c72f3b] shadow-lg"
+              className="px-5 py-3 rounded-lg bg-[#E23744] text-white font-semibold text-base flex items-center gap-3 hover:bg-[#cb303c] shadow-lg"
             >
-              <span className="w-8 h-8 bg-white rounded flex items-center justify-center">
-                <span className="text-[#E23744] font-bold text-xl">Z</span>
+              <span className="w-7 h-7 bg-white rounded flex items-center justify-center">
+                <span className="text-[#E23744] font-bold text-lg">Z</span>
               </span>
-              {t('hero.cta.order')}
+              {language === 'en' ? 'Order on Zomato' : 'Zomato पर ऑर्डर करें'}
             </a>
 
             <a
               href="https://maps.google.com/?q=1Mysa+Cafe+Shaheen+Bagh"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-xl bg-background/80 backdrop-blur-md border-2 border-primary text-foreground font-semibold text-lg flex items-center gap-3 transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-105"
+              className="px-5 py-3 rounded-lg bg-white/90 text-coffee font-semibold text-base flex items-center gap-2 hover:bg-white shadow-lg"
             >
-              <MapPin className="w-6 h-6" />
-              {t('hero.cta.directions')}
+              <MapPin className="w-5 h-5" />
+              {language === 'en' ? 'Get Directions' : 'दिशा-निर्देश'}
             </a>
           </motion.div>
 
-          {/* Features */}
+          {/* Features - Clean badges */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="flex flex-wrap items-center justify-center gap-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
           >
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.key}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1 + index * 0.1 }}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 backdrop-blur-md"
+            {features.map((feature) => (
+              <div
+                key={feature.label.en}
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20"
               >
-                <feature.icon className="w-5 h-5 text-accent" />
-                <span className="text-white font-medium drop-shadow-sm">{t(feature.key)}</span>
-              </motion.div>
+                <CheckCircle className="w-4 h-4 text-accent" />
+                <span className="text-white text-sm font-medium">
+                  {language === 'en' ? feature.label.en : feature.label.hi}
+                </span>
+              </div>
             ))}
           </motion.div>
         </motion.div>
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-all duration-300 ${
               currentSlide === index
-                ? 'bg-primary w-8'
-                : 'bg-muted-foreground/50 hover:bg-primary/50'
+                ? 'bg-primary w-6'
+                : 'bg-white/40 w-2 hover:bg-white/60'
             }`}
           />
         ))}
