@@ -2,24 +2,16 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroKunafa from '@/assets/hero-kunafa.jpg';
-import heroCoffee from '@/assets/hero-coffee.jpg';
-import heroBaklava from '@/assets/hero-baklava.jpg';
-import menuKunafa1 from '@/assets/menu-kunafa-1.jpg';
-import menuKunafa2 from '@/assets/menu-kunafa-2.jpg';
-import menuSweets from '@/assets/menu-sweets.jpg';
-import menuBaklava from '@/assets/menu-baklava.jpg';
-import menuCoffee from '@/assets/menu-coffee.jpg';
 
 const galleryImages = [
-  { src: heroKunafa, category: 'food', alt: 'Kunafa' },
-  { src: heroCoffee, category: 'food', alt: 'Turkish Coffee' },
-  { src: heroBaklava, category: 'food', alt: 'Baklava' },
-  { src: menuKunafa1, category: 'food', alt: 'Menu Kunafa' },
-  { src: menuKunafa2, category: 'food', alt: 'Cheese Kunafa' },
-  { src: menuSweets, category: 'food', alt: 'Sweets' },
-  { src: menuBaklava, category: 'food', alt: 'Baklava Selection' },
-  { src: menuCoffee, category: 'vibe', alt: 'Coffee Menu' },
+  { src: '/images/hero-kunafa.jpg', category: 'food', alt: 'Kunafa' },
+  { src: '/images/hero-coffee.jpg', category: 'food', alt: 'Turkish Coffee' },
+  { src: '/images/hero-baklava.jpg', category: 'food', alt: 'Baklava' },
+  { src: '/images/menu-kunafa-1.jpg', category: 'food', alt: 'Menu Kunafa' },
+  { src: '/images/menu-kunafa-2.jpg', category: 'food', alt: 'Cheese Kunafa' },
+  { src: '/images/menu-sweets.jpg', category: 'food', alt: 'Sweets' },
+  { src: '/images/menu-baklava.jpg', category: 'food', alt: 'Baklava Selection' },
+  { src: '/images/menu-coffee.jpg', category: 'vibe', alt: 'Coffee Menu' },
 ];
 
 const categories = [

@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Instagram, MapPin, Phone, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
-import logo from '@/assets/logo.jpg';
 
 const quickLinks = [
   { key: 'nav.home', path: '/' },
@@ -51,7 +50,7 @@ export default function Footer() {
             className="lg:col-span-2"
           >
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="1Mysa Cafe" className="h-14 w-auto rounded-lg" />
+              <img src="/images/logo.jpg" alt="1Mysa Cafe" className="h-14 w-auto rounded-lg" />
               <div>
                 <h3 className="text-2xl font-heading font-bold text-foreground">
                   1Mysa Café
