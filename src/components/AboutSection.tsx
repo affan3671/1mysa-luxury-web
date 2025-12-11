@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroKunafa from '@/assets/hero-kunafa.jpg';
 
 export default function AboutSection() {
   const { t } = useLanguage();
@@ -25,7 +24,7 @@ export default function AboutSection() {
           >
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src={heroKunafa}
+                src="/images/2024-06-14.jpg"
                 alt="1Mysa Cafe Interior"
                 className="w-full h-[280px] sm:h-[400px] lg:h-[500px] object-cover"
               />

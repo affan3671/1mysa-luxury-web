@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Instagram, MapPin, Phone, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
-import logo from '@/assets/logo.jpg';
 
 const quickLinks = [
   { key: 'nav.home', path: '/' },
@@ -16,17 +15,17 @@ const quickLinks = [
 const socialLinks = [
   {
     name: 'Zomato',
-    url: 'https://zomato.com',
+    url: 'https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi',
     icon: () => (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-        <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-      </svg>
+      <span className="w-5 h-5 bg-[#E23744] rounded flex items-center justify-center">
+        <span className="text-white font-bold text-sm">Z</span>
+      </span>
     ),
+    customStyle: 'bg-[#E23744] hover:bg-[#cb303c]',
   },
   {
     name: 'Instagram',
-    url: 'https://instagram.com',
+    url: 'https://www.instagram.com/1mysa_cafe/',
     icon: Instagram,
   },
   {
@@ -51,7 +50,7 @@ export default function Footer() {
             className="lg:col-span-2"
           >
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="1Mysa Cafe" className="h-14 w-auto rounded-lg" />
+              <img src="/images/logo.jpg" alt="1Mysa Cafe" className="h-14 w-auto rounded-lg" />
               <div>
                 <h3 className="text-2xl font-heading font-bold text-foreground">
                   1Mysa Café
@@ -115,7 +114,11 @@ export default function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all ${
+                      social.customStyle 
+                        ? social.customStyle 
+                        : 'bg-secondary text-foreground hover:bg-primary hover:text-primary-foreground'
+                    }`}
                     aria-label={social.name}
                   >
                     <Icon />
@@ -130,7 +133,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>Shaheen Bagh, New Delhi</span>
+                <span>Al-habib masjid, near 40 futa road, Shaheen Bagh, New Delhi 110025</span>
               </div>
             </div>
           </motion.div>

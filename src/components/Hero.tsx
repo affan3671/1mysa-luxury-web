@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Star, Utensils, Car, Truck, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroKunafa from '@/assets/hero-kunafa.jpg';
-import heroCoffee from '@/assets/hero-coffee.jpg';
-import heroBaklava from '@/assets/hero-baklava.jpg';
 
-const heroImages = [heroKunafa, heroCoffee, heroBaklava];
+const heroImages = [
+  '/images/hero-kunafa.jpg',
+  '/images/hero-coffee.jpg',
+  '/images/hero-baklava.jpg',
+];
 
 const features = [
   { icon: Utensils, label: { en: 'Dine-in', hi: 'डाइन-इन' } },
@@ -150,7 +151,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://maps.google.com/?q=1Mysa+Cafe+Shaheen+Bagh"
+              href="https://maps.app.goo.gl/kLANE8iK1mekgQ768"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-5 py-3 rounded-lg bg-white/90 text-coffee font-semibold text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-white shadow-lg"

@@ -4,8 +4,6 @@ import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroKunafa from '@/assets/hero-kunafa.jpg';
-import heroCoffee from '@/assets/hero-coffee.jpg';
 
 export default function AboutPage() {
   const { t, language } = useLanguage();
@@ -17,7 +15,7 @@ export default function AboutPage() {
       {/* Hero Banner */}
       <section className="relative pt-20 min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={heroKunafa} alt="About 1Mysa" className="w-full h-full object-cover" />
+          <img src="/images/hero-kunafa.jpg" alt="About 1Mysa" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center py-20">
@@ -63,7 +61,7 @@ export default function AboutPage() {
               className="relative"
             >
               <img
-                src={heroCoffee}
+                src="/images/hero-coffee.jpg"
                 alt="Turkish Coffee"
                 className="rounded-3xl shadow-2xl w-full"
               />

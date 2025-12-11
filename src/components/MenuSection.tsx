@@ -3,15 +3,12 @@ import { motion } from 'framer-motion';
 import { Coffee, Cake, Cookie, GlassWater, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { menuItems, MenuItem } from '@/data/menuData';
-import heroKunafa from '@/assets/hero-kunafa.jpg';
-import heroCoffee from '@/assets/hero-coffee.jpg';
-import heroBaklava from '@/assets/hero-baklava.jpg';
 
 const categories = [
-  { id: 'coffee', icon: Coffee, key: 'menu.coffee', image: heroCoffee },
-  { id: 'kunafa', icon: Cake, key: 'menu.kunafa', image: heroKunafa },
-  { id: 'baklava', icon: Cookie, key: 'menu.baklava', image: heroBaklava },
-  { id: 'drinks', icon: GlassWater, key: 'menu.drinks', image: heroCoffee },
+  { id: 'coffee', icon: Coffee, key: 'menu.coffee', image: '/images/hero-coffee.jpg' },
+  { id: 'kunafa', icon: Cake, key: 'menu.kunafa', image: '/images/hero-kunafa.jpg' },
+  { id: 'baklava', icon: Cookie, key: 'menu.baklava', image: '/images/hero-baklava.jpg' },
+  { id: 'drinks', icon: GlassWater, key: 'menu.drinks', image: '/images/hero-coffee.jpg' },
 ];
 
 interface MenuSectionProps {
@@ -114,7 +111,7 @@ export default function MenuSection({ showAll = false }: MenuSectionProps) {
                   item={item}
                   index={index}
                   language={language}
-                  categoryImage={category?.image || heroKunafa}
+                  categoryImage={category?.image || '/images/hero-kunafa.jpg'}
                 />
               );
             })}

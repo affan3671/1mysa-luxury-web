@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '@/assets/logo.jpg';
 
 const navLinks = [
   { key: 'nav.home', path: '/' },
@@ -52,7 +51,7 @@ export default function Navbar() {
   className="flex items-center gap-2 sm:gap-3 flex-shrink-0 max-w-[50%]"
 >
   <img
-    src={logo}
+    src="\src\assets\logo.jpg"
     alt="1Mysa Cafe"
     className="h-10 sm:h-12 w-auto rounded-lg shadow-md"
   />

@@ -96,7 +96,7 @@ export default function ContactSection() {
                 {t('contact.whatsapp')}
               </a>
               <a
-                href="https://maps.google.com/?q=1Mysa+Cafe+Shaheen+Bagh"
+                href="https://maps.app.goo.gl/kLANE8iK1mekgQ768"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg sm:rounded-xl bg-card border border-border text-foreground font-semibold text-sm sm:text-base transition-all hover:scale-105 hover:bg-primary hover:text-primary-foreground"
@@ -115,7 +115,7 @@ export default function ContactSection() {
             className="h-[280px] sm:h-[350px] lg:h-full lg:min-h-[400px] rounded-xl sm:rounded-2xl overflow-hidden shadow-xl border border-border"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.735955668583!2d77.29632907547285!3d28.554093875712898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45b95c34417%3A0x74e4e8d8f8f5e5a5!2sShaheen%20Bagh%2C%20Okhla%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1702658400000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2963!3d28.5541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45ee95b9e7d%3A0x74b4f96e50eeb5d3!2s1Mysa%20Cafe%20-%20Kunafa%20%26%20Turkish%20Coffee!5e0!3m2!1sen!2sin!4v1702658400000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
