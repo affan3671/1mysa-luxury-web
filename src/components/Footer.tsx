@@ -15,13 +15,13 @@ const quickLinks = [
 const socialLinks = [
   {
     name: 'Zomato',
-    url: 'https://zomato.com',
+    url: 'https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi',
     icon: () => (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-        <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-      </svg>
+      <span className="w-5 h-5 bg-[#E23744] rounded flex items-center justify-center">
+        <span className="text-white font-bold text-sm">Z</span>
+      </span>
     ),
+    customStyle: 'bg-[#E23744] hover:bg-[#cb303c]',
   },
   {
     name: 'Instagram',
@@ -114,7 +114,11 @@ export default function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all ${
+                      social.customStyle 
+                        ? social.customStyle 
+                        : 'bg-secondary text-foreground hover:bg-primary hover:text-primary-foreground'
+                    }`}
                     aria-label={social.name}
                   >
                     <Icon />
