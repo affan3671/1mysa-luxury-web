@@ -51,7 +51,7 @@ export default function Navbar() {
   className="flex items-center gap-2 sm:gap-3 flex-shrink-0 max-w-[50%]"
 >
   <img
-    src="\src\assets\logo.jpg"
+    src="https://i.ibb.co/0RY2BJ02/logo.jpg"
     alt="1Mysa Cafe"
     className="h-10 sm:h-12 w-auto rounded-lg shadow-md"
   />
