@@ -43,24 +43,28 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-3 sm:px-4">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-3">
-            <img 
-              src={logo} 
-              alt="1Mysa Cafe" 
-              className="h-10 sm:h-12 w-auto rounded-lg shadow-md"
-            />
-            <div className="hidden md:block">
-              <h1 className="text-lg lg:text-xl font-heading font-bold text-foreground">
-                1Mysa Café
-              </h1>
-              <p className="text-xs text-muted-foreground">
-                {language === 'en' ? 'Kunafa & Turkish Coffee' : 'कुनाफा & तुर्किश कॉफी'}
-              </p>
-            </div>
-          </Link>
+          {/* Logo */}
+<Link
+  to="/"
+  className="flex items-center gap-2 sm:gap-3 flex-shrink-0 max-w-[50%]"
+>
+  <img
+    src={logo}
+    alt="1Mysa Cafe"
+    className="h-10 sm:h-12 w-auto rounded-lg shadow-md"
+  />
+  <div className="min-w-0">                {/* ← allows truncation */}
+    <h1 className="text-base sm:text-lg lg:text-xl font-heading font-bold text-foreground truncate">
+      1Mysa Café
+    </h1>
+    <p className="text-xs text-muted-foreground hidden sm:block truncate">
+      {language === 'en' ? 'Kunafa & Turkish Coffee' : 'कुनाफा & तुर्किश कॉफी'}
+    </p>
+  </div>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
@@ -80,7 +84,7 @@ export default function Navbar() {
           </div>
 
           {/* Language Toggle & Mobile Menu */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
