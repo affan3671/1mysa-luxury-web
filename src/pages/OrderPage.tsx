@@ -4,7 +4,6 @@ import FloatingButtons from '@/components/FloatingButtons';
 import { motion } from 'framer-motion';
 import { MapPin, Instagram, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroKunafa from '@/assets/hero-kunafa.jpg';
 
 export default function OrderPage() {
   const { t, language } = useLanguage();
@@ -42,7 +41,7 @@ export default function OrderPage() {
       {/* Hero Banner */}
       <section className="relative pt-20 min-h-[50vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={heroKunafa} alt="Order Online" className="w-full h-full object-cover" />
+          <img src="/images/hero-kunafa.jpg" alt="Order Online" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center py-16">
