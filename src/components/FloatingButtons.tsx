@@ -26,7 +26,7 @@ const floatingButtons = [
   {
     icon: MapPin,
     label: 'Directions',
-    href: 'https://maps.google.com/?q=1Mysa+Cafe+Shaheen+Bagh',
+    href: 'https://maps.app.goo.gl/kLANE8iK1mekgQ768',
     bgColor: 'bg-blue-500',
     delay: 0.3,
   },

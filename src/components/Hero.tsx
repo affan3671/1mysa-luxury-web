@@ -151,7 +151,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://maps.google.com/?q=1Mysa+Cafe+Shaheen+Bagh"
+              href="https://maps.app.goo.gl/kLANE8iK1mekgQ768"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-5 py-3 rounded-lg bg-white/90 text-coffee font-semibold text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-white shadow-lg"

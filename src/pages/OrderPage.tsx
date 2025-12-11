@@ -11,13 +11,12 @@ export default function OrderPage() {
   const orderPlatforms = [
     {
       name: 'Zomato',
-      url: 'https://zomato.com',
-      color: 'bg-red-500',
+      url: 'https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi',
+      color: 'bg-[#E23744]',
       icon: () => (
-        <svg className="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-          <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-        </svg>
+        <span className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+          <span className="text-[#E23744] font-bold text-2xl">Z</span>
+        </span>
       ),
       description: language === 'en' 
         ? 'Order your favorite Kunafa on Zomato' 
@@ -119,7 +118,7 @@ export default function OrderPage() {
               }
             </p>
             <a
-              href="https://maps.google.com/?q=1Mysa+Cafe+Shaheen+Bagh"
+              href="https://maps.app.goo.gl/kLANE8iK1mekgQ768"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl gold-shimmer text-coffee font-semibold text-lg transition-all hover:scale-105"

@@ -133,7 +133,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>Shaheen Bagh, New Delhi</span>
+                <span>Al-habib masjid, near 40 futa road, Shaheen Bagh, New Delhi 110025</span>
               </div>
             </div>
           </motion.div>
