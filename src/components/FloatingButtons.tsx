@@ -19,7 +19,7 @@ const floatingButtons = [
   {
     icon: Instagram,
     label: 'Instagram',
-    href: 'https://instagram.com//1mysa_cafe/',
+    href: 'https://instagram.com',
     bgColor: 'bg-pink-500',
     delay: 0.2,
   },
