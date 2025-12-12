@@ -115,7 +115,7 @@ export default function ContactSection() {
             className="h-[280px] sm:h-[350px] lg:h-full lg:min-h-[400px] rounded-xl sm:rounded-2xl overflow-hidden shadow-xl border border-border"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d875.6!2d77.2963889!3d28.5540833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e8dd6e5c77%3A0x9e29a8c7d7f23b5a!2s1Mysa%20Cafe%20-%20Kunafa%20%26%20Turkish%20Coffee%20-%20Shaheen%20Bagh!5e0!3m2!1sen!2sin!4v1702658400000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=1Mysa+Cafe+Kunafa+Turkish+Coffee+Shaheen+Bagh+New+Delhi&zoom=17"
               width="100%"
               height="100%"
               style={{ border: 0 }}
