@@ -205,13 +205,16 @@ function MenuCard({
         </p>
         <div className="flex items-center justify-between">
           <span className="text-lg sm:text-xl font-bold gold-text">₹{item.price}</span>
-          <motion.button
+          <motion.a
+            href="https://www.zomato.com/ncr/1mysa-cafe-okhla-new-delhi/order"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary text-primary-foreground text-xs sm:text-sm font-medium transition-colors hover:bg-primary/90"
           >
-            {language === 'en' ? 'Add' : 'जोड़ें'}
-          </motion.button>
+            {language === 'en' ? 'Order Now' : 'अभी ऑर्डर करें'}
+          </motion.a>
         </div>
       </div>
     </motion.div>
