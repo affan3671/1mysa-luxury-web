@@ -86,6 +86,7 @@ export default function Footer() {
                 <li key={link.key}>
                   <Link
                     to={link.path}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {t(link.key)}

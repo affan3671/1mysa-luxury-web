@@ -26,7 +26,11 @@ const categories = [
   { id: 'interior', label: 'Interior', labelHi: 'इंटीरियर' },
 ];
 
-export default function GallerySection() {
+interface GallerySectionProps {
+  hideHeader?: boolean;
+}
+
+export default function GallerySection({ hideHeader = false }: GallerySectionProps) {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const { t, language } = useLanguage();
@@ -40,19 +44,21 @@ export default function GallerySection() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-            <span className="gold-text">{t('gallery.title')}</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t('gallery.subtitle')}
-          </p>
-        </motion.div>
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+              <span className="gold-text">{t('gallery.title')}</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t('gallery.subtitle')}
+            </p>
+          </motion.div>
+        )}
 
         {/* Category Filters */}
         <motion.div

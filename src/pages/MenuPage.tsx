@@ -33,7 +33,7 @@ export default function MenuPage() {
         </div>
       </section>
 
-      <MenuSection showAll />
+      <MenuSection showAll hideHeader />
       <Footer />
       <FloatingButtons />
     </main>

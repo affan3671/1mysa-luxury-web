@@ -13,9 +13,10 @@ const categories = [
 
 interface MenuSectionProps {
   showAll?: boolean;
+  hideHeader?: boolean;
 }
 
-export default function MenuSection({ showAll = false }: MenuSectionProps) {
+export default function MenuSection({ showAll = false, hideHeader = false }: MenuSectionProps) {
   const [activeCategory, setActiveCategory] = useState<string>('kunafa');
   const { t, language } = useLanguage();
 
@@ -34,19 +35,21 @@ export default function MenuSection({ showAll = false }: MenuSectionProps) {
     <section className="py-12 sm:py-16 md:py-20 bg-secondary/30">
       <div className="container mx-auto px-3 sm:px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-8 sm:mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-3 sm:mb-4">
-            <span className="gold-text">{t('menu.title')}</span>
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-            {t('menu.subtitle')}
-          </p>
-        </motion.div>
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8 sm:mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-3 sm:mb-4">
+              <span className="gold-text">{t('menu.title')}</span>
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+              {t('menu.subtitle')}
+            </p>
+          </motion.div>
+        )}
 
         {/* Category Tabs - Only show when not showing all */}
         {!showAll && (
@@ -205,13 +208,16 @@ function MenuCard({
         </p>
         <div className="flex items-center justify-between">
           <span className="text-lg sm:text-xl font-bold gold-text">₹{item.price}</span>
-          <motion.button
+          <motion.a
+            href="https://www.zomato.com/ncr/1mysa-cafe-okhla-new-delhi/order"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary text-primary-foreground text-xs sm:text-sm font-medium transition-colors hover:bg-primary/90"
           >
-            {language === 'en' ? 'Add' : 'जोड़ें'}
-          </motion.button>
+            {language === 'en' ? 'Order Now' : 'अभी ऑर्डर करें'}
+          </motion.a>
         </div>
       </div>
     </motion.div>
