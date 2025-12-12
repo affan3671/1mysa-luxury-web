@@ -56,7 +56,11 @@ const reviews = [
   },
 ];
 
-export default function ReviewsSection() {
+interface ReviewsSectionProps {
+  hideHeader?: boolean;
+}
+
+export default function ReviewsSection({ hideHeader = false }: ReviewsSectionProps) {
   const [currentReview, setCurrentReview] = useState(0);
   const { t, language } = useLanguage();
 
@@ -80,19 +84,21 @@ export default function ReviewsSection() {
 
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-            <span className="gold-text">{t('reviews.title')}</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t('reviews.subtitle')}
-          </p>
-        </motion.div>
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+              <span className="gold-text">{t('reviews.title')}</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t('reviews.subtitle')}
+            </p>
+          </motion.div>
+        )}
 
         {/* Reviews Carousel */}
         <div className="max-w-4xl mx-auto">

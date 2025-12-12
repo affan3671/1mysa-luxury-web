@@ -33,7 +33,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <GallerySection />
+      <GallerySection hideHeader />
       <Footer />
       <FloatingButtons />
     </main>
