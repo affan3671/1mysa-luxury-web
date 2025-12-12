@@ -13,9 +13,10 @@ const categories = [
 
 interface MenuSectionProps {
   showAll?: boolean;
+  hideHeader?: boolean;
 }
 
-export default function MenuSection({ showAll = false }: MenuSectionProps) {
+export default function MenuSection({ showAll = false, hideHeader = false }: MenuSectionProps) {
   const [activeCategory, setActiveCategory] = useState<string>('kunafa');
   const { t, language } = useLanguage();
 
@@ -34,19 +35,21 @@ export default function MenuSection({ showAll = false }: MenuSectionProps) {
     <section className="py-12 sm:py-16 md:py-20 bg-secondary/30">
       <div className="container mx-auto px-3 sm:px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-8 sm:mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-3 sm:mb-4">
-            <span className="gold-text">{t('menu.title')}</span>
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-            {t('menu.subtitle')}
-          </p>
-        </motion.div>
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8 sm:mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-3 sm:mb-4">
+              <span className="gold-text">{t('menu.title')}</span>
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+              {t('menu.subtitle')}
+            </p>
+          </motion.div>
+        )}
 
         {/* Category Tabs - Only show when not showing all */}
         {!showAll && (

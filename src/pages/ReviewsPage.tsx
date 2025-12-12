@@ -53,7 +53,7 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      <ReviewsSection />
+      <ReviewsSection hideHeader />
 
       {/* Submit Review Form */}
       <section className="py-20 bg-background">
