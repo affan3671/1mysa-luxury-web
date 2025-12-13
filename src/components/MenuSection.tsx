@@ -209,7 +209,7 @@ function MenuCard({
         <div className="flex items-center justify-between">
           <span className="text-lg sm:text-xl font-bold gold-text">₹{item.price}</span>
           <motion.a
-            href="https://www.zomato.com/ncr/1mysa-cafe-okhla-new-delhi/order"
+            href="https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi/order"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
