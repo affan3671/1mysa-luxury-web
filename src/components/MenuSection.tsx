@@ -98,7 +98,7 @@ export default function MenuSection({ showAll = false, hideHeader = false }: Men
                 </motion.div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {category.items.map((item, index) => (
-                    <MenuCard key={item.id} item={item} index={index} language={language} categoryImage={category.image} />
+                    <MenuCard key={item.id} item={item} index={index} language={language} />
                   ))}
                 </div>
               </div>
@@ -106,18 +106,14 @@ export default function MenuSection({ showAll = false, hideHeader = false }: Men
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {filteredItems.map((item, index) => {
-              const category = categories.find((c) => c.id === item.category);
-              return (
-                <MenuCard
-                  key={item.id}
-                  item={item}
-                  index={index}
-                  language={language}
-                  categoryImage={category?.image || '/images/hero-kunafa.jpg'}
-                />
-              );
-            })}
+            {filteredItems.map((item, index) => (
+              <MenuCard
+                key={item.id}
+                item={item}
+                index={index}
+                language={language}
+              />
+            ))}
           </div>
         )}
       </div>
@@ -129,12 +125,10 @@ function MenuCard({
   item,
   index,
   language,
-  categoryImage,
 }: {
   item: MenuItem;
   index: number;
   language: 'en' | 'hi';
-  categoryImage: string;
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -151,7 +145,7 @@ function MenuCard({
       {/* Image */}
       <div className="relative h-40 sm:h-48 overflow-hidden">
         <motion.img
-          src={categoryImage}
+          src={item.image || '/images/hero-kunafa.jpg'}
           alt={item.name}
           className="w-full h-full object-cover"
           animate={{ scale: isHovered ? 1.1 : 1 }}
