@@ -21,6 +21,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'पारंपरिक रेत में उबाली गई तुर्किश कॉफी, समृद्ध और सुगंधित',
     price: 120,
     category: 'coffee',
+    image: '/images/399361128_759025669573090_1213483921279875783_n.jpg',
     isPopular: true,
   },
   {
@@ -31,6 +32,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'मखमली क्रीम के साथ समृद्ध तुर्किश कॉफी',
     price: 150,
     category: 'coffee',
+    image: '/images/399580717_1016145996168014_8704332221360997849_n.jpg',
   },
   {
     id: 'tc-3',
@@ -40,6 +42,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'अनोखे स्वाद के साथ पारंपरिक बोस्नियन शैली की कॉफी',
     price: 130,
     category: 'coffee',
+    image: '/images/403626269_375773254977197_8679190473259505294_n.jpg',
   },
   {
     id: 'tc-4',
@@ -49,6 +52,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'ताज़े अदरक से युक्त गर्म कॉफी',
     price: 110,
     category: 'coffee',
+    image: '/images/403843170_3461495074098241_7520671604373836469_n.jpg',
   },
   {
     id: 'tc-5',
@@ -58,6 +62,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'मीठा अदरक हलवा स्वाद वाला गर्म पेय',
     price: 140,
     category: 'coffee',
+    image: '/images/403859769_659643392951136_6089730639769534153_n.jpg',
     isNew: true,
   },
   {
@@ -68,6 +73,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'समृद्ध और मलाईदार हॉट चॉकलेट',
     price: 120,
     category: 'coffee',
+    image: '/images/403869203_891505425957540_98166563678010134_n.jpg',
   },
 
   // Kunafa / Knafeh
@@ -79,6 +85,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'चीनी की चाशनी और पिस्ता के साथ पारंपरिक चीज़ कुनाफा',
     price: 180,
     category: 'kunafa',
+    image: '/images/cheese-pull-w.jpg',
     isPopular: true,
   },
   {
@@ -89,6 +96,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'कुरकुरे वर्मीसेली टॉप के साथ एक्स्ट्रा चीज़ फिलिंग',
     price: 200,
     category: 'kunafa',
+    image: '/images/hero-kunafa.jpg',
     isPopular: true,
   },
   {
@@ -99,6 +107,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'गुलाब जल के सार के साथ हल्की क्रीम भरी कुनाफा',
     price: 190,
     category: 'kunafa',
+    image: '/images/menu-kunafa-1.jpg',
   },
   {
     id: 'k-4',
@@ -108,6 +117,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'समृद्ध नुटेला से भरी फ्यूज़न कुनाफा',
     price: 220,
     category: 'kunafa',
+    image: '/images/menu-kunafa-2.jpg',
     isNew: true,
   },
   {
@@ -118,6 +128,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'कुचले पिस्ता से भरपूर प्रीमियम कुनाफा',
     price: 250,
     category: 'kunafa',
+    image: '/images/403887309_743160247662528_3771152756126886506_n.jpg',
     isPopular: true,
   },
   {
@@ -128,6 +139,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'मिनी कुनाफा टुकड़े, शेयर करने के लिए परफेक्ट (6 पीस)',
     price: 160,
     category: 'kunafa',
+    image: '/images/404272398_1111028776972634_9109480898804746209_n.jpg',
   },
 
   // Baklava & Sweets
@@ -139,6 +151,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'कुचले पिस्ता और शहद के साथ फाइलो की परतें',
     price: 80,
     category: 'baklava',
+    image: '/images/hero-baklava.jpg',
     isPopular: true,
   },
   {
@@ -149,6 +162,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'प्रीमियम अखरोट के साथ क्लासिक बकलावा',
     price: 70,
     category: 'baklava',
+    image: '/images/bakalva menu.jpg',
   },
   {
     id: 'b-3',
@@ -158,6 +172,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'हमारी बेहतरीन बकलावा किस्मों का वर्गीकरण (8 पीस)',
     price: 320,
     category: 'baklava',
+    image: '/images/menu-baklava.jpg',
   },
   {
     id: 'b-4',
@@ -167,6 +182,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'पिस्ता के साथ गुलाब स्वाद वाला लोकुम',
     price: 60,
     category: 'baklava',
+    image: '/images/menu-sweets.jpg',
   },
   {
     id: 'b-5',
@@ -176,6 +192,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'मीठी चाशनी में भिगोया हुआ सूजी का केक',
     price: 90,
     category: 'baklava',
+    image: '/images/unnamed.jpg',
   },
 
   // Beverages
@@ -187,6 +204,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'मसालेदार दूध की चाय, मलाईदार और सुगंधित',
     price: 60,
     category: 'drinks',
+    image: '/images/menu-drinks.jpg',
     isPopular: true,
   },
   {
@@ -197,6 +215,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'ताज़े पुदीने के साथ ताज़गी भरा नींबू पानी',
     price: 80,
     category: 'drinks',
+    image: '/images/unnamed (1).jpg',
   },
   {
     id: 'd-3',
@@ -206,6 +225,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'गाढ़ा और मलाईदार आम का मिल्कशेक',
     price: 100,
     category: 'drinks',
+    image: '/images/unnamed (2).jpg',
   },
   {
     id: 'd-4',
@@ -215,6 +235,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'कुचले ओरियो कुकीज़ के साथ मलाईदार शेक',
     price: 120,
     category: 'drinks',
+    image: '/images/Coca-Cola_s_Cans.jpg',
   },
   {
     id: 'd-5',
@@ -224,6 +245,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'आइसक्रीम के साथ ठंडी कॉफी',
     price: 110,
     category: 'drinks',
+    image: '/images/hero-coffee.jpg',
   },
   {
     id: 'd-6',
@@ -233,6 +255,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'फ़िज़ी नींबू सोडा, मीठा या नमकीन',
     price: 50,
     category: 'drinks',
+    image: '/images/menu-drinks.jpg',
   },
 ];
 
