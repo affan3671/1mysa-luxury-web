@@ -85,7 +85,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'मलाईदार भरावन और लोटस बिस्कॉफ के भरपूर स्वाद से भरपूर कुरकुरे कुनाफा की परतें।',
     price: 650,
     category: 'kunafa',
-    image: '/images/cheese-pull-w.jpg',
+    image: '/images/kunafa/lotus-biscoff-kunafa.jpg',
     isPopular: true,
   },
   {
@@ -96,7 +96,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'मीठे शहद के सिरप में डूबे हुए कुरकुरे कुनाफा, एक समृद्ध, पारंपरिक स्वाद के साथ।',
     price: 490,
     category: 'kunafa',
-    image: '/images/hero-kunafa.jpg',
+    image: '/images/kunafa/honey-syrup-kunafa.jpg',
     isPopular: true,
   },
   {
@@ -107,7 +107,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'गरमागरम, लजीज न्यूटेला से भरे कुरकुरे कुनाफा एक शानदार व्यंजन हैं।',
     price: 590,
     category: 'kunafa',
-    image: '/images/hero-kunafa.jpg',
+    image: '/images/kunafa/nutella-spread-kunafa.jpg',
   },
   {
     id: 'k-4',
@@ -117,7 +117,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'कुरकुरे कुनाफा पर भरपूर, प्राकृतिक खजूर की चाशनी डाली गई है, जिससे इसका स्वाद गहरा और मीठा हो जाता है।',
     price: 540,
     category: 'kunafa',
-    image: '/images/hero-kunafa.jpg',
+    image: '/images/kunafa/date_syrup_kunafa.jpg',
   },
   {
     id: 'k-5',
@@ -127,7 +127,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'पारंपरिक मिठास के लिए क्लासिक चीनी की चाशनी में भिगोए हुए सुनहरे, कुरकुरे कुनाफा।',
     price: 399,
     category: 'kunafa',
-    image: '/images/hero-kunafa.jpg',
+    image: '/images/kunafa/sugar_syrup_kunafa.jpg',
     isPopular: true,
   },
   {
@@ -138,13 +138,23 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'गरमागरम, कुरकुरे कुनाफा को ठंडी, मलाईदार आइसक्रीम के साथ मिलाकर एक बेहतरीन संयोजन बनता है।',
     price: 540,
     category: 'kunafa',
-    image: '/images/hero-kunafa.jpg',
+    image: '/images/kunafa/ice-cream-kunafa.jpg',
   },
+  /*{
+    id: 'k-7',
+    name: 'Lotus Biscoff + Ice Cream Knafeh/Kunafa',
+    nameHi: 'आइसक्रीम कनाफेह/कुनाफा',
+    description: 'Warm, crispy kunafa paired with cold, creamy ice cream for a perfect contrast.',
+    descriptionHi: 'गरमागरम, कुरकुरे कुनाफा को ठंडी, मलाईदार आइसक्रीम के साथ मिलाकर एक बेहतरीन संयोजन बनता है।',
+    price: 540,
+    category: 'kunafa',
+    image: '/images/kunafa/ice-cream-kunafa.jpg',
+  },*/
   
 
   // Baklava & Sweets
 
-  {
+  /*{
     id: 'b-1',
     name: 'Finger Baklava',
     nameHi: 'उंगली बाकलावा',
@@ -152,9 +162,9 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'कुरकुरी, सुनहरी पेस्ट्री जिसमें मेवे भरे हुए हैं और ऊपर से मीठी चाशनी डाली गई है।',
     price: 80,
     category: 'baklava',
-    image: '/images/hero-baklava.jpg',
+    image: '/images/baklava/hero-baklava.jpg',
     isPopular: true,
-  },
+  },*/
   {
     id: 'b-2',
     name: 'Pyramid Baklava',
@@ -163,7 +173,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'परतदार, खस्ता बकलावा को पिरामिड के आकार में ढाला जाता है और मीठे सिरप में भिगोया जाता है।',
     price: 39,
     category: 'baklava',
-    image: '/images/hero-baklava.jpg',
+    image: '/images/baklava/pyramid_baklava.jpg',
   },
   {
     id: 'b-3',
@@ -173,7 +183,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'परतदार चौकोर बकलावा, जिसमें भरपूर मात्रा में कुरकुरे काजू और मीठी चाशनी भरी हुई है।',
     price: 49,
     category: 'baklava',
-    image: '/images/hero-baklava.jpg',
+    image: '/images/baklava/cashew_square_baklava.jpg',
   },
   {
     id: 'b-4',
@@ -183,7 +193,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'भुने हुए काजू और मीठे सिरप से भरा कुरकुरा कुनाफा-शैली का बकलावा।',
     price: 59,
     category: 'baklava',
-    image: '/images/hero-baklava.jpg',
+    image: '/images/baklava/cashew_kunafa_baklava.jpg',
   },
   {
     id: 'b-5',
@@ -193,7 +203,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'मेवों से भरी और चाशनी से सजी, चिड़िया के घोंसले के आकार की नाजुक बकलावा।',
     price: 70,
     category: 'baklava',
-    image: '/images/hero-baklava.jpg',
+    image: '/images/baklava/oshe_bulbul_baklava.jpg',
   },
   {
     id: 'b-6',
@@ -203,7 +213,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'चॉकलेट और मीठे सिरप की परतों से सजे हुए, मुलायम और परतदार बकलावा के चौकोर टुकड़े।',
     price: 35,
     category: 'baklava',
-    image: '/images/hero-baklava.jpg',
+    image: '/images/baklava/chocolate_square_baklava.jpg',
   },
 
   // Beverages
