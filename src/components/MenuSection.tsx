@@ -8,7 +8,7 @@ const categories = [
   { id: 'coffee', icon: Coffee, key: 'menu.coffee', image: '/images/399361128_759025669573090_1213483921279875783_n.jpg' },
   { id: 'kunafa', icon: Cake, key: 'menu.kunafa', image: '/images/cheese-pull-w.jpg' },
   { id: 'baklava', icon: Cookie, key: 'menu.baklava', image: '/images/403859769_659643392951136_6089730639769534153_n.jpg' },
-  { id: 'drinks', icon: GlassWater, key: 'menu.drinks', image: '/images/Coca-Cola_s_Cans.jpg' },
+  //{ id: 'drinks', icon: GlassWater, key: 'menu.drinks', image: '/images/Coca-Cola_s_Cans.jpg' },
 ];
 
 interface MenuSectionProps {

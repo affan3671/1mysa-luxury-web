@@ -36,7 +36,7 @@ const translations: Record<Language, Record<string, string>> = {
     'menu.coffee': 'Turkish Coffee & Hot Drinks',
     'menu.kunafa': 'Kunafa / Knafeh',
     'menu.baklava': 'Baklava & Sweets',
-    'menu.drinks': 'Beverages',
+    //*'menu.drinks': 'Beverages',*/
     
     // About
     'about.title': 'Our Story',

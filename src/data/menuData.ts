@@ -21,7 +21,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'पारंपरिक रेत में उबाली गई तुर्किश कॉफी, समृद्ध और सुगंधित',
     price: 55,
     category: 'coffee',
-    image: '/images/399361128_759025669573090_1213483921279875783_n.jpg',
+    image: '/images/coffee/Sand_Caffeine_Infused_Turkish_Coffee.jpg',
     isPopular: true,
   },
   {
@@ -32,7 +32,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'एक सच्चे पारंपरिक अनुभव के लिए समृद्ध, दमदार और सुगंधित तुर्की कॉफी।',
     price: 70,
     category: 'coffee',
-    image: '/images/399580717_1016145996168014_8704332221360997849_n.jpg',
+    image: '/images/coffee/Sand_Black_Caffeine_Authentic_Turkish_Coffee.jpg',
   },
   {
     id: 'tc-3',
@@ -40,9 +40,9 @@ export const menuItems: MenuItem[] = [
     nameHi: '1 मायसा बीटन कैफीन-मोर क्रीमी कॉफी',
     description: 'Smooth, creamy, and well-balanced coffee with a rich, comforting taste.',
     descriptionHi: 'एक मुलायम, मलाईदार और संतुलित कॉफी जिसका स्वाद भरपूर और सुखद है।',
-    price: 130,
+    price: 70,
     category: 'coffee',
-    image: '/images/399361128_759025669573090_1213483921279875783_n.jpg',
+    image: '/images/coffee/1_Mysa_Beaten_Caffeine_More_Creamy_Coffee.jpg',
   },
   /*{
     id: 'tc-4',
@@ -52,7 +52,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'ताज़े अदरक से युक्त गर्म कॉफी',
     price: 110,
     category: 'coffee',
-    image: '/images/399361128_759025669573090_1213483921279875783_n.jpg',
+    image: '/images/coffee/399361128_759025669573090_1213483921279875783_n.jpg',
   },
   {
     id: 'tc-5',
@@ -62,7 +62,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'मीठा अदरक हलवा स्वाद वाला गर्म पेय',
     price: 140,
     category: 'coffee',
-    image: '/images/399361128_759025669573090_1213483921279875783_n.jpg',
+    image: '/images/coffee/399361128_759025669573090_1213483921279875783_n.jpg',
     isNew: true,
   },
   {
@@ -73,7 +73,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'समृद्ध और मलाईदार हॉट चॉकलेट',
     price: 120,
     category: 'coffee',
-    image: '/images/399361128_759025669573090_1213483921279875783_n.jpg',
+    image: '/images/coffee/399361128_759025669573090_1213483921279875783_n.jpg',
   },*/
 
   // Kunafa / Knafeh
@@ -83,7 +83,7 @@ export const menuItems: MenuItem[] = [
     nameHi: 'लोटस बिस्कॉफ कनाफेह/कुनाफा',
     description: 'Crispy kunafa layered with creamy filling and rich Lotus Biscoff flavor.',
     descriptionHi: 'मलाईदार भरावन और लोटस बिस्कॉफ के भरपूर स्वाद से भरपूर कुरकुरे कुनाफा की परतें।',
-    price: 650,
+    price: 599,
     category: 'kunafa',
     image: '/images/kunafa/lotus-biscoff-kunafa.jpg',
     isPopular: true,
@@ -94,7 +94,7 @@ export const menuItems: MenuItem[] = [
     nameHi: 'शहद की चाशनी वाला कनाफेह/कुनाफा',
     description: 'Crispy kunafa soaked in sweet honey syrup with a rich, traditional taste.',
     descriptionHi: 'मीठे शहद के सिरप में डूबे हुए कुरकुरे कुनाफा, एक समृद्ध, पारंपरिक स्वाद के साथ।',
-    price: 490,
+    price: 449,
     category: 'kunafa',
     image: '/images/kunafa/honey-syrup-kunafa.jpg',
     isPopular: true,
@@ -105,7 +105,7 @@ export const menuItems: MenuItem[] = [
     nameHi: 'नूटेला स्प्रेड कनाफेह/कुनाफा',
     description: 'Crispy kunafa filled with warm, rich Nutella for an indulgent treat.',
     descriptionHi: 'गरमागरम, लजीज न्यूटेला से भरे कुरकुरे कुनाफा एक शानदार व्यंजन हैं।',
-    price: 590,
+    price: 539,
     category: 'kunafa',
     image: '/images/kunafa/nutella-spread-kunafa.jpg',
   },
@@ -115,7 +115,7 @@ export const menuItems: MenuItem[] = [
     nameHi: 'खजूर की चाशनी से बना कनाफेह/कुनाफा',
     description: 'Crispy kunafa drizzled with rich, natural date syrup for a deep, sweet flavor.',
     descriptionHi: 'कुरकुरे कुनाफा पर भरपूर, प्राकृतिक खजूर की चाशनी डाली गई है, जिससे इसका स्वाद गहरा और मीठा हो जाता है।',
-    price: 540,
+    price: 499,
     category: 'kunafa',
     image: '/images/kunafa/date_syrup_kunafa.jpg',
   },
@@ -125,7 +125,7 @@ export const menuItems: MenuItem[] = [
     nameHi: 'चीनी की चाशनी से बना कनाफेह/कुनाफा',
     description: 'Golden, crispy kunafa soaked in classic sugar syrup for a traditional sweetness.',
     descriptionHi: 'पारंपरिक मिठास के लिए क्लासिक चीनी की चाशनी में भिगोए हुए सुनहरे, कुरकुरे कुनाफा।',
-    price: 399,
+    price: 349,
     category: 'kunafa',
     image: '/images/kunafa/sugar_syrup_kunafa.jpg',
     isPopular: true,
@@ -136,20 +136,31 @@ export const menuItems: MenuItem[] = [
     nameHi: 'आइसक्रीम कनाफेह/कुनाफा',
     description: 'Warm, crispy kunafa paired with cold, creamy ice cream for a perfect contrast.',
     descriptionHi: 'गरमागरम, कुरकुरे कुनाफा को ठंडी, मलाईदार आइसक्रीम के साथ मिलाकर एक बेहतरीन संयोजन बनता है।',
-    price: 540,
+    price: 499,
     category: 'kunafa',
     image: '/images/kunafa/ice-cream-kunafa.jpg',
   },
-  /*{
+  {
     id: 'k-7',
-    name: 'Lotus Biscoff + Ice Cream Knafeh/Kunafa',
-    nameHi: 'आइसक्रीम कनाफेह/कुनाफा',
-    description: 'Warm, crispy kunafa paired with cold, creamy ice cream for a perfect contrast.',
-    descriptionHi: 'गरमागरम, कुरकुरे कुनाफा को ठंडी, मलाईदार आइसक्रीम के साथ मिलाकर एक बेहतरीन संयोजन बनता है।',
-    price: 540,
+    name: 'Pista Kunefe/Kunafa',
+    nameHi: 'पिस्ता कुनेफे/कुनाफा',
+    description: 'Crispy kunafa filled with rich pistachio flavor and sweet syrup.',
+    descriptionHi: 'कुरकुरे कुनाफा, जो पिस्ता के भरपूर स्वाद और मीठे सिरप से भरे हुए हैं।',
+    price: 749,
     category: 'kunafa',
     image: '/images/kunafa/ice-cream-kunafa.jpg',
-  },*/
+  },
+   {
+    id: 'k-8',
+    name: 'Combo Topping Kunefe/Kunafa',
+    nameHi: 'कुनेफे/कुनाफा टॉपिंग कॉम्बो',
+    description: 'Crispy kunafa topped with a mix of rich, indulgent flavors.',
+    descriptionHi: 'कुरकुरे कुनाफा के ऊपर स्वादिष्ट और लजीज स्वादों का मिश्रण डाला गया है।',
+    price: "Half/Half Price As Per Topping",
+    category: 'kunafa',
+    image: '/images/kunafa/ice-cream-kunafa.jpg',
+  },
+  
   
 
   // Baklava & Sweets
@@ -217,7 +228,7 @@ export const menuItems: MenuItem[] = [
   },
 
   // Beverages
-  {
+  /*{
     id: 'd-1',
     name: 'Sand Black Caffeine(Turkish Strong) ',
     nameHi: 'सैंड ब्लैक कैफीन (तुर्की स्ट्रॉन्ग)',
