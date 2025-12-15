@@ -148,7 +148,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'कुरकुरे कुनाफा, जो पिस्ता के भरपूर स्वाद और मीठे सिरप से भरे हुए हैं।',
     price: 749,
     category: 'kunafa',
-    image: '/images/kunafa/ice-cream-kunafa.jpg',
+    image: '/images/kunafa/pista_kunafa.jpg',
   },
    {
     id: 'k-8',
@@ -158,7 +158,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'कुरकुरे कुनाफा के ऊपर स्वादिष्ट और लजीज स्वादों का मिश्रण डाला गया है।',
     price: "Half/Half Price As Per Topping",
     category: 'kunafa',
-    image: '/images/kunafa/ice-cream-kunafa.jpg',
+    image: '/images/kunafa/combo_topping_kunafa.jpg',
   },
   
   
