@@ -10,7 +10,7 @@ import Index from "./pages/Index";
 import MenuPage from "./pages/MenuPage";
 import AboutPage from "./pages/AboutPage";
 import GalleryPage from "./pages/GalleryPage";
-import ReviewsPage from "./pages/ReviewsPage";
+import PartyPage from "./pages/PartyPage";
 import OrderPage from "./pages/OrderPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
@@ -46,7 +46,7 @@ function App() {
               <Route path="/menu" element={<MenuPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/reviews" element={<ReviewsPage />} />
+              <Route path="/party" element={<PartyPage />} />
               <Route path="/order" element={<OrderPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<NotFound />} />
