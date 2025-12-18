@@ -15,7 +15,7 @@ export default function AboutPage() {
       {/* Hero Banner */}
       <section className="relative pt-20 min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
-          <img src="/images/hero-kunafa.jpg" alt="About 1Mysa" className="w-full h-full object-cover" />
+          <img src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg" alt="About 1Mysa" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center py-20">
@@ -48,7 +48,7 @@ export default function AboutPage() {
               className="space-y-6"
             >
               <h2 className="text-3xl font-heading font-bold text-foreground">
-                {language === 'en' ? 'The Art of Kunafa' : 'कुनाफा की कला'}
+                {language === 'en' ? 'The Art of 1Mysa' : '1Mysa की कला'}
               </h2>
               <p className="text-muted-foreground leading-relaxed">{t('about.p1')}</p>
               <p className="text-muted-foreground leading-relaxed">{t('about.p2')}</p>
@@ -61,8 +61,8 @@ export default function AboutPage() {
               className="relative"
             >
               <img
-                src="/images/hero-coffee.jpg"
-                alt="Turkish Coffee"
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/2024-06-14.jpg"
+                alt="1Mysa Cafe"
                 className="rounded-3xl shadow-2xl w-full"
               />
               <div className="absolute -bottom-6 -left-6 w-48 h-48 border-4 border-primary rounded-3xl -z-10" />

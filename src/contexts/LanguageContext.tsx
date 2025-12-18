@@ -90,7 +90,7 @@ const translations: Record<Language, Record<string, string>> = {
     'party.cta.title': 'Ready to Book?',
     'party.cta.subtitle': 'Contact us on WhatsApp for bulk orders, party bookings, and custom arrangements.',
     'party.cta.button': 'Book on WhatsApp',
-    'party.cta.response': 'We typically respond within 30 minutes',
+    //'party.cta.response': 'We typically respond within 30 minutes',
   },
   hi: {
     // Navbar
@@ -173,7 +173,7 @@ const translations: Record<Language, Record<string, string>> = {
     'party.cta.title': 'बुक करने के लिए तैयार?',
     'party.cta.subtitle': 'बल्क ऑर्डर, पार्टी बुकिंग और कस्टम व्यवस्था के लिए व्हाट्सएप पर संपर्क करें।',
     'party.cta.button': 'व्हाट्सएप पर बुक करें',
-    'party.cta.response': 'हम आमतौर पर 30 मिनट में जवाब देते हैं',
+    //'party.cta.response': 'हम आमतौर पर 30 मिनट में जवाब देते हैं',
   },
 };
 

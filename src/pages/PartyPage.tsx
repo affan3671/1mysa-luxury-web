@@ -8,7 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function PartyPage() {
   const { t, language } = useLanguage();
   
-  const whatsappNumber = '919220522205';
+  const whatsappNumber = '919310579571';
   const whatsappMessage = encodeURIComponent(
     language === 'en' 
       ? 'Hi! I would like to inquire about party/event booking at 1Mysa Café.' 
@@ -26,7 +26,7 @@ export default function PartyPage() {
       <Navbar />
       
       {/* Hero Banner */}
-      <section className="pt-28 pb-16 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
+      <section className="pt-28 pb-8 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl" />
@@ -83,44 +83,39 @@ export default function PartyPage() {
       </section>
 
       {/* Media Section - Videos & Photos */}
-      <section className="py-16 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl font-heading font-bold text-center mb-12"
+            className="text-3xl font-heading font-bold text-center mb-8"
           >
             <span className="gold-text">{t('party.gallery')}</span>
           </motion.h2>
 
           {/* Video Grid */}
-          {/* TODO: Add your party/event videos here */}
-          {/* Each video should be in a motion.div with similar styling */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             
-            {/* VIDEO PLACEHOLDER 1 */}
-            {/* Replace src with your video URL */}
+            {/* VIDEO 1 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="aspect-video rounded-2xl overflow-hidden bg-card border border-border shadow-lg"
             >
-              {/* Uncomment and add your video:
               <video 
-                src="/videos/party-1.mp4" 
-                controls 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/videos/event_1.mp4" 
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-full object-cover"
                 poster="/images/party-poster-1.jpg"
               />
-              */}
-              <div className="w-full h-full flex items-center justify-center bg-secondary/50">
-                <p className="text-muted-foreground text-sm">Video 1</p>
-              </div>
             </motion.div>
 
-            {/* VIDEO PLACEHOLDER 2 */}
+            {/* VIDEO 2 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -128,20 +123,18 @@ export default function PartyPage() {
               transition={{ delay: 0.1 }}
               className="aspect-video rounded-2xl overflow-hidden bg-card border border-border shadow-lg"
             >
-              {/* Uncomment and add your video:
               <video 
-                src="/videos/party-2.mp4" 
-                controls 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/videos/event_2.mp4" 
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-full object-cover"
                 poster="/images/party-poster-2.jpg"
               />
-              */}
-              <div className="w-full h-full flex items-center justify-center bg-secondary/50">
-                <p className="text-muted-foreground text-sm">Video 2</p>
-              </div>
             </motion.div>
 
-            {/* VIDEO PLACEHOLDER 3 */}
+            {/* VIDEO 3 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -149,39 +142,33 @@ export default function PartyPage() {
               transition={{ delay: 0.2 }}
               className="aspect-video rounded-2xl overflow-hidden bg-card border border-border shadow-lg"
             >
-              {/* Uncomment and add your video:
               <video 
-                src="/videos/party-3.mp4" 
-                controls 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/videos/event_3.mp4" 
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-full object-cover"
                 poster="/images/party-poster-3.jpg"
               />
-              */}
-              <div className="w-full h-full flex items-center justify-center bg-secondary/50">
-                <p className="text-muted-foreground text-sm">Video 3</p>
-              </div>
             </motion.div>
           </div>
 
           {/* Photo Grid */}
-          {/* TODO: Add your party/event photos here */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             
             {/* PHOTO PLACEHOLDER 1 */}
-            {/* Replace src with your image path */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="aspect-square rounded-xl overflow-hidden bg-card border border-border shadow-md"
             >
-              {/* Uncomment and add your image:
               <img 
-                src="/images/party/event-1.jpg" 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_1.png" 
                 alt="Party event" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
-              */}
               <div className="w-full h-full flex items-center justify-center bg-secondary/50">
                 <p className="text-muted-foreground text-xs">Photo 1</p>
               </div>
@@ -195,6 +182,11 @@ export default function PartyPage() {
               transition={{ delay: 0.05 }}
               className="aspect-square rounded-xl overflow-hidden bg-card border border-border shadow-md"
             >
+              <img 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_2.png" 
+                alt="Party event" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
               <div className="w-full h-full flex items-center justify-center bg-secondary/50">
                 <p className="text-muted-foreground text-xs">Photo 2</p>
               </div>
@@ -208,6 +200,11 @@ export default function PartyPage() {
               transition={{ delay: 0.1 }}
               className="aspect-square rounded-xl overflow-hidden bg-card border border-border shadow-md"
             >
+              <img 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_3.png" 
+                alt="Party event" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
               <div className="w-full h-full flex items-center justify-center bg-secondary/50">
                 <p className="text-muted-foreground text-xs">Photo 3</p>
               </div>
@@ -221,6 +218,11 @@ export default function PartyPage() {
               transition={{ delay: 0.15 }}
               className="aspect-square rounded-xl overflow-hidden bg-card border border-border shadow-md"
             >
+              <img 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_4.jpeg" 
+                alt="Party event" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
               <div className="w-full h-full flex items-center justify-center bg-secondary/50">
                 <p className="text-muted-foreground text-xs">Photo 4</p>
               </div>
@@ -258,9 +260,9 @@ export default function PartyPage() {
               {t('party.cta.button')}
             </motion.a>
 
-            <p className="text-sm text-muted-foreground mt-4">
+            {/*<p className="text-sm text-muted-foreground mt-4">
               {t('party.cta.response')}
-            </p>
+            </p>*/}
           </motion.div>
         </div>
       </section>

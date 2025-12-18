@@ -4,9 +4,9 @@ import { MapPin, Star, Utensils, Car, Truck, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const heroImages = [
-  '/images/hero-kunafa.jpg',
-  '/images/hero-coffee.jpg',
-  '/images/hero-baklava.jpg',
+  'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg',
+  'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Sand_Caffeine_Infused_Turkish_Coffee.jpg',
+  'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/cashew_square_baklava.jpg',
 ];
 
 const features = [

@@ -4,19 +4,23 @@ import { X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const galleryImages = [
-  { src: '/images/hero-kunafa.jpg', category: 'food', alt: 'Kunafa' },
-  { src: '/images/399361128_759025669573090_1213483921279875783_n.jpg', category: 'food', alt: 'Turkish Coffee' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg', category: 'food', alt: 'Kunafa' },
+  { src: '/images/399361128_759025669573090_1213483921279875783_n.jpg', category: 'food', alt: 'Turkish coffee' },
   //{ src: '/images/403859769_659643392951136_6089730639769534153_n.jpg', category: 'food', alt: 'Baklava' },
-  //{ src: '/images/menu-kunafa-1.jpg', category: 'food', alt: 'Menu Kunafa' },
-  //{ src: '/images/menu-kunafa-2.jpg', category: 'food', alt: 'Cheese Kunafa' },
-  //{ src: '/images/menu-sweets.jpg', category: 'food', alt: 'Sweets' },
-  //{ src: '/images/menu-baklava.jpg', category: 'food', alt: 'Baklava Selection' },
-  //{ src: '/images/menu-coffee.jpg', category: 'vibe', alt: 'Coffee Menu' },
-  { src: '/images/403626269_375773254977197_8679190473259505294_n.jpg', category: 'interior', alt: 'Interior View' },
-  { src: '/images/403887309_743160247662528_3771152756126886506_n.jpg', category: 'interior', alt: 'Interior View' },
-  { src: '/images/unnamed.jpg', category: 'vibe', alt: 'Cafe Vibe' },
-  { src: '/images/unnamed (1).jpg', category: 'vibe', alt: 'Cozy Ambience' },
-  { src: '/images/unnamed (2).jpg', category: 'vibe', alt: 'Relaxing Atmosphere' },
+  //{ src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo1.png', category: 'food', alt: 'Coffee brewing' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo2.png', category: 'food', alt: 'Coffee pouring' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.png', category: 'food', alt: 'Kunafa' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo5.png', category: 'food', alt: 'Coffee barista' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo3.png', category: 'interior', alt: 'Cafe exterior' },
+  { src: '/images/403626269_375773254977197_8679190473259505294_n.jpg', category: 'interior', alt: 'Interior view' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo6.png', category: 'vibe', alt: 'Cafe interior' },
+  { src: '/images/unnamed.jpg', category: 'vibe', alt: 'Cafe vibe' },
+  { src: '/images/unnamed (1).jpg', category: 'vibe', alt: 'Cozy ambience' },
+  { src: '/images/unnamed (2).jpg', category: 'vibe', alt: 'Relaxing atmosphere' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo7.png', category: 'vibe', alt: 'Kunafa Preparation' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo8.png', category: 'vibe', alt: 'Kunafa Preparation' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo9.png', category: 'food', alt: 'Cafe menu' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.jpg', category: 'food', alt: 'Coffee serving' },
 ];
 
 const categories = [

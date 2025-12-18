@@ -145,7 +145,7 @@ function MenuCard({
       {/* Image */}
       <div className="relative h-40 sm:h-48 overflow-hidden">
         <motion.img
-          src={item.image || '/images/hero-kunafa.jpg'}
+          src={item.image || 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg'}
           alt={item.name}
           className="w-full h-full object-cover"
           animate={{ scale: isHovered ? 1.1 : 1 }}

@@ -107,7 +107,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'गरमागरम, लजीज न्यूटेला से भरे कुरकुरे कुनाफा एक शानदार व्यंजन हैं।',
     price: 539,
     category: 'kunafa',
-    image: '/images/kunafa/nutella-spread-kunafa.jpg',
+    image: '/images/kunafa/nutella-spread-kunafa.jpeg',
   },
   {
     id: 'k-4',
@@ -138,7 +138,7 @@ export const menuItems: MenuItem[] = [
     descriptionHi: 'गरमागरम, कुरकुरे कुनाफा को ठंडी, मलाईदार आइसक्रीम के साथ मिलाकर एक बेहतरीन संयोजन बनता है।',
     price: 499,
     category: 'kunafa',
-    image: '/images/kunafa/ice-cream-kunafa.jpg',
+    image: '/images/kunafa/ice-cream-kunafa.jpeg',
   },
   {
     id: 'k-7',
@@ -150,19 +150,27 @@ export const menuItems: MenuItem[] = [
     category: 'kunafa',
     image: '/images/kunafa/pista_kunafa.jpg',
   },
-   {
+  {
     id: 'k-8',
+    name: 'Dubai Pista Spread Kunafa/Kunefe',
+    nameHi: 'दुबई पिस्ता स्प्रेड कनाफेह/कुनाफा',
+    description: 'Crispy kunafa layered with rich Dubai pistachio spread for a luxurious taste.',
+    descriptionHi: 'शानदार स्वाद के लिए कुरकुरे कुनाफा पर दुबई पिस्ता का भरपूर स्प्रेड लगाया गया है।',
+    price: 699,
+    category: 'kunafa',
+    image: '/images/kunafa/dubai_pista_kunafa.jpeg',
+  },
+  {
+    id: 'k-9',
     name: 'Combo Topping Kunefe/Kunafa',
     nameHi: 'कुनेफे/कुनाफा टॉपिंग कॉम्बो',
     description: 'Crispy kunafa topped with a mix of rich, indulgent flavors.',
     descriptionHi: 'कुरकुरे कुनाफा के ऊपर स्वादिष्ट और लजीज स्वादों का मिश्रण डाला गया है।',
-    price: 0, // Price varies based on topping selection
+    price: "Price varies based on topping selection", // Price varies based on topping selection
     category: 'kunafa',
     image: '/images/kunafa/combo_topping_kunafa.jpg',
   },
   
-  
-
   // Baklava & Sweets
 
   /*{

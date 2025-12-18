@@ -8,8 +8,9 @@ const quickLinks = [
   { key: 'nav.menu', path: '/menu' },
   { key: 'nav.about', path: '/about' },
   { key: 'nav.gallery', path: '/gallery' },
-  { key: 'nav.reviews', path: '/reviews' },
+  //{ key: 'nav.reviews', path: '/reviews' },
   { key: 'nav.contact', path: '/contact' },
+  { key: 'nav.party', path: '/party' },
 ];
 
 const socialLinks = [
