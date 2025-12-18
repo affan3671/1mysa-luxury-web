@@ -26,6 +26,8 @@ export default function AboutSection() {
               <img
                 src="/images/2024-06-14.jpg"
                 alt="1Mysa Cafe Interior"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-[280px] sm:h-[400px] lg:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-coffee/50 to-transparent" />

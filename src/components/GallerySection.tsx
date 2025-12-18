@@ -108,6 +108,8 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
                 <img
                   src={image.src}
                   alt={image.alt}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover aspect-square transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-coffee/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -142,6 +144,8 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
                 exit={{ scale: 0.8, opacity: 0 }}
                 src={selectedImage}
                 alt="Gallery"
+                loading="eager"
+                decoding="async"
                 className="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               />
