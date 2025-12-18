@@ -147,6 +147,8 @@ function MenuCard({
         <motion.img
           src={item.image || 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg'}
           alt={item.name}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover"
           animate={{ scale: isHovered ? 1.1 : 1 }}
           transition={{ duration: 0.5 }}

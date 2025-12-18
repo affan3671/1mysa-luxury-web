@@ -110,6 +110,7 @@ export default function PartyPage() {
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="w-full h-full object-cover"
                 poster="/images/party-poster-1.jpg"
               />
@@ -129,6 +130,7 @@ export default function PartyPage() {
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="w-full h-full object-cover"
                 poster="/images/party-poster-2.jpg"
               />
@@ -148,6 +150,7 @@ export default function PartyPage() {
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="w-full h-full object-cover"
                 poster="/images/party-poster-3.jpg"
               />
@@ -167,6 +170,8 @@ export default function PartyPage() {
               <img 
                 src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_1.png" 
                 alt="Party event" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="w-full h-full flex items-center justify-center bg-secondary/50">
@@ -185,6 +190,8 @@ export default function PartyPage() {
               <img 
                 src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_2.png" 
                 alt="Party event" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="w-full h-full flex items-center justify-center bg-secondary/50">
@@ -203,6 +210,8 @@ export default function PartyPage() {
               <img 
                 src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_3.png" 
                 alt="Party event" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="w-full h-full flex items-center justify-center bg-secondary/50">
@@ -221,6 +230,8 @@ export default function PartyPage() {
               <img 
                 src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_4.jpeg" 
                 alt="Party event" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="w-full h-full flex items-center justify-center bg-secondary/50">
