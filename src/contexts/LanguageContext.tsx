@@ -15,7 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.menu': 'Menu',
     'nav.about': 'About Us',
     'nav.gallery': 'Gallery',
-    'nav.reviews': 'Reviews',
+    'nav.party': 'Party & Events',
     'nav.order': 'Order Online',
     'nav.contact': 'Contact',
     
@@ -81,6 +81,16 @@ const translations: Record<Language, Record<string, string>> = {
     // Order
     'order.title': 'Order Online',
     'order.subtitle': 'Craving Kunafa? Get it delivered!',
+    
+    // Party & Events
+    'party.badge': 'Celebrate With Us',
+    'party.title': 'Party & Big Orders',
+    'party.subtitle': 'Make your celebrations sweeter with our authentic Turkish desserts. Perfect for birthdays, corporate events, and special occasions.',
+    'party.gallery': 'Our Events',
+    'party.cta.title': 'Ready to Book?',
+    'party.cta.subtitle': 'Contact us on WhatsApp for bulk orders, party bookings, and custom arrangements.',
+    'party.cta.button': 'Book on WhatsApp',
+    'party.cta.response': 'We typically respond within 30 minutes',
   },
   hi: {
     // Navbar
@@ -88,7 +98,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.menu': 'मेन्यू',
     'nav.about': 'हमारे बारे में',
     'nav.gallery': 'गैलरी',
-    'nav.reviews': 'समीक्षाएं',
+    'nav.party': 'पार्टी और इवेंट्स',
     'nav.order': 'ऑनलाइन ऑर्डर',
     'nav.contact': 'संपर्क',
     
@@ -154,6 +164,16 @@ const translations: Record<Language, Record<string, string>> = {
     // Order
     'order.title': 'ऑनलाइन ऑर्डर करें',
     'order.subtitle': 'कुनाफा की चाहत? इसे डिलीवर करवाएं!',
+    
+    // Party & Events
+    'party.badge': 'हमारे साथ जश्न मनाएं',
+    'party.title': 'पार्टी और बड़े ऑर्डर',
+    'party.subtitle': 'हमारी प्रामाणिक तुर्की मिठाइयों के साथ अपने उत्सव को और मीठा बनाएं। जन्मदिन, कॉर्पोरेट इवेंट्स और विशेष अवसरों के लिए एकदम सही।',
+    'party.gallery': 'हमारे इवेंट्स',
+    'party.cta.title': 'बुक करने के लिए तैयार?',
+    'party.cta.subtitle': 'बल्क ऑर्डर, पार्टी बुकिंग और कस्टम व्यवस्था के लिए व्हाट्सएप पर संपर्क करें।',
+    'party.cta.button': 'व्हाट्सएप पर बुक करें',
+    'party.cta.response': 'हम आमतौर पर 30 मिनट में जवाब देते हैं',
   },
 };
 
