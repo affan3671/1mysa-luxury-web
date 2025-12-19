@@ -85,7 +85,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Party & Events
     'party.badge': 'Celebrate With Us',
     'party.title': 'Party & Big Orders',
-    'party.subtitle': 'Make your celebrations sweeter with our authentic Turkish desserts. Perfect for birthdays, corporate events, and special occasions.',
+    'party.subtitle': 'Make your celebrations sweeter with authentic Turkish desserts and beverages—Turkish coffee, Turkish qahwa and tea, baklava, and kunafah—perfect for birthdays, corporate events, and special occasions.',
     'party.gallery': 'Our Events',
     'party.cta.title': 'Ready to Book?',
     'party.cta.subtitle': 'Contact us on WhatsApp for bulk orders, party bookings, and custom arrangements.',
@@ -168,7 +168,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Party & Events
     'party.badge': 'हमारे साथ जश्न मनाएं',
     'party.title': 'पार्टी और बड़े ऑर्डर',
-    'party.subtitle': 'हमारी प्रामाणिक तुर्की मिठाइयों के साथ अपने उत्सव को और मीठा बनाएं। जन्मदिन, कॉर्पोरेट इवेंट्स और विशेष अवसरों के लिए एकदम सही।',
+    'party.subtitle': 'अपने उत्सवों को प्रामाणिक तुर्की मिठाइयों और पेय पदार्थों - तुर्की कॉफी, तुर्की कहवा और चाय, बकलावा और कुनाफा - के साथ और भी मीठा बनाएं, जो जन्मदिन, कॉर्पोरेट कार्यक्रमों और विशेष अवसरों के लिए बिल्कुल उपयुक्त हैं।',
     'party.gallery': 'हमारे इवेंट्स',
     'party.cta.title': 'बुक करने के लिए तैयार?',
     'party.cta.subtitle': 'बल्क ऑर्डर, पार्टी बुकिंग और कस्टम व्यवस्था के लिए व्हाट्सएप पर संपर्क करें।',

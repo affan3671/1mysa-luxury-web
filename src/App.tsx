@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-import { useEffect } from "react";
+import { useEffect } from "react";  // your tailwind import
 
 import Index from "./pages/Index";
 import MenuPage from "./pages/MenuPage";

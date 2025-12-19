@@ -2,20 +2,24 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: { "2xl": "1400px" },
     },
     extend: {
       fontFamily: {
-        heading: ['"Cormorant Garamond"', 'serif'],
-        body: ['Montserrat', 'sans-serif'],
+        heading: ['"Cormorant Garamond"', "serif"],
+        body: ["Montserrat", "sans-serif"],
+        sans: ["Inter", "Noto Sans Devanagari", "ui-sans-serif", "system-ui"], // ← Hindi-safe
       },
       colors: {
         border: "hsl(var(--border))",
@@ -116,8 +120,10 @@ export default {
         "slide-in-left": "slide-in-left 0.6s ease-out forwards",
       },
       backgroundImage: {
-        'gold-gradient': 'linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--primary)), hsl(var(--gold-dark)))',
-        'cream-gradient': 'linear-gradient(180deg, hsl(var(--background)), hsl(var(--card)))',
+        "gold-gradient":
+          "linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--primary)), hsl(var(--gold-dark)))",
+        "cream-gradient":
+          "linear-gradient(180deg, hsl(var(--background)), hsl(var(--card)))",
       },
     },
   },

@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { motion } from 'framer-motion';
-import { MapPin, Instagram, ExternalLink } from 'lucide-react';
+import { MapPin, Instagram, ExternalLink, MessageCircle, } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function OrderPage() {
@@ -10,6 +10,14 @@ export default function OrderPage() {
 
   const orderPlatforms = [
     {
+  name: 'WhatsApp',
+  url: 'https://wa.me/919310579571',   // your existing number
+  color: 'bg-[#25D366]',
+  icon: MessageCircle,
+  description: language === 'en'
+    ? 'Order directly on WhatsApp'
+    : 'व्हाट्सएप पर सीधे ऑर्डर करें',
+},    {
       name: 'Zomato',
       url: 'https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi',
       color: 'bg-[#E23744]',

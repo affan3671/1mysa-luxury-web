@@ -20,7 +20,6 @@ const Index = () => {
       <GallerySection />
       <ContactSection />
       <PartyPage />
-      <Footer />
       <FloatingButtons />
     </main>
   );

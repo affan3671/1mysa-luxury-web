@@ -53,13 +53,14 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <img src="/images/logo.jpg" alt="1Mysa Cafe" className="h-14 w-auto rounded-lg" />
               <div>
-                <h3 className="text-2xl font-heading font-bold text-foreground">
-                  1Mysa Café
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {language === 'en' ? '1मैसा कैफे' : '1Mysa Café'}
-                </p>
-              </div>
+  <h3 className="text-2xl font-heading font-bold text-foreground tabular-nums">
+    1Mysa Cafe
+  </h3>
+  <p className="text-sm text-muted-foreground">
+    {language === 'en' ? '1Mysa Cafe' : '1मैसा कैफे'}
+  </p>
+</div>
+
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               {language === 'en' 
@@ -152,7 +153,7 @@ export default function Footer() {
             © {new Date().getFullYear()} 1Mysa Café. {t('footer.rights')}
           </p>
           <p className="text-sm text-muted-foreground">
-            {language === 'en' ? 'टेस्ट में दिलावरी, दिल से हिंदुस्तानी' : 'Taste mein Dilawari, Dil se Hindustani'}
+            {language === 'en' ? 'टेस्ट में विलायती, दिलसे हिन्दुस्तानी' : 'Taste mein Dilawari, Dil se Hindustani'}
           </p>
         </motion.div>
       </div>

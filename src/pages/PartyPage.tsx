@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { motion } from 'framer-motion';
-import { PartyPopper, Cake, Users, MessageCircle } from 'lucide-react';
+import { PartyPopper, Cake, Users, MessageCircle, HeartHandshake, Music } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function PartyPage() {
@@ -19,6 +19,8 @@ export default function PartyPage() {
     { icon: PartyPopper, labelEn: 'Birthday Parties', labelHi: 'जन्मदिन की पार्टियां' },
     { icon: Cake, labelEn: 'Special Events', labelHi: 'विशेष आयोजन' },
     { icon: Users, labelEn: 'Corporate Orders', labelHi: 'कॉर्पोरेट ऑर्डर' },
+    { icon: HeartHandshake, labelEn: 'Wedding Functions', labelHi: 'विवाह समारोह' },
+    { icon: Music, labelEn: 'Parties and Music Festivals', labelHi: 'पार्टियाँ और संगीत समारोह' },
   ];
 
   return (
