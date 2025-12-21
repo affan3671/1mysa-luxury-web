@@ -14,6 +14,7 @@ import PartyPage from "./pages/PartyPage";
 import OrderPage from "./pages/OrderPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
+import FAQs from "./pages/FAQs";
 
 const GA_ID = "G-WDYZL10G97";
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ function App() {
               <Route path="/menu" element={<MenuPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/faq" element={<FAQs/>} />
               <Route path="/party" element={<PartyPage />} />
               <Route path="/order" element={<OrderPage />} />
               <Route path="/contact" element={<ContactPage />} />

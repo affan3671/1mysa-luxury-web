@@ -8,6 +8,7 @@ import ContactSection from '@/components/ContactSection';
 import PartyPage from './PartyPage';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
+import FAQs from './FAQs';
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <AboutSection />
       <ReviewsSection />
       <GallerySection />
+      <FAQs />
       <ContactSection />
       <PartyPage />
       <FloatingButtons />
