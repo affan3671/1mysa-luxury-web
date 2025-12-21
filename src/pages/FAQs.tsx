@@ -235,8 +235,6 @@ export default function FAQPage() {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
       <FloatingButtons />
     </main>
   );
