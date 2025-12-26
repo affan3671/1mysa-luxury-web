@@ -57,7 +57,7 @@ export default function Footer() {
     1Mysa Cafe
   </h3>
   <p className="text-sm text-muted-foreground">
-    {language === 'en' ? '1Mysa Cafe' : '1मैसा कैफे'}
+    {language === 'en' ? '1Mysa Cafe' : '1मायसा कैफे'}
   </p>
 </div>
 
