@@ -6,8 +6,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const galleryImages = [
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg', category: 'food', alt: 'Kunafa' },
   { src: '/images/399361128_759025669573090_1213483921279875783_n.jpg', category: 'food', alt: 'Turkish coffee' },
-  //{ src: '/images/403859769_659643392951136_6089730639769534153_n.jpg', category: 'food', alt: 'Baklava' },
-  //{ src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo1.png', category: 'food', alt: 'Coffee brewing' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Turkish_Coffee_Post_NEW.png', category: 'food', alt: 'Sand Caffeine Turkish Coffee' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Turkish_Coffee_Thumbnil_New_Instagram.png', category: 'food', alt: 'The Taste of Tradition' },
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo2.png', category: 'food', alt: 'Coffee pouring' },
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.png', category: 'food', alt: 'Kunafa' },
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo5.png', category: 'food', alt: 'Coffee barista' },

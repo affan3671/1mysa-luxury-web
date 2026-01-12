@@ -25,7 +25,7 @@ export default function AboutSection() {
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src="/images/2024-06-14.jpg"
-                alt="1Mysa Cafe Interior"
+                alt="1Mysa Cafe"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-[280px] sm:h-[400px] lg:h-[500px] object-cover"
