@@ -83,7 +83,7 @@ export const menuItems: MenuItem[] = [
     nameHi: 'लोटस बिस्कॉफ कनाफेह/कुनाफा',
     description: 'Crispy kunafa layered with creamy filling and rich Lotus Biscoff flavor.',
     descriptionHi: 'मलाईदार भरावन और लोटस बिस्कॉफ के भरपूर स्वाद से भरपूर कुरकुरे कुनाफा की परतें।',
-    price: 599,
+    price: 719,
     category: 'kunafa',
     image: '/images/kunafa/lotus-biscoff-kunafa.jpg',
     isPopular: true,
