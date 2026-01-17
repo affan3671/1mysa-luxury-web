@@ -79,13 +79,15 @@ export default function ContactSection() {
               transition={{ delay: 0.3 }}
               className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
             >
-              <a
-                href="tel:+919310579571"
-                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg sm:rounded-xl gold-shimmer text-coffee font-semibold text-sm sm:text-base transition-all hover:scale-105"
-              >
-                <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" />
-                {t('contact.callnow')}
-              </a>
+            <motion.a
+              href="tel:+919310579571"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary text-primary-foreground text-xs sm:text-sm font-medium transition-colors hover:bg-primary/90"
+            >
+              <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" />
+              {t('contact.callnow')}
+            </motion.a>
               <a
                 href="https://wa.me/919310579571"
                 target="_blank"

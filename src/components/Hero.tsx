@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Star, Utensils, Car, Truck, CheckCircle } from 'lucide-react';
+import { MapPin, Star, Utensils, Car, Truck, CheckCircle, Youtube } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const heroImages = [
-  'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg',
-  'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Sand_Caffeine_Infused_Turkish_Coffee.jpg',
-  'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/cashew_square_baklava.jpg',
+  'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164250%20(1).png',
+  'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20165033.png',
+  'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164534.png',
 ];
 
 const features = [
@@ -28,7 +28,7 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    const target = 249;
+    const target = 259;
     const duration = 1500;
     const steps = 40;
     const increment = target / steps;
@@ -122,7 +122,7 @@ export default function Hero() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-3 sm:mb-4 px-2"
           >
-            <span className="gold-text">{language === 'en' ? 'Kunafa. Coffee. Comfort.' : 'कुनाफा। कॉफी। आराम।'}</span>
+            <span className="gold-text">{language === 'en' ? 'Kunafa. Coffee. Baklava.' : 'कुनाफा। कॉफी। बाकलावा'}</span>
           </motion.h1>
 
           <motion.p
@@ -161,6 +161,15 @@ export default function Hero() {
             >
               <MapPin className="w-5 h-5 flex-shrink-0" />
               {language === 'en' ? 'Get Directions' : 'दिशा-निर्देश'}
+            </a>
+            <a
+              href="https://www.youtube.com/@1mysacafe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-5 py-3 rounded-lg bg-[#E23744] text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 hover:bg-[#cb303c] shadow-lg"
+            >
+              <Youtube className="w-5 h-5 flex-shrink-0" />
+              {language === 'en' ? 'Watch Our Perfection' : 'YouTube पर देखें'}
             </a>
           </motion.div>
 

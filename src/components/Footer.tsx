@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Instagram, MapPin, Phone, MessageCircle } from 'lucide-react';
+import { Instagram, MapPin, Phone, MessageCircle, Youtube, } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -30,10 +30,25 @@ const socialLinks = [
     icon: Instagram,
   },
   {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/profile.php?id=61586649923981',
+    icon: () => (
+      <span className="w-5 h-5 bg-[#1877F2] rounded-full flex items-center justify-center">
+        <span className="text-white font-bold text-sm">f</span>
+      </span>
+    ),
+    customStyle: 'bg-[#1877F2] hover:bg-[#0a66c2]',
+  },
+  {
+    name: 'YouTube',
+    url: 'https://www.youtube.com/@1mysacafe',
+    icon: Youtube
+  },
+  {
     name: 'WhatsApp',
     url: 'https://wa.me/919310579571',
     icon: MessageCircle,
-  },
+  }
 ];
 
 export default function Footer() {
