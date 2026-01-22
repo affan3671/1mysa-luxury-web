@@ -166,7 +166,7 @@ export const menuItems: MenuItem[] = [
     nameHi: 'कुनेफे/कुनाफा टॉपिंग कॉम्बो',
     description: 'Crispy kunafa topped with a mix of rich, indulgent flavors.',
     descriptionHi: 'कुरकुरे कुनाफा के ऊपर स्वादिष्ट और लजीज स्वादों का मिश्रण डाला गया है।',
-    price: "Price varies based on topping selection", // Price varies based on topping selection
+    price: 0, // Price varies based on topping selection
     category: 'kunafa',
     image: '/images/kunafa/combo_topping_kunafa.jpg',
   },
