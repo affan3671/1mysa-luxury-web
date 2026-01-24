@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Coffee, Cake, Cookie, GlassWater, Sparkles } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Coffee, Cake, Cookie, Sparkles, Play } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { menuItems, MenuItem } from '@/data/menuData';
+import CategoryVideoSection from './CategoryVideoSection';
 
 const categories = [
   { id: 'coffee', icon: Coffee, key: 'menu.coffee', image: '/images/399361128_759025669573090_1213483921279875783_n.jpg' },
   { id: 'kunafa', icon: Cake, key: 'menu.kunafa', image: '/images/cheese-pull-w.jpg' },
   { id: 'baklava', icon: Cookie, key: 'menu.baklava', image: '/images/403859769_659643392951136_6089730639769534153_n.jpg' },
-  //{ id: 'drinks', icon: GlassWater, key: 'menu.drinks', image: '/images/Coca-Cola_s_Cans.jpg' },
 ];
 
 interface MenuSectionProps {
@@ -18,6 +18,7 @@ interface MenuSectionProps {
 
 export default function MenuSection({ showAll = false, hideHeader = false }: MenuSectionProps) {
   const [activeCategory, setActiveCategory] = useState<string>('kunafa');
+  const [activeTab, setActiveTab] = useState<'menu' | 'videos'>('menu');
   const { t, language } = useLanguage();
 
   const filteredItems = showAll
@@ -57,14 +58,17 @@ export default function MenuSection({ showAll = false, hideHeader = false }: Men
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12"
+            className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8"
           >
             {categories.map((cat) => {
               const Icon = cat.icon;
               return (
                 <button
                   key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
+                  onClick={() => {
+                    setActiveCategory(cat.id);
+                    setActiveTab('menu');
+                  }}
                   className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-medium transition-all duration-300 ${
                     activeCategory === cat.id
                       ? 'gold-shimmer text-coffee shadow-lg scale-105'
@@ -79,45 +83,177 @@ export default function MenuSection({ showAll = false, hideHeader = false }: Men
           </motion.div>
         )}
 
-        {/* Menu Items */}
-        {showAll ? (
-          <div className="space-y-10 sm:space-y-16">
-            {groupedItems?.map((category) => (
-              <div key={category.id}>
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8"
-                >
-                  <category.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary flex-shrink-0" />
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-foreground">
-                    {t(category.key)}
-                  </h3>
-                  <div className="flex-1 h-px bg-gradient-to-r from-primary/50 to-transparent" />
-                </motion.div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                  {category.items.map((item, index) => (
-                    <MenuCard key={item.id} item={item} index={index} language={language} />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {filteredItems.map((item, index) => (
-              <MenuCard
-                key={item.id}
-                item={item}
-                index={index}
-                language={language}
-              />
-            ))}
-          </div>
+        {/* Menu/Videos Toggle - Only show when not showing all */}
+        {!showAll && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex justify-center mb-6 sm:mb-8"
+          >
+            <div className="inline-flex bg-card rounded-xl p-1 border border-border shadow-sm">
+              <button
+                onClick={() => setActiveTab('menu')}
+                className={`flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-sm sm:text-base font-medium transition-all duration-300 ${
+                  activeTab === 'menu'
+                    ? 'bg-primary text-primary-foreground shadow-md'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                }`}
+              >
+                <Cake className="w-4 h-4" />
+                {language === 'en' ? 'Menu' : 'मेन्यू'}
+              </button>
+              <button
+                onClick={() => setActiveTab('videos')}
+                className={`flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-sm sm:text-base font-medium transition-all duration-300 ${
+                  activeTab === 'videos'
+                    ? 'bg-primary text-primary-foreground shadow-md'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                }`}
+              >
+                <Play className="w-4 h-4" />
+                {language === 'en' ? 'Watch Videos' : 'वीडियो देखें'}
+              </button>
+            </div>
+          </motion.div>
         )}
+
+        {/* Content */}
+        <AnimatePresence mode="wait">
+          {showAll ? (
+            <div className="space-y-10 sm:space-y-16">
+              {groupedItems?.map((category) => (
+                <CategorySection
+                  key={category.id}
+                  category={category}
+                  language={language}
+                  t={t}
+                />
+              ))}
+            </div>
+          ) : activeTab === 'menu' ? (
+            <motion.div
+              key="menu"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+            >
+              {filteredItems.map((item, index) => (
+                <MenuCard
+                  key={item.id}
+                  item={item}
+                  index={index}
+                  language={language}
+                />
+              ))}
+            </motion.div>
+          ) : (
+            <motion.div
+              key="videos"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <CategoryVideoSection category={activeCategory as 'coffee' | 'kunafa' | 'baklava'} />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
+  );
+}
+
+// Category Section component for showAll view
+interface CategorySectionProps {
+  category: {
+    id: string;
+    icon: React.ComponentType<{ className?: string }>;
+    key: string;
+    items: MenuItem[];
+  };
+  language: 'en' | 'hi';
+  t: (key: string) => string;
+}
+
+function CategorySection({ category, language, t }: CategorySectionProps) {
+  const [activeTab, setActiveTab] = useState<'menu' | 'videos'>('menu');
+
+  return (
+    <div>
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8"
+      >
+        <div className="flex items-center gap-2 sm:gap-3">
+          <category.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary flex-shrink-0" />
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-foreground">
+            {t(category.key)}
+          </h3>
+        </div>
+        
+        {/* Menu/Videos Toggle for each category */}
+        <div className="flex items-center gap-2 ml-0 sm:ml-4">
+          <div className="inline-flex bg-card rounded-lg p-0.5 border border-border shadow-sm">
+            <button
+              onClick={() => setActiveTab('menu')}
+              className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ${
+                activeTab === 'menu'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              <Cake className="w-3 h-3 sm:w-4 sm:h-4" />
+              {language === 'en' ? 'Menu' : 'मेन्यू'}
+            </button>
+            <button
+              onClick={() => setActiveTab('videos')}
+              className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ${
+                activeTab === 'videos'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              <Play className="w-3 h-3 sm:w-4 sm:h-4" />
+              {language === 'en' ? 'Videos' : 'वीडियो'}
+            </button>
+          </div>
+        </div>
+        
+        <div className="flex-1 h-px bg-gradient-to-r from-primary/50 to-transparent hidden sm:block" />
+      </motion.div>
+      
+      <AnimatePresence mode="wait">
+        {activeTab === 'menu' ? (
+          <motion.div
+            key="menu"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+          >
+            {category.items.map((item, index) => (
+              <MenuCard key={item.id} item={item} index={index} language={language} />
+            ))}
+          </motion.div>
+        ) : (
+          <motion.div
+            key="videos"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <CategoryVideoSection category={category.id as 'coffee' | 'kunafa' | 'baklava'} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 
@@ -203,7 +339,12 @@ function MenuCard({
           {language === 'en' ? item.description : item.descriptionHi}
         </p>
         <div className="flex items-center justify-between">
-          <span className="text-lg sm:text-xl font-bold gold-text">₹{item.price}</span>
+          <span className="text-lg sm:text-xl font-bold gold-text">
+            {item.price === 0 
+              ? (language === 'en' ? 'Price varies' : 'मूल्य भिन्न होता है')
+              : `₹${item.price}`
+            }
+          </span>
           <motion.a
             href="https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi/order"
             target="_blank"
