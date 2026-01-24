@@ -15,7 +15,6 @@ import OrderPage from "./pages/OrderPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 import FAQs from "./pages/FAQs";
-import sitemap from "./sitemap.xml?url";
 
 const GA_ID = "G-WDYZL10G97";
 const queryClient = new QueryClient();
@@ -52,7 +51,6 @@ function App() {
               <Route path="/party" element={<PartyPage />} />
               <Route path="/order" element={<OrderPage />} />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="/sitemap.xml" element={sitemap} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
