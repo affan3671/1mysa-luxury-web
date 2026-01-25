@@ -5,6 +5,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function ContactSection() {
   const { t } = useLanguage();
 
+  const MAPS_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY;
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -79,15 +81,15 @@ export default function ContactSection() {
               transition={{ delay: 0.3 }}
               className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
             >
-            <motion.a
-              href="tel:+919310579571"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary text-primary-foreground text-xs sm:text-sm font-medium transition-colors hover:bg-primary/90"
-            >
-              <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" />
-              {t('contact.callnow')}
-            </motion.a>
+              <motion.a
+                href="tel:+919310579571"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary text-primary-foreground text-xs sm:text-sm font-medium transition-colors hover:bg-primary/90"
+              >
+                <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" />
+                {t('contact.callnow')}
+              </motion.a>
               <a
                 href="https://wa.me/919310579571"
                 target="_blank"
@@ -117,7 +119,7 @@ export default function ContactSection() {
             className="h-[280px] sm:h-[350px] lg:h-full lg:min-h-[400px] rounded-xl sm:rounded-2xl overflow-hidden shadow-xl border border-border"
           >
             <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=1Mysa+Cafe+Kunafa+Turkish+Coffee+Shaheen+Bagh+New+Delhi&zoom=17"
+              src={`https://www.google.com/maps/embed/v1/place?key=${MAPS_KEY}&q=1Mysa+Cafe+Kunafa+Turkish+Coffee+Shaheen+Bagh+New+Delhi&zoom=17`}
               width="100%"
               height="100%"
               style={{ border: 0 }}
