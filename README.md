@@ -39,8 +39,7 @@ npm run build
 # Preview production build
 npm run preview
 The build generates static files in dist/ suitable for deployment on Vercel, Netlify, AWS S3, or any static host.
-Architecture
-Copy
+
 src/
 ├── components/
 │   ├── ui/              # Reusable UI components (buttons, cards, modals)
@@ -50,10 +49,12 @@ src/
 ├── hooks/               # Custom React hooks
 ├── lib/                 # Utility functions and helpers
 └── styles/              # Global styles and Tailwind config
+
 Customization
 Branding: Edit tailwind.config.ts to modify the color palette, typography scale, and spacing system. The design tokens are centralized there.
 Content: Page content is component-driven. Update text and imagery in the respective section components under src/components/sections/.
 Assets: Static files (images, fonts, videos) belong in public/. Reference them with root-relative paths.
+
 Development Notes
 Strict TypeScript configuration enabled
 ESLint rules for React Hooks and accessibility
@@ -66,5 +67,6 @@ Firefox (last 2 versions)
 Safari (last 2 versions)
 Mobile Safari iOS 14+
 Chrome Android
+
 License
 MIT License - feel free to use this as a template for similar projects.
