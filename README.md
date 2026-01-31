@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# 1mysa-luxury-web
 
-## Project info
+Frontend application for 1MYSA luxury brand. Built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Project Overview
 
-## How can I edit this code?
+This is a responsive, high-performance web application designed for a luxury fashion/lifestyle brand. The architecture prioritizes clean component design, type safety, and fast load times.
 
-There are several ways of editing your application.
+The site features a minimalist aesthetic with smooth interactions, optimized image loading, and a component-based architecture that allows for easy content updates.
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Vite** - Fast build tool with HMR
+- **React 18** - Component-based UI with hooks
+- **TypeScript** - Static type checking throughout
+- **Tailwind CSS** - Utility-first styling system
+- **shadcn/ui** - Accessible UI primitives (Radix-based)
+- **Lucide React** - Consistent iconography
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+```bash
+# Clone repository
+git clone https://github.com/affan3671/1mysa-luxury-web.git
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Install dependencies
+cd 1mysa-luxury-web
+npm install
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
-```
+Application runs at http://localhost:5173.
+Build & Deployment
+bash
+Copy
+# Production build
+npm run build
 
-**Edit a file directly in GitHub**
+# Preview production build
+npm run preview
+The build generates static files in dist/ suitable for deployment on Vercel, Netlify, AWS S3, or any static host.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+src/
+├── components/
+│   ├── ui/              # Reusable UI components (buttons, cards, modals)
+│   ├── layout/          # Layout wrappers (header, footer, navigation)
+│   └── sections/        # Page sections (hero, gallery, features)
+├── pages/               # Route components
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility functions and helpers
+└── styles/              # Global styles and Tailwind config
 
-**Use GitHub Codespaces**
+Customization
+Branding: Edit tailwind.config.ts to modify the color palette, typography scale, and spacing system. The design tokens are centralized there.
+Content: Page content is component-driven. Update text and imagery in the respective section components under src/components/sections/.
+Assets: Static files (images, fonts, videos) belong in public/. Reference them with root-relative paths.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Development Notes
+Strict TypeScript configuration enabled
+ESLint rules for React Hooks and accessibility
+Components designed for composition over inheritance
+Image optimization handled at build time
+Responsive breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+Browser Support
+Chrome/Edge (last 2 versions)
+Firefox (last 2 versions)
+Safari (last 2 versions)
+Mobile Safari iOS 14+
+Chrome Android
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+License
+MIT License - feel free to use this as a template for similar projects.
