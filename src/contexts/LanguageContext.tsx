@@ -77,7 +77,7 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.tagline': 'Baked with Love in Shaheen Bagh.',
     'footer.quicklinks': 'Quick Links',
     'footer.connect': 'Connect With Us',
-    'footer.rights': 'All rights reserved.',
+    'footer.rights': 'All rights reserved. ',
     
     // Order
     'order.title': 'Order Online',
