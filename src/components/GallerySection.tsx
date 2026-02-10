@@ -32,6 +32,7 @@ const galleryMedia: MediaItem[] = [
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo8.png', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo9.png', category: 'food', alt: 'Cafe menu', type: 'image' },
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.jpg', category: 'food', alt: 'Coffee serving', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/1Mysa_Perfect_Kunafa_Post.jpg', category: 'food', alt: 'Customize Your Kunafa', type: 'image' },
   
   // === ADD YOUR VIDEOS HERE ===
   // Example video entries:

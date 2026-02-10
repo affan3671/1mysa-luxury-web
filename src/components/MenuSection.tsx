@@ -346,7 +346,7 @@ function MenuCard({
             }
           </span>
           <motion.a
-            href="https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi/order"
+            href={`https://wa.me/919310579571?text=I Would Like To Order: ${item.name} (${language === 'en' ? item.name : item.name})`}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

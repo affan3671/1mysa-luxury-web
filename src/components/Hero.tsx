@@ -84,7 +84,7 @@ export default function Hero() {
               fetchPriority="high"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-background" />
           </motion.div>
         </AnimatePresence>
 
@@ -148,7 +148,7 @@ export default function Hero() {
               transition={{ delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-white/85 mb-6 sm:mb-8 font-light"
             >
-              {language === 'en' ? 'The Heart of Shaheen Bagh' : 'शाहीन बाग का दिल'}
+              {language === 'en' ? 'The Heart of Middle East' : 'मध्य पूर्व का दिल'}
             </motion.p>
 
             {/* CTA Buttons */}
