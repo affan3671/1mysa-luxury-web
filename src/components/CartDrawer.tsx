@@ -23,6 +23,9 @@ export default function CartDrawer() {
     const message = `Hi! I'd like to order:\n\n${lines.join('\n')}\n\n${totalPrice > 0 ? `Subtotal: ₹${totalPrice}\n` : ''}Thank you!`;
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
+    // Clear cart after checkout
+    clearCart();
+    setIsOpen(false);
   };
 
   return (
