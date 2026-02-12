@@ -4,7 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-import { useEffect } from "react";  // your tailwind import
+import { CartProvider } from "@/contexts/CartContext";
+import CartDrawer from "@/components/CartDrawer";
+import CartFloatingButton from "@/components/CartFloatingButton";
+import { useEffect } from "react";
 
 import Index from "./pages/Index";
 import MenuPage from "./pages/MenuPage";
@@ -36,25 +39,29 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <GATracker />
+        <CartProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <GATracker />
+              <CartDrawer />
+              <CartFloatingButton />
 
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/menu" element={<MenuPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/faq" element={<FAQs/>} />
-              <Route path="/party" element={<PartyPage />} />
-              <Route path="/order" element={<OrderPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/menu" element={<MenuPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/gallery" element={<GalleryPage />} />
+                <Route path="/faq" element={<FAQs/>} />
+                <Route path="/party" element={<PartyPage />} />
+                <Route path="/order" element={<OrderPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </TooltipProvider>
+        </CartProvider>
       </LanguageProvider>
     </QueryClientProvider>
   );
