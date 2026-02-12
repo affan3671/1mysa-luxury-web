@@ -29,7 +29,7 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    const target = 259;
+    const target = 255;
     const duration = 1500;
     const steps = 40;
     const increment = target / steps;
