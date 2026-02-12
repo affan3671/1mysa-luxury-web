@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Coffee, Cake, Cookie, Sparkles, Play } from 'lucide-react';
+import { Coffee, Cake, Cookie, Sparkles, Play, ShoppingCart, Check } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useCart } from '@/contexts/CartContext';
 import { menuItems, MenuItem } from '@/data/menuData';
 import CategoryVideoSection from './CategoryVideoSection';
 
@@ -267,6 +268,14 @@ function MenuCard({
   language: 'en' | 'hi';
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [justAdded, setJustAdded] = useState(false);
+  const { addItem } = useCart();
+
+  const handleAddToCart = () => {
+    addItem(item);
+    setJustAdded(true);
+    setTimeout(() => setJustAdded(false), 1200);
+  };
 
   return (
     <motion.div
@@ -281,7 +290,7 @@ function MenuCard({
       {/* Image */}
       <div className="relative h-40 sm:h-48 overflow-hidden">
         <motion.img
-          src={item.image || 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg'}
+          src={item.image || '/placeholder.svg'}
           alt={item.name}
           loading="lazy"
           decoding="async"
@@ -345,16 +354,36 @@ function MenuCard({
               : `₹${item.price}`
             }
           </span>
-          <motion.a
-            href={`https://wa.me/919310579571?text=I Would Like To Order: ${item.name} (${language === 'en' ? item.name : item.name})`}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary text-primary-foreground text-xs sm:text-sm font-medium transition-colors hover:bg-primary/90"
-          >
-            {language === 'en' ? 'Order Now' : 'अभी ऑर्डर करें'}
-          </motion.a>
+          <div className="flex items-center gap-1.5">
+            {/* Add to Cart */}
+            <motion.button
+              onClick={handleAddToCart}
+              whileTap={{ scale: 0.9 }}
+              className={`p-2 rounded-lg border transition-all duration-300 ${
+                justAdded
+                  ? 'bg-accent text-accent-foreground border-accent'
+                  : 'border-border text-foreground hover:bg-primary/10 hover:border-primary/30'
+              }`}
+              aria-label="Add to cart"
+            >
+              {justAdded ? (
+                <Check className="w-4 h-4" />
+              ) : (
+                <ShoppingCart className="w-4 h-4" />
+              )}
+            </motion.button>
+            {/* Order Now */}
+            <motion.a
+              href={`https://wa.me/919310579571?text=I Would Like To Order: ${item.name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary text-primary-foreground text-xs sm:text-sm font-medium transition-colors hover:bg-primary/90"
+            >
+              {language === 'en' ? 'Order Now' : 'ऑर्डर करें'}
+            </motion.a>
+          </div>
         </div>
       </div>
     </motion.div>
