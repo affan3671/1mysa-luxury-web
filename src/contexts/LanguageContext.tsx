@@ -73,6 +73,21 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.whatsapp': 'WhatsApp',
     'contact.directions': 'Get Directions',
     
+  'delivery.free': 'FREE DELIVERY',
+  'delivery.noCharges': 'No delivery charges by us — ever!',
+  
+  'customization.zeroSweetness': 'ZERO SWEETNESS',
+  'customization.option': 'OPTION', 
+  'customization.sugarFree': '100% sugar-free customization available',
+  'customization.noSugar': 'No sugar',
+  'customization.natural': 'Natural taste',
+  
+  'delivery.always': 'ALWAYS',
+  'delivery.fast': 'Fast delivery',
+  'delivery.guaranteed': 'Guaranteed',
+
+
+    
     // Footer
     'footer.tagline': 'Baked with Love in Shaheen Bagh.',
     'footer.quicklinks': 'Quick Links',
