@@ -1,4 +1,1 @@
-# config.example.toml
-VITE_SUPABASE_PROJECT_ID = "your_project_id_here"
-VITE_SUPABASE_URL = "your_supabase_url_here"
-VITE_SUPABASE_PUBLISHABLE_KEY = "your_public_key_here"
+project_id = "zpdbjpaatpydeekemqaz"
