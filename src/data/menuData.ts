@@ -238,7 +238,7 @@ export const menuItems: MenuItem[] = [
   //Premium Imports
   {
     id: 'p-1',
-    name: 'Kinza Lemon',
+    name: 'Kinza Lemon (300ml)',
     nameHi: 'किन्ज़ा नींबू',
     description: 'Crisp, zesty lemon-lime fizz in a bold green can—pure citrus refreshment with every bubbly sip.',
     descriptionHi: 'एक बोल्ड हरे कैन में कुरकुरा, ज़ायकेदार नींबू-लाइम फ़िज़ - हर बुदबुदाती घूंट के साथ शुद्ध साइट्रस ताज़गी।',
@@ -249,7 +249,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: 'p-2',
-    name: 'Kinza Orange',
+    name: 'Kinza Orange (300ml)',
     nameHi: 'किन्ज़ा ओरेंज',
     description: 'Bright, sun-kissed orange fizz bursting with tangy-sweet citrus flavor—classic refreshment in every bubbly sip.',
     descriptionHi: 'चमकदार, धूप से नहाया हुआ संतरे का फ़िज़, जिसमें खट्टा-मीठा सिट्रस स्वाद है—हर चुस्की में क्लासिक ताज़गी।',
@@ -260,7 +260,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: 'p-3',
-    name: 'Kinza Diet Cola',
+    name: 'Kinza Diet Cola (300ml)',
     nameHi: 'किन्ज़ा डायट कोला',
     description: 'Bold cola taste without the sugar—zero-calorie fizz for the refreshment you crave, guilt-free.',
     descriptionHi: 'शुद्ध नारंगी के स्वाद के साथ बिना शुगर के बोल्ड कॉला स्वाद—हर बुदबुदाती घूंट के साथ ताज़गी।',
