@@ -5,7 +5,7 @@ export interface MenuItem {
   description: string;
   descriptionHi: string;
   price: number;
-  category: 'coffee' | 'kunafa' | 'baklava' | 'drinks';
+  category: 'coffee' | 'kunafa' | 'baklava' | 'premium_imports';
   image?: string;
   isPopular?: boolean;
   isNew?: boolean;
@@ -235,37 +235,39 @@ export const menuItems: MenuItem[] = [
     image: '/images/baklava/chocolate_square_baklava.jpg',
   },
 
-  // Beverages
-  /*{
-    id: 'd-1',
-    name: 'Sand Black Caffeine(Turkish Strong) ',
-    nameHi: 'सैंड ब्लैक कैफीन (तुर्की स्ट्रॉन्ग)',
-    description: 'Bold, intense Turkish coffee with a deep, powerful flavor.',
-    descriptionHi: 'एक दमदार और तीव्र स्वाद वाली तुर्की कॉफी।',
-    price: 30,
-    category: 'drinks',
-    image: '/images/bevarage.jpg',
+  //Premium Imports
+  {
+    id: 'p-1',
+    name: 'Kinza Lemon',
+    nameHi: 'किन्ज़ा नींबू',
+    description: 'Crisp, zesty lemon-lime fizz in a bold green can—pure citrus refreshment with every bubbly sip.',
+    descriptionHi: 'एक बोल्ड हरे कैन में कुरकुरा, ज़ायकेदार नींबू-लाइम फ़िज़ - हर बुदबुदाती घूंट के साथ शुद्ध साइट्रस ताज़गी।',
+    price: 89,
+    category: 'premium_imports',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/kinza_lemon.webp',
     isPopular: true,
   },
   {
-    id: 'd-2',
-    name: 'Sand Caffeine (Turkish Milk Based)',
-    nameHi: 'सैंड कैफीन (तुर्की दूध आधारित)',
-    description: 'Smooth Turkish coffee blended with milk for a rich, creamy taste.',
-    descriptionHi: 'गाढ़े और मलाईदार स्वाद के लिए दूध के साथ मिश्रित मुलायम तुर्की कॉफी।',
-    price: 35,
-    category: 'drinks',
-    image: '/images/bevarage.jpg',
+    id: 'p-2',
+    name: 'Kinza Orange',
+    nameHi: 'किन्ज़ा ओरेंज',
+    description: 'Bright, sun-kissed orange fizz bursting with tangy-sweet citrus flavor—classic refreshment in every bubbly sip.',
+    descriptionHi: 'चमकदार, धूप से नहाया हुआ संतरे का फ़िज़, जिसमें खट्टा-मीठा सिट्रस स्वाद है—हर चुस्की में क्लासिक ताज़गी।',
+    price: 89,
+    category: 'premium_imports',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/kinza_orange.webp',
+    isPopular: true,
   },
   {
-    id: 'd-3',
-    name: '1 Mysa Beaten Caffeine',
-    nameHi: '1 मायसा बीटन कैफीन',
-    description: 'Light, smooth coffee with a soft, creamy finish.',
-    descriptionHi: 'हल्की, मुलायम कॉफी जिसका स्वाद मलाईदार और हल्का होता है।',
-    price: 55,
-    category: 'drinks',
-    image: '/images/bevarage.jpg',
+    id: 'p-3',
+    name: 'Kinza Diet Cola',
+    nameHi: 'किन्ज़ा डायट कोला',
+    description: 'Bold cola taste without the sugar—zero-calorie fizz for the refreshment you crave, guilt-free.',
+    descriptionHi: 'शुद्ध नारंगी के स्वाद के साथ बिना शुगर के बोल्ड कॉला स्वाद—हर बुदबुदाती घूंट के साथ ताज़गी।',
+    price: 89,
+    category: 'premium_imports',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/kinza_diet_cola.jpg',
+    isPopular: true,
   },
   /*{
     id: 'd-4',
