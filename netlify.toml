@@ -6,5 +6,5 @@
 SECRETS_SCAN_OMIT_KEYS = "VITE_GOOGLE_MAPS_KEY,VITE_SUPABASE_PUBLISHABLE_KEY"
 [dev]
   command = "npm run dev"
-  port = 8080
+  port = 8888
   targetPort = 8080
