@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Coffee, Cake, Cookie, Sparkles, Play, ShoppingCart, Check } from 'lucide-react';
+import { Coffee, Cake, Cookie, Sparkles, Play, ShoppingCart, Check, Crown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useCart } from '@/contexts/CartContext';
 import { menuItems, MenuItem } from '@/data/menuData';
 import CategoryVideoSection from './CategoryVideoSection';
 
 const categories = [
-  { id: 'coffee', icon: Coffee, key: 'menu.coffee', image: '/images/399361128_759025669573090_1213483921279875783_n.jpg' },
-  { id: 'kunafa', icon: Cake, key: 'menu.kunafa', image: '/images/cheese-pull-w.jpg' },
-  { id: 'baklava', icon: Cookie, key: 'menu.baklava', image: '/images/403859769_659643392951136_6089730639769534153_n.jpg' },
+  { id: 'coffee', icon: Coffee, key: 'menu.coffee'},
+  { id: 'kunafa', icon: Cake, key: 'menu.kunafa'},
+  { id: 'baklava', icon: Cookie, key: 'menu.baklava'},
+  { id: 'premium_imports', icon: Crown, key: 'menu.premium_imports'},
 ];
 
 interface MenuSectionProps {
