@@ -57,8 +57,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-card border-t border-border relative overflow-hidden">
-      {/* Ramadan pattern */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'repeating-conic-gradient(hsl(var(--primary)) 0% 25%, transparent 0% 50%)', backgroundSize: '30px 30px' }} />
+      {/* Subtle dot pattern */}
+      <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
