@@ -9,7 +9,6 @@ import PartyPage from './PartyPage';
 import FloatingButtons from '@/components/FloatingButtons';
 import FAQs from './FAQs';
 import RamadanBanner from '@/components/RamadanBanner';
-import RamadanCountdown from '@/components/RamadanCountdown';
 import RamadanDivider from '@/components/RamadanDivider';
 
 const Index = () => {
@@ -18,7 +17,6 @@ const Index = () => {
       <RamadanBanner />
       <Navbar />
       <Hero />
-      <RamadanCountdown />
       <RamadanDivider />
       <div id="menu">
         <MenuSection />

@@ -286,7 +286,7 @@ function MenuCard({
       transition={{ delay: index * 0.05 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="group relative bg-card rounded-xl sm:rounded-2xl overflow-hidden border border-border shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2"
+      className="group relative bg-card rounded-xl sm:rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-[0_8px_30px_hsl(var(--primary)/0.12)] transition-all duration-400 hover:-translate-y-1"
     >
       {/* Image */}
       <div className="relative h-40 sm:h-48 overflow-hidden">
