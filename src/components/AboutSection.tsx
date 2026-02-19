@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { FloatingLanterns } from './RamadanDecorations';
 
 export default function AboutSection() {
   const { t } = useLanguage();
 
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-background relative overflow-hidden">
+      {/* Ramadan Decorative Lanterns */}
+      <FloatingLanterns count={4} />
+
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-48 sm:w-96 h-48 sm:h-96 bg-primary rounded-full blur-3xl" />
