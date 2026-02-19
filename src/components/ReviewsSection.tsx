@@ -74,6 +74,8 @@ export default function ReviewsSection({ hideHeader = false }: ReviewsSectionPro
 
   return (
     <section className="py-20 bg-secondary/30 relative overflow-hidden">
+      {/* Ramadan geometric pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'repeating-conic-gradient(hsl(var(--primary)) 0% 25%, transparent 0% 50%)', backgroundSize: '40px 40px' }} />
       {/* Decorative Quote */}
       <div className="absolute top-10 left-10 opacity-5">
         <Quote className="w-32 h-32 text-primary" />

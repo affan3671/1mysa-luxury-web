@@ -56,8 +56,10 @@ export default function Footer() {
   const { t, language } = useLanguage();
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-16">
+    <footer className="bg-card border-t border-border relative overflow-hidden">
+      {/* Ramadan pattern */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'repeating-conic-gradient(hsl(var(--primary)) 0% 25%, transparent 0% 50%)', backgroundSize: '30px 30px' }} />
+      <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <motion.div
@@ -87,7 +89,7 @@ export default function Footer() {
                 : "कुनाफा & तुर्किश कॉफी – शाहीन बाघ"}
             </p>
             <p className="text-lg font-heading italic gold-text">
-              "{t("footer.tagline")}"
+              🌙 "{t("footer.tagline")}"
             </p>
           </motion.div>
 

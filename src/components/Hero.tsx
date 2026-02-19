@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Star, Utensils, Car, Truck, CheckCircle, Youtube } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import CurvedLoop from './CurvedLoop'; // Adjust the import path as needed
+import { TwinklingStars, MosqueSilhouette } from './RamadanDecorations';
 
 const heroImages = [
   'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164250%20(1).png',
@@ -50,23 +50,21 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100svh] flex flex-col overflow-hidden">
-      {/* Curved Loop Text at the top */}
-      <div className="absolute top-0 left-0 right-0 z-20 pointer-events-auto h-16 md:h-20">
-        <div className="scale-[0.3] md:scale-[0.35] origin-top">
-          <CurvedLoop
-            marqueeText={language === 'en' ? 'Watch ✦  Us ✦  On ✦  Youtube ✦ ' : 'हमें ✦ यूट्यूब ✦ पर ✦ देखें ✦ '}
-            speed={7}
-            curveAmount={150}
-            direction="left"
-            interactive={true}
-            className="fill-primary"
-          />
-        </div>
+      {/* Ramadan Crescent & Text */}
+      <div className="absolute top-20 left-0 right-0 z-20 pointer-events-none text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="inline-block"
+        >
+          <span className="text-4xl sm:text-5xl drop-shadow-[0_0_20px_hsl(var(--primary)/0.6)]">🌙</span>
+        </motion.div>
       </div>
 
       {/* Main Hero Content */}
       <div className="flex-1 flex items-center justify-center pt-20 pb-16 md:pt-24 md:pb-20">
-        {/* Background Slider - Faster transition */}
+        {/* Background Slider */}
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -84,30 +82,35 @@ export default function Hero() {
               fetchPriority="high"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-background" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,40%,8%)/0.7] via-[hsl(220,40%,8%)/0.4] to-background" />
           </motion.div>
         </AnimatePresence>
 
-        {/* Subtle Gold Particles - Reduced on mobile */}
+        {/* Twinkling Stars */}
+        <TwinklingStars count={25} />
+
+        {/* Floating Lanterns */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">
-          {[...Array(8)].map((_, i) => (
+          {['🏮', '🏮', '🏮', '🏮'].map((lantern, i) => (
             <motion.div
               key={i}
-              className="absolute w-1.5 h-1.5 rounded-full bg-primary/50"
+              className="absolute text-2xl sm:text-3xl select-none opacity-30"
               animate={{
-                y: [0, -100],
-                opacity: [0, 0.8, 0],
+                y: [0, -15, 0],
+                rotate: [0, i % 2 === 0 ? 8 : -8, 0],
               }}
               transition={{
-                duration: 4,
+                duration: 4 + i,
                 repeat: Infinity,
-                delay: i * 0.5,
+                ease: 'easeInOut',
               }}
               style={{
-                left: `${10 + i * 12}%`,
-                top: '80%',
+                left: `${5 + i * 25}%`,
+                top: `${20 + (i % 3) * 20}%`,
               }}
-            />
+            >
+              {lantern}
+            </motion.div>
           ))}
         </div>
 
@@ -132,6 +135,16 @@ export default function Hero() {
               <span className="text-white text-sm sm:text-base">{reviewCount} {language === 'en' ? 'Reviews' : 'समीक्षाएं'}</span>
             </motion.div>
 
+            {/* Ramadan Greeting */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.05 }}
+              className="text-primary text-sm sm:text-base font-medium tracking-widest uppercase mb-3"
+            >
+              ☪ {language === 'en' ? 'Ramadan Kareem' : 'रमज़ान करीम'} ☪
+            </motion.p>
+
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0 }}
@@ -139,7 +152,9 @@ export default function Hero() {
               transition={{ delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-3 sm:mb-4 px-2"
             >
-              <span className="gold-text">{language === 'en' ? 'Kunafa. Coffee. Baklava.' : 'कुनाफा। कॉफी। बाकलावा'}</span>
+              <span className="gold-text">
+                {language === 'en' ? 'Celebrate the Spirit of Ramadan' : 'रमज़ान की रूह को मनाएं'}
+              </span>
             </motion.h1>
 
             <motion.p
@@ -148,7 +163,9 @@ export default function Hero() {
               transition={{ delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-white/85 mb-6 sm:mb-8 font-light"
             >
-              {language === 'en' ? 'The Heart of Middle East' : 'मध्य पूर्व का दिल'}
+              {language === 'en'
+                ? 'Community · Reflection · Blessings — Kunafa, Coffee & Baklava'
+                : 'समुदाय · चिंतन · आशीर्वाद — कुनाफा, कॉफी और बाकलावा'}
             </motion.p>
 
             {/* CTA Buttons */}
@@ -159,10 +176,21 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8"
             >
               <a
+                href="#menu"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#menu')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-primary/90 shadow-[0_0_25px_hsl(var(--primary)/0.35)] transition-all"
+              >
+                🌙 {language === 'en' ? 'Explore Ramadan Specials' : 'रमज़ान स्पेशल देखें'}
+              </a>
+
+              <a
                 href="https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-5 py-3 rounded-lg bg-[#E23744] text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 hover:bg-[#cb303c] shadow-lg"
+                className="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#E23744] text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 hover:bg-[#cb303c] shadow-lg"
               >
                 <span className="w-6 h-6 sm:w-7 sm:h-7 bg-white rounded flex items-center justify-center flex-shrink-0">
                   <span className="text-[#E23744] font-bold text-base sm:text-lg">Z</span>
@@ -174,23 +202,14 @@ export default function Hero() {
                 href="https://maps.app.goo.gl/kLANE8iK1mekgQ768"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-5 py-3 rounded-lg bg-white/90 text-coffee font-semibold text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-white shadow-lg"
+                className="w-full sm:w-auto px-5 py-3 rounded-xl bg-white/90 text-foreground font-semibold text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-white shadow-lg"
               >
                 <MapPin className="w-5 h-5 flex-shrink-0" />
                 {language === 'en' ? 'Get Directions' : 'दिशा-निर्देश'}
               </a>
-              <a
-                href="https://www.youtube.com/@1mysacafe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-5 py-3 rounded-lg bg-[#E23744] text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 hover:bg-[#cb303c] shadow-lg"
-              >
-                <Youtube className="w-5 h-5 flex-shrink-0" />
-                {language === 'en' ? 'Watch Our Perfection' : 'YouTube पर देखें'}
-              </a>
             </motion.div>
 
-            {/* Features - Clean badges */}
+            {/* Features badges */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -210,6 +229,11 @@ export default function Hero() {
               ))}
             </motion.div>
           </motion.div>
+        </div>
+
+        {/* Mosque Silhouette at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 text-foreground/5 z-[1]">
+          <MosqueSilhouette />
         </div>
 
         {/* Slide Indicators */}
