@@ -67,7 +67,8 @@ export default function Hero() {
               className="w-full h-full object-cover"
             />
             {/* Premium gradient overlay — emerald to navy */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(160,40%,8%)/0.75] via-[hsl(220,45%,10%)/0.5] to-background" />
+            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(160,40%,8%)/0.95] via-[hsl(220,45%,10%)/0.85] to-background" />
           </motion.div>
         </AnimatePresence>
 
