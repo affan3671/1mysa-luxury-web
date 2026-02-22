@@ -156,7 +156,7 @@ export const menuItems: MenuItem[] = [
     nameHi: 'दुबई पिस्ता स्प्रेड कनाफेह/कुनाफा',
     description: 'Crispy kunafa layered with rich Dubai pistachio spread for a luxurious taste.',
     descriptionHi: 'शानदार स्वाद के लिए कुरकुरे कुनाफा पर दुबई पिस्ता का भरपूर स्प्रेड लगाया गया है।',
-    price: 699,
+    price: 749,
     category: 'kunafa',
     image: '/images/kunafa/dubai_pista_kunafa.jpeg',
   },
