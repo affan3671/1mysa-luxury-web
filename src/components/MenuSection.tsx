@@ -349,12 +349,20 @@ function MenuCard({
           {language === 'en' ? item.description : item.descriptionHi}
         </p>
         <div className="flex items-center justify-between">
-          <span className="text-lg sm:text-xl font-bold gold-text">
-            {item.price === 0 
-              ? (language === 'en' ? 'Price varies' : 'मूल्य भिन्न होता है')
-              : `₹${item.price}`
-            }
-          </span>
+          {/* Price with optional strikethrough */}
+          <div className="flex items-center gap-2">
+            {item.originalPrice && (
+              <span className="text-sm sm:text-base text-muted-foreground line-through">
+                ₹{item.originalPrice}
+              </span>
+            )}
+            <span className="text-lg sm:text-xl font-bold gold-text">
+              {item.price === 0
+                ? (language === 'en' ? 'Price varies' : 'मूल्य भिन्न होता है')
+                : `₹${item.price}`
+              }
+            </span>
+          </div>
           <div className="flex items-center gap-1.5">
             {/* Add to Cart */}
             <motion.button

@@ -114,14 +114,14 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Ramadan Greeting — refined typography */}
+            {/* Eid Greeting — refined typography */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1 }}
               className="text-[#FFD700] text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase mb-4"
             >
-              ✦ {language === "en" ? "Ramadan Kareem" : "रमज़ान करीम"} ✦
+              ✦ {language === "en" ? "EID  MUBARAK" : "ईद मुबारक"} ✦
             </motion.p>
 
             {/* Main Heading */}
@@ -133,8 +133,8 @@ export default function Hero() {
             >
               <span className="text-[#FFD700]">
                 {language === "en"
-                  ? "Celebrate the Spirit of Ramadan"
-                  : "रमज़ान की रूह को मनाएं"}
+                  ? "Celebrate the Blessings of Eid-Ul-Fitr"
+                  : "ईद के आशीर्वादों को मनाएं"}
               </span>
             </motion.h1>
 
@@ -168,7 +168,7 @@ export default function Hero() {
               >
                 ✦{" "}
                 {language === "en"
-                  ? "Explore Ramadan Specials"
+                  ? "Explore Our Eid Specials"
                   : "रमज़ान स्पेशल देखें"}
               </a>
 
