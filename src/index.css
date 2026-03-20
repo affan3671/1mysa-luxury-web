@@ -8,6 +8,7 @@
 @layer base {
    html {
     line-height: 1.65;     /* or 1.7 – pick what looks good */
+    overflow-x: hidden;
   }
   :root {
     /* 🌙 Premium Ramadan — Emerald, Navy, Ivory & Gold */
@@ -158,6 +159,7 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
     line-height: 1.6;          /* give Hindi ascenders room */
+    overflow-x: hidden;
   }
   h1, h2, h3, h4, h5, h6 { @apply font-heading; }
 }
