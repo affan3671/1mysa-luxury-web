@@ -21,8 +21,8 @@ export default function RamadanBanner() {
           <span className="text-primary text-sm">✦</span>
           <p className="text-xs sm:text-sm font-medium tracking-wide">
             {language === 'en'
-              ? 'Ramadan Kareem — Wishing you a blessed month of peace and reflection'
-              : 'रमज़ान करीम — शांति और चिंतन के इस पवित्र महीने की शुभकामनाएं'}
+              ? 'Eid Mubarak — Wishing you a blessed Eid filled with joy and togetherness!'
+              : 'ईद मुबारक — आपको खुशियों और एकता से भरी एक मुबारक ईद की शुभकामनाएं!'}
           </p>
           <span className="text-primary text-sm">✦</span>
           <button
