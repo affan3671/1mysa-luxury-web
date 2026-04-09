@@ -8,28 +8,20 @@ import ContactSection from '@/components/ContactSection';
 import PartyPage from './PartyPage';
 import FloatingButtons from '@/components/FloatingButtons';
 import FAQs from './FAQs';
-import RamadanBanner from '@/components/RamadanBanner';
-import RamadanDivider from '@/components/RamadanDivider';
+
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
-      <RamadanBanner />
       <Navbar />
       <Hero />
-      <RamadanDivider />
       <div id="menu">
         <MenuSection />
       </div>
-      <RamadanDivider />
       <AboutSection />
-      <RamadanDivider />
       <ReviewsSection />
-      <RamadanDivider />
       <GallerySection />
-      <RamadanDivider />
       <FAQs />
-      <RamadanDivider />
       <ContactSection />
       <PartyPage />
       <FloatingButtons />

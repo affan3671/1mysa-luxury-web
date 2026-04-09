@@ -89,7 +89,7 @@ export default function Footer() {
                 : "कुनाफा & तुर्किश कॉफी – शाहीन बाघ"}
             </p>
             <p className="text-lg font-heading italic gold-text">
-              🌙 "{t("footer.tagline")}"
+              "{t("footer.tagline")}"
             </p>
           </motion.div>
 

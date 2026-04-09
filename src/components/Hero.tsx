@@ -28,7 +28,7 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    const target = 301;
+    const target = 296;
     const duration = 1500;
     const steps = 40;
     const increment = target / steps;
@@ -133,8 +133,8 @@ export default function Hero() {
             >
               <span className="text-[#FFD700]">
                 {language === "en"
-                  ? "Celebrate the Blessings of Eid-Ul-Fitr"
-                  : "ईद के आशीर्वादों को मनाएं"}
+                  ? "Kunafa, Coffee, Baklava And Pilaf"
+                  : "कुनाफ़ा, कॉफी और बकलावा"}
               </span>
             </motion.h1>
 
@@ -145,8 +145,8 @@ export default function Hero() {
               className="text-base sm:text-lg md:text-xl text-[#FFD700] mb-8 sm:mb-10 font-light max-w-2xl mx-auto"
             >
               {language === "en"
-                ? "Community · Reflection · Blessings — Kunafa, Coffee & Baklava"
-                : "समुदाय · चिंतन · आशीर्वाद — कुनाफा, कॉफी और बाकलावा"}
+                ? "Unfold The Culture of Turkish Delights — Kunafa, Coffee, Baklava And Our Special Indo-Uzbeki Pilaf"
+                : "तुर्की व्यंजनों की संस्कृति का आनंद लें — कुनाफ़ा, कॉफी और बकलावा"}
             </motion.p>
 
             {/* CTA Buttons — with premium glow */}
