@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.1mysacafe.com/sitemap-home.xml</loc>
+    <lastmod>2026-04-13T10:58:08+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.1mysacafe.com/sitemap-menu.xml</loc>
+    <lastmod>2026-04-13T10:58:35+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.1mysacafe.com/sitemap-about.xml</loc>
+    <lastmod>2026-04-13T10:58:53+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.1mysacafe.com/sitemap-contact.xml</loc>
+    <lastmod>2026-04-13T10:59:16+00:00</lastmod>
+  </sitemap>
+</sitemapindex>
