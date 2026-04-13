@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "mcp__plugin_context-mode_context-mode__ctx_batch_execute",
+      "Bash(npm install:*)"
     ]
   }
 }
