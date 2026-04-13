@@ -114,16 +114,6 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Eid Greeting — refined typography */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.1 }}
-              className="text-[#FFD700] text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase mb-4"
-            >
-              ✦ {language === "en" ? "EID  MUBARAK" : "ईद मुबारक"} ✦
-            </motion.p>
-
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
