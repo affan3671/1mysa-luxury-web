@@ -146,21 +146,6 @@ export default function Hero() {
               transition={{ delay: 0.35 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10"
             >
-              <a
-                href="#menu"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .querySelector("#menu")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-[0_4px_30px_hsl(var(--primary)/0.3)] hover:shadow-[0_4px_40px_hsl(var(--primary)/0.5)] hover:bg-primary/90 transition-all duration-300"
-              >
-                ✦{" "}
-                {language === "en"
-                  ? "Explore Our Eid Specials"
-                  : "रमज़ान स्पेशल देखें"}
-              </a>
 
               <a
                 href="https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi"
