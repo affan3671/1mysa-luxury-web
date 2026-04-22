@@ -7,9 +7,8 @@ import GallerySection from '@/components/GallerySection';
 import ContactSection from '@/components/ContactSection';
 import PartyPage from './PartyPage';
 import FloatingButtons from '@/components/FloatingButtons';
-import FAQs from './FAQs';
 import { SEO, kunafaKeywords, locationKeywords } from '@/components/SEO';
-import { restaurantSchema, breadcrumbSchema, faqSchema } from '@/utils/jsonLd';
+import { restaurantSchema, breadcrumbSchema } from '@/utils/jsonLd';
 
 const Index = () => {
   return (
@@ -24,7 +23,6 @@ const Index = () => {
           '@graph': [
             restaurantSchema,
             breadcrumbSchema([{ name: 'Home', url: 'https://www.1mysacafe.com' }]),
-            faqSchema,
           ],
         }}
       />
@@ -48,10 +46,6 @@ const Index = () => {
 
         <section aria-label="Photo Gallery">
           <GallerySection />
-        </section>
-
-        <section aria-label="Frequently Asked Questions">
-          <FAQs />
         </section>
 
         <section aria-label="Contact Us">
