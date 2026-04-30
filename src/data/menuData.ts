@@ -193,6 +193,7 @@ export const menuItems: MenuItem[] = [
     image: '/images/baklava/chocolate_square_baklava.jpg',
   },
 
+  //SUMMER SPECIAL REFRESHMENTS
   // Premium Imports
   {
     id: 'p-1',
@@ -203,7 +204,7 @@ export const menuItems: MenuItem[] = [
     price: 140,
     originalPrice: 199,
     category: 'premium_imports',
-    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/MILAF-COLA.png',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/MILAF-COLA.webp',
     isPopular: true,
   },
   {
@@ -239,7 +240,7 @@ export const menuItems: MenuItem[] = [
     price: 90,
     originalPrice: 99,
     category: 'premium_imports',
-    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/kinza_diet_cola.jpg',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/kinza_diet_cola.webp',
     isPopular: true,
   },
   {
@@ -263,7 +264,7 @@ export const menuItems: MenuItem[] = [
     price: 90,
     originalPrice: 99,
     category: 'premium_imports',
-    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kinza_Cola_Lemon_Diet.jpg',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kinza_Cola_Lemon_Diet.webp',
     isPopular: true,
   },
   {

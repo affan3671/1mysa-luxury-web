@@ -48,7 +48,7 @@ export default function OrderPage() {
       {/* Hero Banner */}
       <section className="relative pt-20 min-h-[50vh] flex items-center">
         <div className="absolute inset-0">
-          <img src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg" alt="Order Online" className="w-full h-full object-cover" />
+          <img src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.webp" alt="Order Online" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center py-16">

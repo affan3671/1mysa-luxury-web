@@ -170,7 +170,7 @@ export default function PartyPage() {
               className="aspect-square rounded-xl overflow-hidden bg-card border border-border shadow-md"
             >
               <img 
-                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_1.png" 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_1.webp" 
                 alt="Party event" 
                 loading="lazy"
                 decoding="async"
@@ -190,7 +190,7 @@ export default function PartyPage() {
               className="aspect-square rounded-xl overflow-hidden bg-card border border-border shadow-md"
             >
               <img 
-                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_2.png" 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_2.webp" 
                 alt="Party event" 
                 loading="lazy"
                 decoding="async"
@@ -210,7 +210,7 @@ export default function PartyPage() {
               className="aspect-square rounded-xl overflow-hidden bg-card border border-border shadow-md"
             >
               <img 
-                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_3.png" 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_3.webp" 
                 alt="Party event" 
                 loading="lazy"
                 decoding="async"
@@ -230,7 +230,7 @@ export default function PartyPage() {
               className="aspect-square rounded-xl overflow-hidden bg-card border border-border shadow-md"
             >
               <img 
-                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_4.jpeg" 
+                src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/event_photo_4.webp" 
                 alt="Party event" 
                 loading="lazy"
                 decoding="async"

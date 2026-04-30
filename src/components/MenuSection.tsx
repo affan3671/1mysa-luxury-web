@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Coffee, Cake, Cookie, Sparkles, Play, ShoppingCart, Check, Crown } from 'lucide-react';
+import { Coffee, Cake, Cookie, Sparkles, Play, ShoppingCart, Check, Crown, Droplets } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useCart } from '@/contexts/CartContext';
 import { menuItems, MenuItem } from '@/data/menuData';
@@ -10,6 +10,7 @@ const categories = [
   { id: 'coffee', icon: Coffee, key: 'menu.coffee'},
   { id: 'kunafa', icon: Cake, key: 'menu.kunafa'},
   { id: 'baklava', icon: Cookie, key: 'menu.baklava'},
+  { id: 'summer_refreshments', icon: Droplets, key: 'menu.summer_refreshments'},
   { id: 'premium_imports', icon: Crown, key: 'menu.premium_imports'},
 ];
 
@@ -295,6 +296,12 @@ function MenuCard({
           alt={item.name}
           loading="lazy"
           decoding="async"
+          onError={(e) => {
+            const img = e.currentTarget;
+            if (img.dataset.fallbackApplied) return;
+            img.dataset.fallbackApplied = "1";
+            img.src = "/placeholder.svg";
+          }}
           className="w-full h-full object-cover"
           animate={{ scale: isHovered ? 1.1 : 1 }}
           transition={{ duration: 0.5 }}

@@ -16,6 +16,7 @@ import GalleryPage from "./pages/GalleryPage";
 import PartyPage from "./pages/PartyPage";
 import OrderPage from "./pages/OrderPage";
 import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
 import NotFound from "./pages/NotFound";
 import FAQs from "./pages/FAQs";
 
@@ -53,6 +54,7 @@ function App() {
                 <Route path="/menu" element={<MenuPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/gallery" element={<GalleryPage />} />
+                <Route path="/blog" element={<BlogPage />} />
                 <Route path="/faq" element={<FAQs/>} />
                 <Route path="/party" element={<PartyPage />} />
                 <Route path="/order" element={<OrderPage />} />

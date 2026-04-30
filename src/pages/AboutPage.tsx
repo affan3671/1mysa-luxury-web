@@ -37,7 +37,7 @@ export default function AboutPage() {
         <header className="relative pt-20 min-h-[60vh] flex items-center">
           <div className="absolute inset-0">
             <img
-              src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.jpg"
+              src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.webp"
               alt="About 1Mysa Café - Best Turkish Kunafa in Delhi"
               className="w-full h-full object-cover"
             />
@@ -87,7 +87,7 @@ export default function AboutPage() {
                 className="relative"
               >
                 <img
-                  src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/2024-06-14.jpg"
+                  src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/2024-06-14.webp"
                   alt="1Mysa Café - Turkish Kunafa Restaurant in Delhi"
                   className="rounded-3xl shadow-2xl w-full"
                 />

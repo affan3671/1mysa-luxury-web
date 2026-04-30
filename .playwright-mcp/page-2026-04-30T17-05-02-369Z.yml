@@ -1,0 +1,545 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - main [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "1Mysa Cafe 1Mysa Café Kunafa & Turkish Coffee" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "1Mysa Cafe" [ref=e8]
+          - generic [ref=e9]:
+            - heading "1Mysa Café" [level=1] [ref=e10]
+            - paragraph [ref=e11]: Kunafa & Turkish Coffee
+        - generic [ref=e12]:
+          - link "Home" [ref=e13] [cursor=pointer]:
+            - /url: /
+          - link "Menu" [ref=e14] [cursor=pointer]:
+            - /url: /menu
+          - link "About Us" [ref=e15] [cursor=pointer]:
+            - /url: /about
+          - link "Gallery" [ref=e16] [cursor=pointer]:
+            - /url: /gallery
+          - link "Blog" [ref=e17] [cursor=pointer]:
+            - /url: /blog
+          - link "Party & Events" [ref=e18] [cursor=pointer]:
+            - /url: /party
+          - link "Order Online" [ref=e19] [cursor=pointer]:
+            - /url: /order
+          - link "FAQs" [ref=e20] [cursor=pointer]:
+            - /url: /faq
+          - link "Contact" [ref=e21] [cursor=pointer]:
+            - /url: /contact
+        - button "हिंदी" [ref=e23] [cursor=pointer]:
+          - img [ref=e24]
+          - generic [ref=e27]: हिंदी
+    - generic [ref=e30]:
+      - img "1Mysa Cafe" [ref=e32]
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - img [ref=e38]
+          - generic [ref=e40]: "4.7"
+          - generic [ref=e41]: "|"
+          - generic [ref=e42]: 275 Reviews
+        - heading "Kunafa, Coffee, Baklava And Pilaf" [level=1] [ref=e43]
+        - paragraph [ref=e44]: Unfold The Culture of Turkish Delights — Kunafa, Coffee, Baklava And Our Special Indo-Uzbeki Pilaf
+        - generic [ref=e45]:
+          - link "Z Order on Zomato" [ref=e46] [cursor=pointer]:
+            - /url: https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi
+            - generic [ref=e48]: Z
+            - text: Order on Zomato
+          - link "Get Directions" [ref=e49] [cursor=pointer]:
+            - /url: https://maps.app.goo.gl/kLANE8iK1mekgQ768
+            - img [ref=e50]
+            - text: Get Directions
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - img [ref=e55]
+            - generic [ref=e58]: Dine-in
+          - generic [ref=e59]:
+            - img [ref=e60]
+            - generic [ref=e63]: Drive-through
+          - generic [ref=e64]:
+            - img [ref=e65]
+            - generic [ref=e68]: Delivery
+      - generic [ref=e69]:
+        - button [ref=e70] [cursor=pointer]
+        - button [ref=e71] [cursor=pointer]
+        - button [ref=e72] [cursor=pointer]
+    - region "Our Menu" [ref=e73]:
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - heading "Our Menu" [level=2] [ref=e77]
+          - paragraph [ref=e78]: Authentic Turkish & Middle Eastern Delights
+        - generic [ref=e79]:
+          - button "Turkish Coffee & Hot Drinks" [ref=e80] [cursor=pointer]:
+            - img [ref=e81]
+            - text: Turkish Coffee & Hot Drinks
+          - button "Kunafa / Knafeh" [ref=e83] [cursor=pointer]:
+            - img [ref=e84]
+            - text: Kunafa / Knafeh
+          - button "Baklava & Sweets" [ref=e87] [cursor=pointer]:
+            - img [ref=e88]
+            - text: Baklava & Sweets
+          - button "Summer Refreshments" [ref=e90] [cursor=pointer]:
+            - img [ref=e91]
+            - text: Summer Refreshments
+          - button "Premium Imports" [ref=e94] [cursor=pointer]:
+            - img [ref=e95]
+            - text: Premium Imports
+        - generic [ref=e98]:
+          - button "Menu" [ref=e99] [cursor=pointer]:
+            - img [ref=e100]
+            - text: Menu
+          - button "Watch Videos" [ref=e103] [cursor=pointer]:
+            - img [ref=e104]
+            - text: Watch Videos
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - img "Lotus Biscoff Knafeh/Kunafa" [ref=e109]
+              - generic [ref=e112]: Popular
+            - generic [ref=e113]:
+              - heading "Lotus Biscoff Knafeh/Kunafa" [level=3] [ref=e114]
+              - paragraph [ref=e115]: Crispy kunafa layered with creamy filling and rich Lotus Biscoff flavor.
+              - generic [ref=e116]:
+                - generic [ref=e118]: ₹599
+                - generic [ref=e119]:
+                  - button "Add to cart" [ref=e120] [cursor=pointer]:
+                    - img [ref=e121]
+                  - link "Order Now" [ref=e125] [cursor=pointer]:
+                    - /url: "https://wa.me/919310579571?text=I Would Like To Order: Lotus Biscoff Knafeh/Kunafa"
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - img "Honey Syrup Knafeh/Kunafa" [ref=e128]
+              - generic [ref=e131]: Popular
+            - generic [ref=e132]:
+              - heading "Honey Syrup Knafeh/Kunafa" [level=3] [ref=e133]
+              - paragraph [ref=e134]: Crispy kunafa soaked in sweet honey syrup with a rich, traditional taste.
+              - generic [ref=e135]:
+                - generic [ref=e137]: ₹449
+                - generic [ref=e138]:
+                  - button "Add to cart" [ref=e139] [cursor=pointer]:
+                    - img [ref=e140]
+                  - link "Order Now" [ref=e144] [cursor=pointer]:
+                    - /url: "https://wa.me/919310579571?text=I Would Like To Order: Honey Syrup Knafeh/Kunafa"
+          - generic [ref=e145]:
+            - img "Nutella Spread Knafeh/Kunafa" [ref=e147]
+            - generic [ref=e149]:
+              - heading "Nutella Spread Knafeh/Kunafa" [level=3] [ref=e150]
+              - paragraph [ref=e151]: Crispy kunafa filled with warm, rich Nutella for an indulgent treat.
+              - generic [ref=e152]:
+                - generic [ref=e154]: ₹539
+                - generic [ref=e155]:
+                  - button "Add to cart" [ref=e156] [cursor=pointer]:
+                    - img [ref=e157]
+                  - link "Order Now" [ref=e161] [cursor=pointer]:
+                    - /url: "https://wa.me/919310579571?text=I Would Like To Order: Nutella Spread Knafeh/Kunafa"
+          - generic [ref=e162]:
+            - img "Date Syrup Knafeh/Kunafa" [ref=e164]
+            - generic [ref=e166]:
+              - heading "Date Syrup Knafeh/Kunafa" [level=3] [ref=e167]
+              - paragraph [ref=e168]: Crispy kunafa drizzled with rich, natural date syrup for a deep, sweet flavor.
+              - generic [ref=e169]:
+                - generic [ref=e171]: ₹499
+                - generic [ref=e172]:
+                  - button "Add to cart" [ref=e173] [cursor=pointer]:
+                    - img [ref=e174]
+                  - link "Order Now" [ref=e178] [cursor=pointer]:
+                    - /url: "https://wa.me/919310579571?text=I Would Like To Order: Date Syrup Knafeh/Kunafa"
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - img "Sugar Syrup Knafeh/Kunafa" [ref=e181]
+              - generic [ref=e184]: Popular
+            - generic [ref=e185]:
+              - heading "Sugar Syrup Knafeh/Kunafa" [level=3] [ref=e186]
+              - paragraph [ref=e187]: Golden, crispy kunafa soaked in classic sugar syrup for a traditional sweetness.
+              - generic [ref=e188]:
+                - generic [ref=e190]: ₹349
+                - generic [ref=e191]:
+                  - button "Add to cart" [ref=e192] [cursor=pointer]:
+                    - img [ref=e193]
+                  - link "Order Now" [ref=e197] [cursor=pointer]:
+                    - /url: "https://wa.me/919310579571?text=I Would Like To Order: Sugar Syrup Knafeh/Kunafa"
+          - generic [ref=e198]:
+            - img "Ice Cream Knafeh/Kunafa" [ref=e200]
+            - generic [ref=e202]:
+              - heading "Ice Cream Knafeh/Kunafa" [level=3] [ref=e203]
+              - paragraph [ref=e204]: Warm, crispy kunafa paired with cold, creamy ice cream for a perfect contrast.
+              - generic [ref=e205]:
+                - generic [ref=e207]: ₹499
+                - generic [ref=e208]:
+                  - button "Add to cart" [ref=e209] [cursor=pointer]:
+                    - img [ref=e210]
+                  - link "Order Now" [ref=e214] [cursor=pointer]:
+                    - /url: "https://wa.me/919310579571?text=I Would Like To Order: Ice Cream Knafeh/Kunafa"
+          - generic [ref=e215]:
+            - img "Pista Kunefe/Kunafa" [ref=e217]
+            - generic [ref=e219]:
+              - heading "Pista Kunefe/Kunafa" [level=3] [ref=e220]
+              - paragraph [ref=e221]: Crispy kunafa filled with rich pistachio flavor and sweet syrup.
+              - generic [ref=e222]:
+                - generic [ref=e224]: ₹749
+                - generic [ref=e225]:
+                  - button "Add to cart" [ref=e226] [cursor=pointer]:
+                    - img [ref=e227]
+                  - link "Order Now" [ref=e231] [cursor=pointer]:
+                    - /url: "https://wa.me/919310579571?text=I Would Like To Order: Pista Kunefe/Kunafa"
+          - generic [ref=e232]:
+            - img "Dubai Pista Spread Kunafa/Kunefe" [ref=e234]
+            - generic [ref=e236]:
+              - heading "Dubai Pista Spread Kunafa/Kunefe" [level=3] [ref=e237]
+              - paragraph [ref=e238]: Crispy kunafa layered with rich Dubai pistachio spread for a luxurious taste.
+              - generic [ref=e239]:
+                - generic [ref=e241]: ₹749
+                - generic [ref=e242]:
+                  - button "Add to cart" [ref=e243] [cursor=pointer]:
+                    - img [ref=e244]
+                  - link "Order Now" [ref=e248] [cursor=pointer]:
+                    - /url: "https://wa.me/919310579571?text=I Would Like To Order: Dubai Pista Spread Kunafa/Kunefe"
+          - generic [ref=e249]:
+            - img "Combo Topping Kunefe/Kunafa" [ref=e251]
+            - generic [ref=e253]:
+              - heading "Combo Topping Kunefe/Kunafa" [level=3] [ref=e254]
+              - paragraph [ref=e255]: Crispy kunafa topped with a mix of rich, indulgent flavors.
+              - generic [ref=e256]:
+                - generic [ref=e258]: Price varies
+                - generic [ref=e259]:
+                  - button "Add to cart" [ref=e260] [cursor=pointer]:
+                    - img [ref=e261]
+                  - link "Order Now" [ref=e265] [cursor=pointer]:
+                    - /url: "https://wa.me/919310579571?text=I Would Like To Order: Combo Topping Kunefe/Kunafa"
+    - region "About Us" [ref=e266]:
+      - generic [ref=e272]:
+        - img "1Mysa Cafe" [ref=e275]
+        - generic [ref=e279]:
+          - generic [ref=e280]:
+            - generic [ref=e281]: A Taste of Turkey in Delhi
+            - heading "Our Story" [level=2] [ref=e282]
+          - generic [ref=e283]:
+            - paragraph [ref=e284]: Nestled in the vibrant heart of Shaheen Bagh, 1Mysa Café brings the authentic flavors of Turkish and Middle Eastern desserts to Delhi. Our passion lies in crafting the perfect Kunafa - crispy, golden, and dripping with sweet syrup.
+            - paragraph [ref=e285]: Our Turkish coffee is sand-boiled the traditional way, creating a rich, aromatic experience that transports you straight to the streets of Istanbul. Every cup tells a story of centuries-old tradition.
+            - paragraph [ref=e286]: At 1Mysa, we believe in warm hospitality and creating a cozy ambiance where every guest feels at home. Come, sit, and savor the sweetness of life.
+          - generic [ref=e287]:
+            - generic [ref=e288]:
+              - generic [ref=e289]: 2+
+              - generic [ref=e290]: Years
+            - generic [ref=e291]:
+              - generic [ref=e292]: 50+
+              - generic [ref=e293]: Items
+            - generic [ref=e294]:
+              - generic [ref=e295]: 10K+
+              - generic [ref=e296]: Customers
+    - region "Customer Reviews" [ref=e297]:
+      - generic [ref=e298]:
+        - img [ref=e300]
+        - img [ref=e304]
+        - generic [ref=e307]:
+          - generic [ref=e308]:
+            - heading "What Our Guests Say" [level=2] [ref=e309]
+            - paragraph [ref=e310]: Real experiences from our beloved customers
+          - generic [ref=e311]:
+            - generic [ref=e312]:
+              - generic [ref=e313]:
+                - generic [ref=e314]:
+                  - img [ref=e315]
+                  - img [ref=e317]
+                  - img [ref=e319]
+                  - img [ref=e321]
+                  - img [ref=e323]
+                - blockquote [ref=e325]: "\"The owner was generally pleasant, and I thoroughly enjoyed the ambiance. The Kunafa here is absolutely divine - crispy on the outside, perfectly gooey on the inside!\""
+                - generic [ref=e326]:
+                  - generic [ref=e327]: AS
+                  - generic [ref=e328]:
+                    - generic [ref=e329]: Arjun Sharma
+                    - generic [ref=e330]: 2 weeks ago
+              - button [ref=e331] [cursor=pointer]:
+                - img [ref=e332]
+              - button [ref=e334] [cursor=pointer]:
+                - img [ref=e335]
+            - generic [ref=e337]:
+              - button [ref=e338] [cursor=pointer]
+              - button [ref=e339] [cursor=pointer]
+              - button [ref=e340] [cursor=pointer]
+              - button [ref=e341] [cursor=pointer]
+              - button [ref=e342] [cursor=pointer]
+    - region "Photo Gallery" [ref=e343]:
+      - generic [ref=e345]:
+        - generic [ref=e346]:
+          - heading "Gallery" [level=2] [ref=e347]
+          - paragraph [ref=e348]: A Visual Journey Through 1Mysa
+        - generic [ref=e349]:
+          - button "All" [ref=e350] [cursor=pointer]
+          - button "Food" [ref=e351] [cursor=pointer]
+          - button "Vibe" [ref=e352] [cursor=pointer]
+          - button "Interior" [ref=e353] [cursor=pointer]
+        - generic [ref=e354]:
+          - generic [ref=e355] [cursor=pointer]:
+            - img "Turkish coffee" [ref=e356]
+            - paragraph [ref=e359]: Turkish coffee
+          - generic [ref=e360] [cursor=pointer]:
+            - img "Sand Caffeine Turkish Coffee" [ref=e361]
+            - paragraph [ref=e364]: Sand Caffeine Turkish Coffee
+          - generic [ref=e365] [cursor=pointer]:
+            - img "The Taste of Tradition" [ref=e366]
+            - paragraph [ref=e369]: The Taste of Tradition
+          - generic [ref=e370] [cursor=pointer]:
+            - img "The Lotus Biscoff Kunafa" [ref=e371]
+            - paragraph [ref=e374]: The Lotus Biscoff Kunafa
+          - generic [ref=e375] [cursor=pointer]:
+            - img "Kunafa" [ref=e376]
+            - paragraph [ref=e379]: Kunafa
+          - generic [ref=e380] [cursor=pointer]:
+            - img "Delicious Kunafa" [ref=e381]
+            - paragraph [ref=e384]: Delicious Kunafa
+          - generic [ref=e385] [cursor=pointer]:
+            - img "Cafe exterior" [ref=e386]
+            - paragraph [ref=e389]: Cafe exterior
+          - generic [ref=e390] [cursor=pointer]:
+            - img "Interior view" [ref=e391]
+            - paragraph [ref=e394]: Interior view
+          - generic [ref=e395] [cursor=pointer]:
+            - img "Cafe interior" [ref=e396]
+            - paragraph [ref=e399]: Cafe interior
+          - generic [ref=e400] [cursor=pointer]:
+            - img "Cafe vibe" [ref=e401]
+            - paragraph [ref=e404]: Cafe vibe
+          - generic [ref=e405] [cursor=pointer]:
+            - img "Cozy ambience" [ref=e406]
+            - paragraph [ref=e409]: Cozy ambience
+          - generic [ref=e410] [cursor=pointer]:
+            - img "Baklava" [ref=e411]
+            - paragraph [ref=e414]: Baklava
+          - generic [ref=e415] [cursor=pointer]:
+            - img "Kunafa Preparation" [ref=e416]
+            - paragraph [ref=e419]: Kunafa Preparation
+          - generic [ref=e420] [cursor=pointer]:
+            - img "Kunafa Preparation" [ref=e421]
+            - paragraph [ref=e424]: Kunafa Preparation
+          - generic [ref=e425] [cursor=pointer]:
+            - img "Cafe menu" [ref=e426]
+            - paragraph [ref=e429]: Cafe menu
+          - generic [ref=e430] [cursor=pointer]:
+            - img "Coffee serving" [ref=e431]
+            - paragraph [ref=e434]: Coffee serving
+          - generic [ref=e435] [cursor=pointer]:
+            - img "Customize Your Kunafa" [ref=e436]
+            - paragraph [ref=e439]: Customize Your Kunafa
+          - generic [ref=e440] [cursor=pointer]:
+            - generic:
+              - img
+            - paragraph [ref=e444]: 1Mysa Cafe
+    - region "Contact Us" [ref=e445]:
+      - generic [ref=e447]:
+        - generic [ref=e448]:
+          - heading "Visit Us" [level=2] [ref=e449]
+          - paragraph [ref=e450]: We would love to see you
+        - generic [ref=e451]:
+          - generic [ref=e452]:
+            - generic [ref=e453]:
+              - img [ref=e455]
+              - generic [ref=e458]:
+                - heading "Address" [level=3] [ref=e459]
+                - paragraph [ref=e460]: Al-habib masjid, near 40 futa road, next to Crumbs of Paris, Shaheen Bagh, Okhla, New Delhi, Delhi 110025
+            - generic [ref=e461]:
+              - img [ref=e463]
+              - generic [ref=e465]:
+                - heading "Phone" [level=3] [ref=e466]
+                - paragraph [ref=e467]: 093105 79571
+            - generic [ref=e468]:
+              - img [ref=e470]
+              - generic [ref=e473]:
+                - heading "Hours" [level=3] [ref=e474]
+                - paragraph [ref=e475]: Open till 11 PM daily
+            - generic [ref=e476]:
+              - link "Call Now" [ref=e477] [cursor=pointer]:
+                - /url: tel:+919310579571
+                - img [ref=e478]
+                - text: Call Now
+              - link "WhatsApp" [ref=e482] [cursor=pointer]:
+                - /url: https://wa.me/919310579571
+                - img [ref=e483]
+                - text: WhatsApp
+              - link "Get Directions" [ref=e485] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/kLANE8iK1mekgQ768
+                - img [ref=e486]
+                - text: Get Directions
+          - iframe [ref=e489]:
+            - generic [ref=f1e2]: Google Maps Platform rejected your request. The provided API key is invalid.
+    - region "Party & Events Catering" [ref=e490]:
+      - main [ref=e491]:
+        - navigation [ref=e492]:
+          - generic [ref=e494]:
+            - link "1Mysa Cafe 1Mysa Café Kunafa & Turkish Coffee" [ref=e495] [cursor=pointer]:
+              - /url: /
+              - img "1Mysa Cafe" [ref=e496]
+              - generic [ref=e497]:
+                - heading "1Mysa Café" [level=1] [ref=e498]
+                - paragraph [ref=e499]: Kunafa & Turkish Coffee
+            - generic [ref=e500]:
+              - link "Home" [ref=e501] [cursor=pointer]:
+                - /url: /
+              - link "Menu" [ref=e502] [cursor=pointer]:
+                - /url: /menu
+              - link "About Us" [ref=e503] [cursor=pointer]:
+                - /url: /about
+              - link "Gallery" [ref=e504] [cursor=pointer]:
+                - /url: /gallery
+              - link "Blog" [ref=e505] [cursor=pointer]:
+                - /url: /blog
+              - link "Party & Events" [ref=e506] [cursor=pointer]:
+                - /url: /party
+              - link "Order Online" [ref=e507] [cursor=pointer]:
+                - /url: /order
+              - link "FAQs" [ref=e508] [cursor=pointer]:
+                - /url: /faq
+              - link "Contact" [ref=e509] [cursor=pointer]:
+                - /url: /contact
+            - button "हिंदी" [ref=e511] [cursor=pointer]:
+              - img [ref=e512]
+              - generic [ref=e515]: हिंदी
+        - generic [ref=e520]:
+          - generic [ref=e521]:
+            - img [ref=e522]
+            - generic [ref=e528]: Celebrate With Us
+          - heading "Party & Big Orders" [level=1] [ref=e529]
+          - paragraph [ref=e530]: Make your celebrations sweeter with authentic Turkish desserts and beverages—Turkish coffee, Turkish qahwa and tea, baklava, and kunafah—perfect for birthdays, corporate events, and special occasions.
+          - generic [ref=e531]:
+            - generic [ref=e532]:
+              - img [ref=e533]
+              - generic [ref=e539]: Birthday Parties
+            - generic [ref=e540]:
+              - img [ref=e541]
+              - generic [ref=e544]: Special Events
+            - generic [ref=e545]:
+              - img [ref=e546]
+              - generic [ref=e551]: Corporate Orders
+            - generic [ref=e552]:
+              - img [ref=e553]
+              - generic [ref=e558]: Wedding Functions
+            - generic [ref=e559]:
+              - img [ref=e560]
+              - generic [ref=e564]: Parties and Music Festivals
+        - generic [ref=e566]:
+          - heading "Our Events" [level=2] [ref=e567]
+          - generic [ref=e575]:
+            - generic [ref=e576]:
+              - img "Party event" [ref=e577]
+              - paragraph [ref=e579]: Photo 1
+            - generic [ref=e580]:
+              - img "Party event" [ref=e581]
+              - paragraph [ref=e583]: Photo 2
+            - generic [ref=e584]:
+              - img "Party event" [ref=e585]
+              - paragraph [ref=e587]: Photo 3
+            - generic [ref=e588]:
+              - img "Party event" [ref=e589]
+              - paragraph [ref=e591]: Photo 4
+        - generic [ref=e594]:
+          - heading "Ready to Book?" [level=2] [ref=e595]
+          - paragraph [ref=e596]: Contact us on WhatsApp for bulk orders, party bookings, and custom arrangements.
+          - link "Book on WhatsApp" [ref=e597] [cursor=pointer]:
+            - /url: https://wa.me/919310579571?text=Hi!%20I%20would%20like%20to%20inquire%20about%20party%2Fevent%20booking%20at%201Mysa%20Caf%C3%A9.
+            - img [ref=e598]
+            - text: Book on WhatsApp
+        - generic [ref=e601]:
+          - generic [ref=e602]:
+            - generic [ref=e603]:
+              - generic [ref=e604]:
+                - img "1Mysa Cafe" [ref=e605]
+                - generic [ref=e606]:
+                  - heading "1Mysa Cafe" [level=3] [ref=e607]
+                  - paragraph [ref=e608]: 1Mysa Cafe
+              - paragraph [ref=e609]: Kunafa & Turkish Coffee – Shaheen Bagh
+              - paragraph [ref=e610]: "\"Baked with Love in Shaheen Bagh.\""
+            - generic [ref=e611]:
+              - heading "Quick Links" [level=4] [ref=e612]
+              - list [ref=e613]:
+                - listitem [ref=e614]:
+                  - link "Home" [ref=e615] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=e616]:
+                  - link "Menu" [ref=e617] [cursor=pointer]:
+                    - /url: /menu
+                - listitem [ref=e618]:
+                  - link "About Us" [ref=e619] [cursor=pointer]:
+                    - /url: /about
+                - listitem [ref=e620]:
+                  - link "Gallery" [ref=e621] [cursor=pointer]:
+                    - /url: /gallery
+                - listitem [ref=e622]:
+                  - link "FAQs" [ref=e623] [cursor=pointer]:
+                    - /url: /faq
+                - listitem [ref=e624]:
+                  - link "Contact" [ref=e625] [cursor=pointer]:
+                    - /url: /contact
+                - listitem [ref=e626]:
+                  - link "Party & Events" [ref=e627] [cursor=pointer]:
+                    - /url: /party
+            - generic [ref=e628]:
+              - heading "Connect With Us" [level=4] [ref=e629]
+              - generic [ref=e630]:
+                - link "Zomato" [ref=e631] [cursor=pointer]:
+                  - /url: https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi
+                  - generic [ref=e633]: Z
+                - link "Instagram" [ref=e634] [cursor=pointer]:
+                  - /url: https://www.instagram.com/1mysa_cafe/
+                  - img [ref=e635]
+                - link "Facebook" [ref=e638] [cursor=pointer]:
+                  - /url: https://www.facebook.com/profile.php?id=61586649923981
+                  - generic [ref=e640]: f
+                - link "YouTube" [ref=e641] [cursor=pointer]:
+                  - /url: https://www.youtube.com/@1mysacafe
+                  - img [ref=e642]
+                - link "WhatsApp" [ref=e645] [cursor=pointer]:
+                  - /url: https://wa.me/919310579571
+                  - img [ref=e646]
+              - generic [ref=e648]:
+                - generic [ref=e649]:
+                  - img [ref=e650]
+                  - generic [ref=e652]: 093105 79571
+                - generic [ref=e653]:
+                  - img [ref=e654]
+                  - generic [ref=e657]: Al-habib masjid, near 40 futa road, Shaheen Bagh, New Delhi 110025
+          - generic [ref=e658]:
+            - paragraph [ref=e659]:
+              - text: © 2026 1Mysa Café. All rights reserved.
+              - text: Developed, Designed & Maintained by
+              - link "Seclynx" [ref=e660] [cursor=pointer]:
+                - /url: https://seclynx.netlify.app/
+                - generic [ref=e661]: Seclynx
+            - paragraph [ref=e662]: टेस्ट में विलायती, दिलसे हिन्दुस्तानी
+        - generic [ref=e663]:
+          - link "Call" [ref=e664] [cursor=pointer]:
+            - /url: tel:+919310579571
+            - img [ref=e665]
+            - generic: Call
+          - link "WhatsApp" [ref=e667] [cursor=pointer]:
+            - /url: https://wa.me/919310579571
+            - img [ref=e668]
+            - generic: WhatsApp
+          - link "Instagram" [ref=e670] [cursor=pointer]:
+            - /url: https://instagram.com/1mysa_cafe/
+            - img [ref=e671]
+            - generic: Instagram
+          - link "Directions" [ref=e674] [cursor=pointer]:
+            - /url: https://maps.app.goo.gl/kLANE8iK1mekgQ768
+            - img [ref=e675]
+            - generic: Directions
+    - generic [ref=e678]:
+      - link "Call" [ref=e679] [cursor=pointer]:
+        - /url: tel:+919310579571
+        - img [ref=e680]
+        - generic: Call
+      - link "WhatsApp" [ref=e682] [cursor=pointer]:
+        - /url: https://wa.me/919310579571
+        - img [ref=e683]
+        - generic: WhatsApp
+      - link "Instagram" [ref=e685] [cursor=pointer]:
+        - /url: https://instagram.com/1mysa_cafe/
+        - img [ref=e686]
+        - generic: Instagram
+      - link "Directions" [ref=e689] [cursor=pointer]:
+        - /url: https://maps.app.goo.gl/kLANE8iK1mekgQ768
+        - img [ref=e690]
+        - generic: Directions

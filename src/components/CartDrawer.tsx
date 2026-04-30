@@ -95,6 +95,12 @@ export default function CartDrawer() {
                       alt={ci.item.name}
                       className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover flex-shrink-0"
                       loading="lazy"
+                      onError={(e) => {
+                        const img = e.currentTarget;
+                        if (img.dataset.fallbackApplied) return;
+                        img.dataset.fallbackApplied = "1";
+                        img.src = "/placeholder.svg";
+                      }}
                     />
                     {/* Details */}
                     <div className="flex-1 min-w-0">

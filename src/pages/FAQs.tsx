@@ -214,8 +214,14 @@ export default function FAQPage() {
         <header className="relative pt-20 min-h-[60vh] flex items-center">
           <div className="absolute inset-0">
             <img
-              src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo9.png"
+              src="https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.webp"
               alt="Kunafa FAQ - Frequently Asked Questions"
+              onError={(e) => {
+                const img = e.currentTarget;
+                if (img.dataset.fallbackApplied) return;
+                img.dataset.fallbackApplied = "1";
+                img.src = "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.webp";
+              }}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />

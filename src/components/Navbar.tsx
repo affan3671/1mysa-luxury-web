@@ -9,6 +9,7 @@ const navLinks = [
   { key: 'nav.menu', path: '/menu' },
   { key: 'nav.about', path: '/about' },
   { key: 'nav.gallery', path: '/gallery' },
+  { key: 'nav.blog', path: '/blog' },
   { key: 'nav.party', path: '/party' },
   { key: 'nav.order', path: '/order' },
   { key: 'nav.faq', path: '/faq' },

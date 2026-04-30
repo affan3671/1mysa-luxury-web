@@ -4,9 +4,10 @@ import { MapPin, Star, Utensils, Car, Truck, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const heroImages = [
-  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164250%20(1).png",
-  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20165033.png",
-  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164534.png",
+  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Uzbeki_Pilaf.webp",
+  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/cashew_square_baklava.webp",
+  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11(1).webp",
+  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo2.webp",
 ];
 
 const features = [
@@ -64,6 +65,12 @@ export default function Hero() {
               alt="1Mysa Cafe"
               loading="eager"
               decoding="async"
+              onError={(e) => {
+                const img = e.currentTarget;
+                if (img.dataset.fallbackApplied) return;
+                img.dataset.fallbackApplied = "1";
+                img.src = "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.webp";
+              }}
               className="w-full h-full object-cover"
             />
             {/* Premium gradient overlay — emerald to navy */}

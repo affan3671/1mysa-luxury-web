@@ -15,6 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.menu': 'Menu',
     'nav.about': 'About Us',
     'nav.gallery': 'Gallery',
+    'nav.blog': 'Blog',
     'nav.faq': 'FAQs',
     'nav.party': 'Party & Events',
     'nav.order': 'Order Online',
@@ -38,6 +39,7 @@ const translations: Record<Language, Record<string, string>> = {
     'menu.kunafa': 'Kunafa / Knafeh',
     'menu.baklava': 'Baklava & Sweets',
     'menu.premium_imports': 'Premium Imports',
+    'menu.summer_refreshments': 'Summer Refreshments',
     //*'menu.drinks': 'Beverages',*/
     
     // About
@@ -115,6 +117,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.menu': 'मेन्यू',
     'nav.about': 'हमारे बारे में',
     'nav.gallery': 'गैलरी',
+    'nav.blog': 'ब्लॉग',
     'nav.party': 'पार्टी और इवेंट्स',
     'nav.order': 'ऑनलाइन ऑर्डर',
     'nav.contact': 'संपर्क',

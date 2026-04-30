@@ -17,26 +17,26 @@ type MediaItem = {
 const galleryMedia: MediaItem[] = [
   // Images
   { src: '/images/399361128_759025669573090_1213483921279875783_n.jpg', category: 'food', alt: 'Turkish coffee', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Turkish_Coffee_Post_NEW.png', category: 'food', alt: 'Sand Caffeine Turkish Coffee', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Turkish_Coffee_Thumbnil_New_Instagram.png', category: 'food', alt: 'The Taste of Tradition', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164250%20(1).png', category: 'food', alt: 'The Lotus Biscoff Kunafa', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.png', category: 'food', alt: 'Kunafa', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164345.png', category: 'food', alt: 'Delicious Kunafa', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo3.png', category: 'interior', alt: 'Cafe exterior', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.webp', category: 'food', alt: 'Sand Caffeine Turkish Coffee', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.webp', category: 'food', alt: 'The Taste of Tradition', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.webp', category: 'food', alt: 'The Lotus Biscoff Kunafa', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.webp', category: 'food', alt: 'Kunafa', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/1Mysa_Perfect_Kunafa_Post.webp', category: 'food', alt: 'Delicious Kunafa', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo3.webp', category: 'interior', alt: 'Cafe exterior', type: 'image' },
   { src: '/images/403626269_375773254977197_8679190473259505294_n.jpg', category: 'interior', alt: 'Interior view', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo6.png', category: 'vibe', alt: 'Cafe interior', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20165033.png', category: 'vibe', alt: 'Cafe vibe', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164534.png', category: 'vibe', alt: 'Cozy ambience', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164452.png', category: 'vibe', alt: 'Baklava', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo7.png', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo8.png', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo9.png', category: 'food', alt: 'Cafe menu', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.jpg', category: 'food', alt: 'Coffee serving', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/1Mysa_Perfect_Kunafa_Post.jpg', category: 'food', alt: 'Customize Your Kunafa', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo6.webp', category: 'vibe', alt: 'Cafe interior', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo6.webp', category: 'vibe', alt: 'Cafe vibe', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo8.webp', category: 'vibe', alt: 'Cozy ambience', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo7.webp', category: 'vibe', alt: 'Baklava', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo7.webp', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo8.webp', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.webp', category: 'food', alt: 'Cafe menu', type: 'image' },
+  { src:('https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.webp'), category: 'food', alt:('Coffee serving'), type:('image') },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/1Mysa_Perfect_Kunafa_Post.webp', category: 'food', alt: 'Customize Your Kunafa', type: 'image' },
   
   // === ADD YOUR VIDEOS HERE ===
   // Example video entries:
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/videos/1Mysa_Shop_Edit-NEW.mp4', category: 'food', alt: '1Mysa Cafe', type: 'video', poster: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Screenshot%202026-01-16%20164250.png' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/videos/1Mysa_Shop_Edit-NEW.mp4', category: 'food', alt: '1Mysa Cafe', type: 'video', poster: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.webp' },
   // { src: '/videos/coffee-brewing.mp4', category: 'food', alt: 'Turkish Coffee Brewing', type: 'video' },
   // { src: 'https://example.com/video.mp4', category: 'vibe', alt: 'Cafe Atmosphere', type: 'video' },
 ];
@@ -153,6 +153,12 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
                     alt={item.alt}
                     loading="lazy"
                     decoding="async"
+                    onError={(e) => {
+                      const img = e.currentTarget;
+                      if (img.dataset.fallbackApplied) return;
+                      img.dataset.fallbackApplied = "1";
+                      img.src = "/placeholder.svg";
+                    }}
                     className="w-full h-full object-cover aspect-square transition-transform duration-500 group-hover:scale-110"
                   />
                 )}

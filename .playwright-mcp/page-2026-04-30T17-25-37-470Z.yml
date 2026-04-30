@@ -1,0 +1,577 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - main [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "1Mysa Cafe 1Mysa Café Kunafa & Turkish Coffee" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "1Mysa Cafe" [ref=e8]
+          - generic [ref=e9]:
+            - heading "1Mysa Café" [level=1] [ref=e10]
+            - paragraph [ref=e11]: Kunafa & Turkish Coffee
+        - generic [ref=e12]:
+          - link "Home" [ref=e13] [cursor=pointer]:
+            - /url: /
+          - link "Menu" [ref=e14] [cursor=pointer]:
+            - /url: /menu
+          - link "About Us" [ref=e15] [cursor=pointer]:
+            - /url: /about
+          - link "Gallery" [ref=e16] [cursor=pointer]:
+            - /url: /gallery
+          - link "Blog" [ref=e17] [cursor=pointer]:
+            - /url: /blog
+          - link "Party & Events" [ref=e18] [cursor=pointer]:
+            - /url: /party
+          - link "Order Online" [ref=e19] [cursor=pointer]:
+            - /url: /order
+          - link "FAQs" [ref=e20] [cursor=pointer]:
+            - /url: /faq
+          - link "Contact" [ref=e21] [cursor=pointer]:
+            - /url: /contact
+        - button "हिंदी" [ref=e23] [cursor=pointer]:
+          - img [ref=e24]
+          - generic [ref=e27]: हिंदी
+    - generic [ref=e29]:
+      - heading "Our Menu" [level=1] [ref=e30]
+      - paragraph [ref=e31]: Authentic Turkish & Middle Eastern Delights
+    - region "Our Benefits" [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e35]:
+          - img [ref=e37]
+          - generic [ref=e42]:
+            - img [ref=e45]
+            - generic [ref=e50]:
+              - generic [ref=e51]:
+                - heading "FREE DELIVERY" [level=2] [ref=e52]
+                - generic [ref=e53]: ALWAYS
+              - paragraph [ref=e54]: No delivery charges by us — ever!
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - img [ref=e57]
+              - text: Fast delivery
+            - generic [ref=e59]:
+              - img [ref=e60]
+              - text: Guaranteed
+        - generic [ref=e63]:
+          - img [ref=e65]
+          - generic [ref=e68]:
+            - img [ref=e71]
+            - generic [ref=e74]:
+              - generic [ref=e75]:
+                - heading "ZERO SWEETNESS" [level=2] [ref=e76]
+                - generic [ref=e77]: OPTION
+              - paragraph [ref=e78]: 100% sugar-free customization available
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - img [ref=e81]
+              - text: No sugar
+            - generic [ref=e83]:
+              - img [ref=e84]
+              - text: Natural taste
+    - region "Kunafa Menu" [ref=e87]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - img [ref=e94]
+              - heading "Turkish Coffee & Hot Drinks" [level=3] [ref=e96]
+            - generic [ref=e98]:
+              - button "Menu" [ref=e99] [cursor=pointer]:
+                - img [ref=e100]
+                - text: Menu
+              - button "Videos" [ref=e103] [cursor=pointer]:
+                - img [ref=e104]
+                - text: Videos
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - generic [ref=e109]:
+                - img "Sand Caffeine-Infused Turkish Coffee" [ref=e110]
+                - generic [ref=e113]: Popular
+              - generic [ref=e114]:
+                - heading "Sand Caffeine-Infused Turkish Coffee" [level=3] [ref=e115]
+                - paragraph [ref=e116]: Traditional sand-boiled Turkish coffee, rich and aromatic
+                - generic [ref=e117]:
+                  - generic [ref=e119]: ₹55
+                  - generic [ref=e120]:
+                    - button "Add to cart" [ref=e121] [cursor=pointer]:
+                      - img [ref=e122]
+                    - link "Order Now" [ref=e126] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Sand Caffeine-Infused Turkish Coffee"
+            - generic [ref=e127]:
+              - img "Sand Black Caffeine-Authentic Turkish Coffee" [ref=e129]
+              - generic [ref=e131]:
+                - heading "Sand Black Caffeine-Authentic Turkish Coffee" [level=3] [ref=e132]
+                - paragraph [ref=e133]: Rich, bold, and aromatic Turkish coffee for a true traditional experience.
+                - generic [ref=e134]:
+                  - generic [ref=e136]: ₹70
+                  - generic [ref=e137]:
+                    - button "Add to cart" [ref=e138] [cursor=pointer]:
+                      - img [ref=e139]
+                    - link "Order Now" [ref=e143] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Sand Black Caffeine-Authentic Turkish Coffee"
+            - generic [ref=e144]:
+              - img "1 Mysa Beaten Caffeine-More Creamy Coffee" [ref=e146]
+              - generic [ref=e148]:
+                - heading "1 Mysa Beaten Caffeine-More Creamy Coffee" [level=3] [ref=e149]
+                - paragraph [ref=e150]: Smooth, creamy, and well-balanced coffee with a rich, comforting taste.
+                - generic [ref=e151]:
+                  - generic [ref=e153]: ₹70
+                  - generic [ref=e154]:
+                    - button "Add to cart" [ref=e155] [cursor=pointer]:
+                      - img [ref=e156]
+                    - link "Order Now" [ref=e160] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: 1 Mysa Beaten Caffeine-More Creamy Coffee"
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - img [ref=e164]
+              - heading "Kunafa / Knafeh" [level=3] [ref=e167]
+            - generic [ref=e169]:
+              - button "Menu" [ref=e170] [cursor=pointer]:
+                - img [ref=e171]
+                - text: Menu
+              - button "Videos" [ref=e174] [cursor=pointer]:
+                - img [ref=e175]
+                - text: Videos
+          - generic [ref=e178]:
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - img "Lotus Biscoff Knafeh/Kunafa" [ref=e181]
+                - generic [ref=e184]: Popular
+              - generic [ref=e185]:
+                - heading "Lotus Biscoff Knafeh/Kunafa" [level=3] [ref=e186]
+                - paragraph [ref=e187]: Crispy kunafa layered with creamy filling and rich Lotus Biscoff flavor.
+                - generic [ref=e188]:
+                  - generic [ref=e190]: ₹599
+                  - generic [ref=e191]:
+                    - button "Add to cart" [ref=e192] [cursor=pointer]:
+                      - img [ref=e193]
+                    - link "Order Now" [ref=e197] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Lotus Biscoff Knafeh/Kunafa"
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - img "Honey Syrup Knafeh/Kunafa" [ref=e200]
+                - generic [ref=e203]: Popular
+              - generic [ref=e204]:
+                - heading "Honey Syrup Knafeh/Kunafa" [level=3] [ref=e205]
+                - paragraph [ref=e206]: Crispy kunafa soaked in sweet honey syrup with a rich, traditional taste.
+                - generic [ref=e207]:
+                  - generic [ref=e209]: ₹449
+                  - generic [ref=e210]:
+                    - button "Add to cart" [ref=e211] [cursor=pointer]:
+                      - img [ref=e212]
+                    - link "Order Now" [ref=e216] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Honey Syrup Knafeh/Kunafa"
+            - generic [ref=e217]:
+              - img "Nutella Spread Knafeh/Kunafa" [ref=e219]
+              - generic [ref=e221]:
+                - heading "Nutella Spread Knafeh/Kunafa" [level=3] [ref=e222]
+                - paragraph [ref=e223]: Crispy kunafa filled with warm, rich Nutella for an indulgent treat.
+                - generic [ref=e224]:
+                  - generic [ref=e226]: ₹539
+                  - generic [ref=e227]:
+                    - button "Add to cart" [ref=e228] [cursor=pointer]:
+                      - img [ref=e229]
+                    - link "Order Now" [ref=e233] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Nutella Spread Knafeh/Kunafa"
+            - generic [ref=e234]:
+              - img "Date Syrup Knafeh/Kunafa" [ref=e236]
+              - generic [ref=e238]:
+                - heading "Date Syrup Knafeh/Kunafa" [level=3] [ref=e239]
+                - paragraph [ref=e240]: Crispy kunafa drizzled with rich, natural date syrup for a deep, sweet flavor.
+                - generic [ref=e241]:
+                  - generic [ref=e243]: ₹499
+                  - generic [ref=e244]:
+                    - button "Add to cart" [ref=e245] [cursor=pointer]:
+                      - img [ref=e246]
+                    - link "Order Now" [ref=e250] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Date Syrup Knafeh/Kunafa"
+            - generic [ref=e251]:
+              - generic [ref=e252]:
+                - img "Sugar Syrup Knafeh/Kunafa" [ref=e253]
+                - generic [ref=e256]: Popular
+              - generic [ref=e257]:
+                - heading "Sugar Syrup Knafeh/Kunafa" [level=3] [ref=e258]
+                - paragraph [ref=e259]: Golden, crispy kunafa soaked in classic sugar syrup for a traditional sweetness.
+                - generic [ref=e260]:
+                  - generic [ref=e262]: ₹349
+                  - generic [ref=e263]:
+                    - button "Add to cart" [ref=e264] [cursor=pointer]:
+                      - img [ref=e265]
+                    - link "Order Now" [ref=e269] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Sugar Syrup Knafeh/Kunafa"
+            - generic [ref=e270]:
+              - img "Ice Cream Knafeh/Kunafa" [ref=e272]
+              - generic [ref=e274]:
+                - heading "Ice Cream Knafeh/Kunafa" [level=3] [ref=e275]
+                - paragraph [ref=e276]: Warm, crispy kunafa paired with cold, creamy ice cream for a perfect contrast.
+                - generic [ref=e277]:
+                  - generic [ref=e279]: ₹499
+                  - generic [ref=e280]:
+                    - button "Add to cart" [ref=e281] [cursor=pointer]:
+                      - img [ref=e282]
+                    - link "Order Now" [ref=e286] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Ice Cream Knafeh/Kunafa"
+            - generic [ref=e287]:
+              - img "Pista Kunefe/Kunafa" [ref=e289]
+              - generic [ref=e291]:
+                - heading "Pista Kunefe/Kunafa" [level=3] [ref=e292]
+                - paragraph [ref=e293]: Crispy kunafa filled with rich pistachio flavor and sweet syrup.
+                - generic [ref=e294]:
+                  - generic [ref=e296]: ₹749
+                  - generic [ref=e297]:
+                    - button "Add to cart" [ref=e298] [cursor=pointer]:
+                      - img [ref=e299]
+                    - link "Order Now" [ref=e303] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Pista Kunefe/Kunafa"
+            - generic [ref=e304]:
+              - img "Dubai Pista Spread Kunafa/Kunefe" [ref=e306]
+              - generic [ref=e308]:
+                - heading "Dubai Pista Spread Kunafa/Kunefe" [level=3] [ref=e309]
+                - paragraph [ref=e310]: Crispy kunafa layered with rich Dubai pistachio spread for a luxurious taste.
+                - generic [ref=e311]:
+                  - generic [ref=e313]: ₹749
+                  - generic [ref=e314]:
+                    - button "Add to cart" [ref=e315] [cursor=pointer]:
+                      - img [ref=e316]
+                    - link "Order Now" [ref=e320] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Dubai Pista Spread Kunafa/Kunefe"
+            - generic [ref=e321]:
+              - img "Combo Topping Kunefe/Kunafa" [ref=e323]
+              - generic [ref=e325]:
+                - heading "Combo Topping Kunefe/Kunafa" [level=3] [ref=e326]
+                - paragraph [ref=e327]: Crispy kunafa topped with a mix of rich, indulgent flavors.
+                - generic [ref=e328]:
+                  - generic [ref=e330]: Price varies
+                  - generic [ref=e331]:
+                    - button "Add to cart" [ref=e332] [cursor=pointer]:
+                      - img [ref=e333]
+                    - link "Order Now" [ref=e337] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Combo Topping Kunefe/Kunafa"
+        - generic [ref=e338]:
+          - generic [ref=e339]:
+            - generic [ref=e340]:
+              - img [ref=e341]
+              - heading "Baklava & Sweets" [level=3] [ref=e343]
+            - generic [ref=e345]:
+              - button "Menu" [ref=e346] [cursor=pointer]:
+                - img [ref=e347]
+                - text: Menu
+              - button "Videos" [ref=e350] [cursor=pointer]:
+                - img [ref=e351]
+                - text: Videos
+          - generic [ref=e354]:
+            - generic [ref=e355]:
+              - img "Pyramid Baklava" [ref=e357]
+              - generic [ref=e359]:
+                - heading "Pyramid Baklava" [level=3] [ref=e360]
+                - paragraph [ref=e361]: Layered, flaky baklava shaped into a pyramid and soaked in sweet syrup.
+                - generic [ref=e362]:
+                  - generic [ref=e364]: ₹45
+                  - generic [ref=e365]:
+                    - button "Add to cart" [ref=e366] [cursor=pointer]:
+                      - img [ref=e367]
+                    - link "Order Now" [ref=e371] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Pyramid Baklava"
+            - generic [ref=e372]:
+              - img "Cashew Square Baklava" [ref=e374]
+              - generic [ref=e376]:
+                - heading "Cashew Square Baklava" [level=3] [ref=e377]
+                - paragraph [ref=e378]: Flaky square baklava filled with rich, crunchy cashews and sweet syrup.
+                - generic [ref=e379]:
+                  - generic [ref=e381]: ₹49
+                  - generic [ref=e382]:
+                    - button "Add to cart" [ref=e383] [cursor=pointer]:
+                      - img [ref=e384]
+                    - link "Order Now" [ref=e388] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Cashew Square Baklava"
+            - generic [ref=e389]:
+              - img "Cashew Kunafa Baklava" [ref=e391]
+              - generic [ref=e393]:
+                - heading "Cashew Kunafa Baklava" [level=3] [ref=e394]
+                - paragraph [ref=e395]: Crispy kunafa-style baklava filled with roasted cashews and sweet syrup.
+                - generic [ref=e396]:
+                  - generic [ref=e398]: ₹59
+                  - generic [ref=e399]:
+                    - button "Add to cart" [ref=e400] [cursor=pointer]:
+                      - img [ref=e401]
+                    - link "Order Now" [ref=e405] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Cashew Kunafa Baklava"
+            - generic [ref=e406]:
+              - img "Oshe Bulbul Baklava" [ref=e408]
+              - generic [ref=e410]:
+                - heading "Oshe Bulbul Baklava" [level=3] [ref=e411]
+                - paragraph [ref=e412]: Delicate, bird's-nest–shaped baklava filled with nuts and drizzled with syrup.
+                - generic [ref=e413]:
+                  - generic [ref=e415]: ₹70
+                  - generic [ref=e416]:
+                    - button "Add to cart" [ref=e417] [cursor=pointer]:
+                      - img [ref=e418]
+                    - link "Order Now" [ref=e422] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Oshe Bulbul Baklava"
+            - generic [ref=e423]:
+              - img "Chocolate Square Baklava" [ref=e425]
+              - generic [ref=e427]:
+                - heading "Chocolate Square Baklava" [level=3] [ref=e428]
+                - paragraph [ref=e429]: Rich, flaky baklava squares layered with chocolate and sweet syrup.
+                - generic [ref=e430]:
+                  - generic [ref=e432]: ₹39
+                  - generic [ref=e433]:
+                    - button "Add to cart" [ref=e434] [cursor=pointer]:
+                      - img [ref=e435]
+                    - link "Order Now" [ref=e439] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Chocolate Square Baklava"
+        - generic [ref=e441]:
+          - generic [ref=e442]:
+            - img [ref=e443]
+            - heading "Summer Refreshments" [level=3] [ref=e446]
+          - generic [ref=e448]:
+            - button "Menu" [ref=e449] [cursor=pointer]:
+              - img [ref=e450]
+              - text: Menu
+            - button "Videos" [ref=e453] [cursor=pointer]:
+              - img [ref=e454]
+              - text: Videos
+        - generic [ref=e457]:
+          - generic [ref=e458]:
+            - generic [ref=e459]:
+              - img [ref=e460]
+              - heading "Premium Imports" [level=3] [ref=e462]
+            - generic [ref=e464]:
+              - button "Menu" [ref=e465] [cursor=pointer]:
+                - img [ref=e466]
+                - text: Menu
+              - button "Videos" [ref=e469] [cursor=pointer]:
+                - img [ref=e470]
+                - text: Videos
+          - generic [ref=e473]:
+            - generic [ref=e474]:
+              - generic [ref=e475]:
+                - img "Milaf Cola (240ml)" [ref=e476]
+                - generic [ref=e479]: Popular
+              - generic [ref=e480]:
+                - heading "Milaf Cola (240ml)" [level=3] [ref=e481]
+                - paragraph [ref=e482]: A crisp, refreshing soft drink with a bold cola flavor and perfect fizz. It Speaks For Itself.
+                - generic [ref=e483]:
+                  - generic [ref=e484]:
+                    - generic [ref=e485]: ₹199
+                    - generic [ref=e486]: ₹140
+                  - generic [ref=e487]:
+                    - button "Add to cart" [ref=e488] [cursor=pointer]:
+                      - img [ref=e489]
+                    - link "Order Now" [ref=e493] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Milaf Cola (240ml)"
+            - generic [ref=e494]:
+              - generic [ref=e495]:
+                - img "Kinza Lemon (250ml)" [ref=e496]
+                - generic [ref=e499]: Popular
+              - generic [ref=e500]:
+                - heading "Kinza Lemon (250ml)" [level=3] [ref=e501]
+                - paragraph [ref=e502]: Crisp, zesty lemon-lime fizz in a bold green can—pure citrus refreshment with every bubbly sip.
+                - generic [ref=e503]:
+                  - generic [ref=e504]:
+                    - generic [ref=e505]: ₹99
+                    - generic [ref=e506]: ₹90
+                  - generic [ref=e507]:
+                    - button "Add to cart" [ref=e508] [cursor=pointer]:
+                      - img [ref=e509]
+                    - link "Order Now" [ref=e513] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Kinza Lemon (250ml)"
+            - generic [ref=e514]:
+              - generic [ref=e515]:
+                - img "Kinza Orange (250ml)" [ref=e516]
+                - generic [ref=e519]: Popular
+              - generic [ref=e520]:
+                - heading "Kinza Orange (250ml)" [level=3] [ref=e521]
+                - paragraph [ref=e522]: Bright, sun-kissed orange fizz bursting with tangy-sweet citrus flavor—classic refreshment in every bubbly sip.
+                - generic [ref=e523]:
+                  - generic [ref=e524]:
+                    - generic [ref=e525]: ₹99
+                    - generic [ref=e526]: ₹90
+                  - generic [ref=e527]:
+                    - button "Add to cart" [ref=e528] [cursor=pointer]:
+                      - img [ref=e529]
+                    - link "Order Now" [ref=e533] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Kinza Orange (250ml)"
+            - generic [ref=e534]:
+              - generic [ref=e535]:
+                - img "Kinza Diet Cola (250ml)" [ref=e536]
+                - generic [ref=e539]: Popular
+              - generic [ref=e540]:
+                - heading "Kinza Diet Cola (250ml)" [level=3] [ref=e541]
+                - paragraph [ref=e542]: Bold cola taste without the sugar—zero-calorie fizz for the refreshment you crave, guilt-free.
+                - generic [ref=e543]:
+                  - generic [ref=e544]:
+                    - generic [ref=e545]: ₹99
+                    - generic [ref=e546]: ₹90
+                  - generic [ref=e547]:
+                    - button "Add to cart" [ref=e548] [cursor=pointer]:
+                      - img [ref=e549]
+                    - link "Order Now" [ref=e553] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Kinza Diet Cola (250ml)"
+            - generic [ref=e554]:
+              - generic [ref=e555]:
+                - img "Kinza Black Current (250ml)" [ref=e556]
+                - generic [ref=e559]: Popular
+              - generic [ref=e560]:
+                - heading "Kinza Black Current (250ml)" [level=3] [ref=e561]
+                - paragraph [ref=e562]: Deep berry flavor with a crisp fizz—made for the refreshment you love.
+                - generic [ref=e563]:
+                  - generic [ref=e564]:
+                    - generic [ref=e565]: ₹99
+                    - generic [ref=e566]: ₹90
+                  - generic [ref=e567]:
+                    - button "Add to cart" [ref=e568] [cursor=pointer]:
+                      - img [ref=e569]
+                    - link "Order Now" [ref=e573] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Kinza Black Current (250ml)"
+            - generic [ref=e574]:
+              - generic [ref=e575]:
+                - img "Kinza Lemon (Diet) (250ml)" [ref=e576]
+                - generic [ref=e579]: Popular
+              - generic [ref=e580]:
+                - heading "Kinza Lemon (Diet) (250ml)" [level=3] [ref=e581]
+                - paragraph [ref=e582]: Tangy lemon kick without the sugar—zero-calorie bubbles for guilt-free refreshment anytime.
+                - generic [ref=e583]:
+                  - generic [ref=e584]:
+                    - generic [ref=e585]: ₹99
+                    - generic [ref=e586]: ₹90
+                  - generic [ref=e587]:
+                    - button "Add to cart" [ref=e588] [cursor=pointer]:
+                      - img [ref=e589]
+                    - link "Order Now" [ref=e593] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Kinza Lemon (Diet) (250ml)"
+            - generic [ref=e594]:
+              - generic [ref=e595]:
+                - img "Kinza Pomegranate (250ml)" [ref=e596]
+                - generic [ref=e599]: Popular
+              - generic [ref=e600]:
+                - heading "Kinza Pomegranate (250ml)" [level=3] [ref=e601]
+                - paragraph [ref=e602]: Rich pomegranate flavor with a crisp fizz—made for the refreshment you love.
+                - generic [ref=e603]:
+                  - generic [ref=e604]:
+                    - generic [ref=e605]: ₹99
+                    - generic [ref=e606]: ₹90
+                  - generic [ref=e607]:
+                    - button "Add to cart" [ref=e608] [cursor=pointer]:
+                      - img [ref=e609]
+                    - link "Order Now" [ref=e613] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Kinza Pomegranate (250ml)"
+            - generic [ref=e614]:
+              - generic [ref=e615]:
+                - img "Kinza Cola (250ml)" [ref=e616]
+                - generic [ref=e619]: Popular
+              - generic [ref=e620]:
+                - heading "Kinza Cola (250ml)" [level=3] [ref=e621]
+                - paragraph [ref=e622]: Classic cola flavor with lively bubbles—for the refreshment you love anytime.
+                - generic [ref=e623]:
+                  - generic [ref=e624]:
+                    - generic [ref=e625]: ₹99
+                    - generic [ref=e626]: ₹90
+                  - generic [ref=e627]:
+                    - button "Add to cart" [ref=e628] [cursor=pointer]:
+                      - img [ref=e629]
+                    - link "Order Now" [ref=e633] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Kinza Cola (250ml)"
+            - generic [ref=e634]:
+              - generic [ref=e635]:
+                - img "Kinza Citrus (250ml)" [ref=e636]
+                - generic [ref=e639]: Popular
+              - generic [ref=e640]:
+                - heading "Kinza Citrus (250ml)" [level=3] [ref=e641]
+                - paragraph [ref=e642]: Vibrant citrus flavor with crisp carbonation—refreshment that keeps you coming back.
+                - generic [ref=e643]:
+                  - generic [ref=e644]:
+                    - generic [ref=e645]: ₹99
+                    - generic [ref=e646]: ₹90
+                  - generic [ref=e647]:
+                    - button "Add to cart" [ref=e648] [cursor=pointer]:
+                      - img [ref=e649]
+                    - link "Order Now" [ref=e653] [cursor=pointer]:
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: Kinza Citrus (250ml)"
+    - generic [ref=e655]:
+      - generic [ref=e656]:
+        - generic [ref=e657]:
+          - generic [ref=e658]:
+            - img "1Mysa Cafe" [ref=e659]
+            - generic [ref=e660]:
+              - heading "1Mysa Cafe" [level=3] [ref=e661]
+              - paragraph [ref=e662]: 1Mysa Cafe
+          - paragraph [ref=e663]: Kunafa & Turkish Coffee – Shaheen Bagh
+          - paragraph [ref=e664]: "\"Baked with Love in Shaheen Bagh.\""
+        - generic [ref=e665]:
+          - heading "Quick Links" [level=4] [ref=e666]
+          - list [ref=e667]:
+            - listitem [ref=e668]:
+              - link "Home" [ref=e669] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e670]:
+              - link "Menu" [ref=e671] [cursor=pointer]:
+                - /url: /menu
+            - listitem [ref=e672]:
+              - link "About Us" [ref=e673] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e674]:
+              - link "Gallery" [ref=e675] [cursor=pointer]:
+                - /url: /gallery
+            - listitem [ref=e676]:
+              - link "FAQs" [ref=e677] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=e678]:
+              - link "Contact" [ref=e679] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e680]:
+              - link "Party & Events" [ref=e681] [cursor=pointer]:
+                - /url: /party
+        - generic [ref=e682]:
+          - heading "Connect With Us" [level=4] [ref=e683]
+          - generic [ref=e684]:
+            - link "Zomato" [ref=e685] [cursor=pointer]:
+              - /url: https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi
+              - generic [ref=e687]: Z
+            - link "Instagram" [ref=e688] [cursor=pointer]:
+              - /url: https://www.instagram.com/1mysa_cafe/
+              - img [ref=e689]
+            - link "Facebook" [ref=e692] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61586649923981
+              - generic [ref=e694]: f
+            - link "YouTube" [ref=e695] [cursor=pointer]:
+              - /url: https://www.youtube.com/@1mysacafe
+              - img [ref=e696]
+            - link "WhatsApp" [ref=e699] [cursor=pointer]:
+              - /url: https://wa.me/919310579571
+              - img [ref=e700]
+          - generic [ref=e702]:
+            - generic [ref=e703]:
+              - img [ref=e704]
+              - generic [ref=e706]: 093105 79571
+            - generic [ref=e707]:
+              - img [ref=e708]
+              - generic [ref=e711]: Al-habib masjid, near 40 futa road, Shaheen Bagh, New Delhi 110025
+      - generic [ref=e712]:
+        - paragraph [ref=e713]:
+          - text: © 2026 1Mysa Café. All rights reserved.
+          - text: Developed, Designed & Maintained by
+          - link "Seclynx" [ref=e714] [cursor=pointer]:
+            - /url: https://seclynx.netlify.app/
+            - generic [ref=e715]: Seclynx
+        - paragraph [ref=e716]: टेस्ट में विलायती, दिलसे हिन्दुस्तानी
+    - generic [ref=e717]:
+      - link "Call":
+        - /url: tel:+919310579571
+        - img
+        - generic: Call
+      - link "WhatsApp":
+        - /url: https://wa.me/919310579571
+        - img
+        - generic: WhatsApp
+      - link "Instagram":
+        - /url: https://instagram.com/1mysa_cafe/
+        - img
+        - generic: Instagram
+      - link "Directions":
+        - /url: https://maps.app.goo.gl/kLANE8iK1mekgQ768
+        - img
+        - generic: Directions

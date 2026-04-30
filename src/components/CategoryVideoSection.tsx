@@ -131,6 +131,12 @@ const VideoCard = memo(function VideoCard({ video, index, language, onSelect }: 
           alt={video.title}
           loading="lazy"
           decoding="async"
+          onError={(e) => {
+            const img = e.currentTarget;
+            if (img.dataset.fallbackApplied) return;
+            img.dataset.fallbackApplied = "1";
+            img.src = "/placeholder.svg";
+          }}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         
@@ -233,6 +239,12 @@ const VideoModal = memo(function VideoModal({ video, onClose, language }: VideoM
             alt={video.title}
             loading="eager"
             decoding="async"
+            onError={(e) => {
+              const img = e.currentTarget;
+              if (img.dataset.fallbackApplied) return;
+              img.dataset.fallbackApplied = "1";
+              img.src = "/placeholder.svg";
+            }}
             className="w-full h-full object-cover rounded-lg mb-4"
           />
         </div>
