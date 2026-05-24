@@ -4,6 +4,7 @@ import FloatingButtons from '@/components/FloatingButtons';
 import { motion } from 'framer-motion';
 import { MapPin, Instagram, ExternalLink, MessageCircle, } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { SEO, kunafaMenuKeywords, locationKeywords } from '@/components/SEO';
 
 export default function OrderPage() {
   const { t, language } = useLanguage();
@@ -42,8 +43,36 @@ export default function OrderPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
+    <>
+      <SEO
+        title="Order Online | Hot Kunafa & Turkish Coffee Delivery"
+        description="Craving fresh Turkish desserts? Order the best Kunafa in Delhi directly via WhatsApp or Zomato from 1Mysa Café. Free, fast home delivery across Shaheen Bagh & South Delhi."
+        keywords={`Order Kunafa Online, Kunafa Zomato Delhi, Kunafa WhatsApp Delivery, Hot Kunafa Home Delivery, ${kunafaMenuKeywords}, ${locationKeywords}`}
+        canonical="https://www.1mysacafe.com/order"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'OrderAction',
+          name: 'Order Kunafa Online',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://www.1mysacafe.com/order',
+            inLanguage: 'en-US',
+            actionPlatform: [
+              'http://schema.org/DesktopWebPlatform',
+              'http://schema.org/MobileWebPlatform',
+            ],
+          },
+          deliveryMethod: 'http://schema.org/ParcelService',
+          priceSpecification: {
+            '@type': 'DeliveryChargeSpecification',
+            appliesToDeliveryMethod: 'http://schema.org/ParcelService',
+            price: 0,
+            priceCurrency: 'INR',
+          },
+        }}
+      />
+      <main className="min-h-screen bg-background">
+        <Navbar />
       
       {/* Hero Banner */}
       <section className="relative pt-20 min-h-[50vh] flex items-center">
@@ -141,5 +170,6 @@ export default function OrderPage() {
       <Footer />
       <FloatingButtons />
     </main>
+    </>
   );
 }

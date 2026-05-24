@@ -6,6 +6,7 @@ import ReviewsSection from '@/components/ReviewsSection';
 import GallerySection from '@/components/GallerySection';
 import ContactSection from '@/components/ContactSection';
 import PartyPage from './PartyPage';
+import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { SEO, kunafaKeywords, locationKeywords } from '@/components/SEO';
 import { restaurantSchema, breadcrumbSchema } from '@/utils/jsonLd';
@@ -53,9 +54,10 @@ const Index = () => {
         </section>
 
         <section aria-label="Party & Events Catering">
-          <PartyPage />
+          <PartyPage hideHeaderFooter={true} />
         </section>
 
+        <Footer />
         <FloatingButtons />
       </main>
     </>

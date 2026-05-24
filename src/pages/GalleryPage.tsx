@@ -4,13 +4,34 @@ import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { SEO, kunafaKeywords, locationKeywords } from '@/components/SEO';
+import { breadcrumbSchema } from '@/utils/jsonLd';
 
 export default function GalleryPage() {
   const { t } = useLanguage();
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
+    <>
+      <SEO
+        title="Gallery | Inside 1Mysa Café Delhi"
+        description="Explore the visual journey of 1Mysa Café in Shaheen Bagh, Delhi. View photos of our authentic hot Turkish Kunafa, sand-boiled Turkish coffee, cozy interiors, and vibrant client moments."
+        keywords={`1Mysa Cafe Photos, Turkish Desserts Delhi, Kunafa Shaheen Bagh Photos, Turkish Coffee Cafe Interior, ${kunafaKeywords}, ${locationKeywords}`}
+        canonical="https://www.1mysacafe.com/gallery"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'ImageGallery',
+          name: '1Mysa Café Gallery',
+          description: 'A visual journey of premium Turkish desserts and coffee at 1Mysa Cafe, Delhi',
+          url: 'https://www.1mysacafe.com/gallery',
+          publisher: {
+            '@type': 'Restaurant',
+            name: '1Mysa Café',
+            url: 'https://www.1mysacafe.com',
+          },
+        }}
+      />
+      <main className="min-h-screen bg-background">
+        <Navbar />
       
       {/* Hero Banner */}
       <section className="pt-28 pb-12 bg-gradient-to-b from-secondary/50 to-background">
@@ -37,5 +58,6 @@ export default function GalleryPage() {
       <Footer />
       <FloatingButtons />
     </main>
+    </>
   );
 }

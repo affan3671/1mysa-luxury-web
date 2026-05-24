@@ -58,9 +58,9 @@ export default function Navbar() {
     className="h-10 sm:h-12 w-auto rounded-lg shadow-md"
   />
   <div className="min-w-0">                {/* ← allows truncation */}
-    <h1 className="text-base sm:text-lg lg:text-xl font-heading font-bold text-foreground truncate">
+    <span className="text-base sm:text-lg lg:text-xl font-heading font-bold text-foreground truncate block">
       1Mysa Café
-    </h1>
+    </span>
     <p className="text-xs text-muted-foreground hidden sm:block truncate">
       {language === 'en' ? 'Kunafa & Turkish Coffee' : 'कुनाफा & तुर्किश कॉफी'}
     </p>

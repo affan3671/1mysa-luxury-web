@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { SEO, kunafaKeywords, locationKeywords } from '@/components/SEO';
@@ -307,6 +308,7 @@ export default function FAQPage() {
             </motion.div>
           </div>
         </section>
+        <Footer />
         <FloatingButtons />
       </main>
     </>

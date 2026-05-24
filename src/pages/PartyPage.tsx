@@ -4,8 +4,9 @@ import FloatingButtons from '@/components/FloatingButtons';
 import { motion } from 'framer-motion';
 import { PartyPopper, Cake, Users, MessageCircle, HeartHandshake, Music } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { SEO, kunafaKeywords, locationKeywords } from '@/components/SEO';
 
-export default function PartyPage() {
+export default function PartyPage({ hideHeaderFooter = false }: { hideHeaderFooter?: boolean }) {
   const { t, language } = useLanguage();
   
   const whatsappNumber = '919310579571';
@@ -24,11 +25,29 @@ export default function PartyPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
-      
-      {/* Hero Banner */}
-      <section className="pt-28 pb-8 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
+    <>
+      {!hideHeaderFooter && (
+        <SEO
+          title="Party & Events Catering | Authentic Turkish Desserts Delhi"
+          description="Host the sweetest celebration in Delhi with 1Mysa Café! We provide premium catering for birthdays, weddings, corporate events, and music festivals with fresh Turkish Kunafa, baklava, sand coffee, and Turkish qahwa."
+          keywords={`Kunafa Catering Delhi, Turkish Dessert Party, Bulk Kunafa Orders, Sand Coffee Catering, Birthday Party Shaheen Bagh, ${kunafaKeywords}, ${locationKeywords}`}
+          canonical="https://www.1mysacafe.com/party"
+          jsonLd={{
+            '@context': 'https://schema.org',
+            '@type': 'EventVenue',
+            name: '1Mysa Café Party & Events',
+            description: 'Premium Turkish dessert catering and cozy event venue in Shaheen Bagh, Delhi',
+            url: 'https://www.1mysacafe.com/party',
+            telephone: '+91-93105-79571',
+            priceRange: '₹₹',
+          }}
+        />
+      )}
+      <div className={hideHeaderFooter ? "" : "min-h-screen bg-background"}>
+        {!hideHeaderFooter && <Navbar />}
+        
+        {/* Hero Banner */}
+        <section className={`${hideHeaderFooter ? "py-12" : "pt-28 pb-8"} bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden`}>
         {/* Decorative elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl" />
@@ -280,8 +299,9 @@ export default function PartyPage() {
         </div>
       </section>
 
-      <Footer />
-      <FloatingButtons />
-    </main>
+      {!hideHeaderFooter && <Footer />}
+      {!hideHeaderFooter && <FloatingButtons />}
+    </div>
+    </>
   );
 }
