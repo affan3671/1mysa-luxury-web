@@ -16,24 +16,16 @@ type MediaItem = {
 
 const galleryMedia: MediaItem[] = [
   // Images
-  { src: '/images/399361128_759025669573090_1213483921279875783_n.jpg', category: 'food', alt: 'Turkish coffee', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.webp', category: 'food', alt: 'Sand Caffeine Turkish Coffee', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11.webp', category: 'food', alt: 'The Taste of Tradition', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.webp', category: 'food', alt: 'The Lotus Biscoff Kunafa', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.webp', category: 'food', alt: 'Kunafa', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/1Mysa_Perfect_Kunafa_Post.webp', category: 'food', alt: 'Delicious Kunafa', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo3.webp', category: 'interior', alt: 'Cafe exterior', type: 'image' },
-  { src: '/images/403626269_375773254977197_8679190473259505294_n.jpg', category: 'interior', alt: 'Interior view', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo6.webp', category: 'vibe', alt: 'Cafe interior', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo6.webp', category: 'vibe', alt: 'Cafe vibe', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo8.webp', category: 'vibe', alt: 'Cozy ambience', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo7.webp', category: 'vibe', alt: 'Baklava', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo7.webp', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo8.webp', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.webp', category: 'food', alt: 'Cafe menu', type: 'image' },
-  { src:('https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo10.webp'), category: 'food', alt:('Coffee serving'), type:('image') },
-  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/1Mysa_Perfect_Kunafa_Post.webp', category: 'food', alt: 'Customize Your Kunafa', type: 'image' },
-  
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kunafa%20Gallery/Ice_Cream_Kunafa_NEW_POST_1Mysa.webp', category: 'vibe', alt: 'Cafe interior', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kunafa%20Gallery/Dubai_Pista_Spred_Kunafa_POST_New_1Mysa.webp', category: 'vibe', alt: 'Cafe vibe', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kunafa%20Gallery/1Mysa_Cafe_Post_Lotus_Biscoff_Kunafa_NEW.webp', category: 'vibe', alt: 'Cozy ambience', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kunafa%20Gallery/1Mysa_Cafe_Post_Honey_Syrup_Kunafa_NEW.webp', category: 'vibe', alt: 'Baklava', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Summer%20Special/Peach_Ice_Tea_SUMMER_1Mysa_Cafe_POST_NEW.webp', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Summer%20Special/1Mysa_Post_Tamar_Hindi_Summer_NEW-1.webp', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Affogato/1Mysa_Post_Pistachio_Affogato_NEW.webp', category: 'food', alt: 'Cafe menu', type: 'image' },
+  { src: ('https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Affogato/1Mysa_Post_Nutella_Affogato_NEW.webp'), category: 'food', alt: ('Coffee serving'), type: ('image') },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Affogato/1Mysa_New_Affgato_Lotus_Biscoff_Post.webp', category: 'food', alt: 'Customize Your Kunafa', type: 'image' },
+
   // === ADD YOUR VIDEOS HERE ===
   // Example video entries:
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/videos/1Mysa_Shop_Edit-NEW.mp4', category: 'food', alt: '1Mysa Cafe', type: 'video', poster: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.webp' },
@@ -95,11 +87,10 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                activeCategory === cat.id
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === cat.id
                   ? 'gold-shimmer text-coffee'
                   : 'bg-card text-foreground hover:bg-primary/10 border border-border'
-              }`}
+                }`}
             >
               {language === 'en' ? cat.label : cat.labelHi}
             </button>
@@ -120,9 +111,8 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className={`relative overflow-hidden rounded-2xl cursor-pointer group ${
-                  index % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''
-                }`}
+                className={`relative overflow-hidden rounded-2xl cursor-pointer group ${index % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                  }`}
                 onClick={() => setSelectedMedia(item)}
               >
                 {isVideo(item) ? (
@@ -188,7 +178,7 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
               >
                 <X className="w-6 h-6" />
               </button>
-              
+
               {isVideo(selectedMedia) ? (
                 <motion.video
                   initial={{ scale: 0.8, opacity: 0 }}

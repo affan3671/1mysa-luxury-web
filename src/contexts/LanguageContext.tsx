@@ -139,6 +139,8 @@ const translations: Record<Language, Record<string, string>> = {
     'menu.coffee': 'तुर्किश कॉफी और गर्म पेय',
     'menu.kunafa': 'कुनाफा / नाफेह',
     'menu.baklava': 'बकलावा और मिठाइयां',
+    'menu.premium_imports': 'प्रीमियम इम्पोर्ट्स',
+    'menu.summer_refreshments': 'समर रिफ्रेशमेंट्स',
     'menu.drinks': 'पेय पदार्थ',
     
     // About

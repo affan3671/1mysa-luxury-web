@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Star, Utensils, Car, Truck, CheckCircle } from "lucide-react";
+import { MapPin, Star, Utensils, Car, Truck, CheckCircle, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const heroImages = [
-  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Uzbeki_Pilaf.webp",
-  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/cashew_square_baklava.webp",
+  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo3.webp",
   "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11(1).webp",
   "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo2.webp",
+  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Uzbeki_Pilaf.webp",
 ];
 
 const features = [
@@ -26,6 +26,14 @@ export default function Hero() {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
     }, 5000);
     return () => clearInterval(interval);
+  }, []);
+
+  // Preload all hero images to ensure instant, seamless transitions without flickers
+  useEffect(() => {
+    heroImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
   }, []);
 
   useEffect(() => {
@@ -51,13 +59,13 @@ export default function Hero() {
       {/* Main Hero Content */}
       <div className="flex-1 flex items-center justify-center pt-24 pb-20 md:pt-28 md:pb-24">
         {/* Background Slider */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
+            exit={{ opacity: 0, transition: { duration: 0.8, delay: 0.7, ease: "easeInOut" } }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
             className="absolute inset-0"
           >
             <img
@@ -153,6 +161,15 @@ export default function Hero() {
               transition={{ delay: 0.35 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10"
             >
+              <a
+                href="https://wa.me/919310579571"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#25D366] text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2.5 hover:bg-[#20ba5a] shadow-lg transition-all duration-300"
+              >
+                <MessageCircle className="w-5 h-5 flex-shrink-0" />
+                {language === "en" ? "Order on WhatsApp" : "WhatsApp पर ऑर्डर करें"}
+              </a>
 
               <a
                 href="https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi"

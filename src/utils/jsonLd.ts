@@ -3,9 +3,9 @@
 export const restaurantSchema = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
-  name: '1Mysa Café',
+  name: '1Mysa Café - Best Kunafa & Turkish Coffee in Delhi',
   alternateName: '1मायसा कैफे',
-  description: 'Best Turkish Kunafa and authentic Turkish coffee café in Shaheen Bagh, New Delhi',
+  description: 'The No.1 Turkish Café in Delhi & New Delhi. Famous for authentic hot sweet cheese Kunafa, sand-boiled traditional Turkish coffee, and baklava near you.',
   image: 'https://i.ibb.co/v4wGDzQn/bg.png',
   url: 'https://www.1mysacafe.com',
   telephone: '+91-93105-79571',
@@ -15,7 +15,7 @@ export const restaurantSchema = {
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Al-habib masjid, near 40 futa road, next to Crumbs of Paris',
-    addressLocality: 'Shaheen Bagh, Okhla',
+    addressLocality: 'Shaheen Bagh, Okhla, New Delhi',
     addressRegion: 'Delhi',
     postalCode: '110025',
     addressCountry: 'IN',
@@ -115,14 +115,14 @@ export const faqSchema = {
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'CafeOrCoffeeShop',
-  name: '1Mysa Café - Best Kunafa in Delhi',
-  description: 'Authentic Turkish Kunafa and specialty coffee in Shaheen Bagh',
+  name: '1Mysa Café - No.1 Cafe in Delhi & Turkish Coffee Near Me',
+  description: 'The premier Turkish Cafe in Delhi and New Delhi serving authentic cheese Kunafa, sand-boiled Turkish coffee, and premium baklava near you.',
   url: 'https://www.1mysacafe.com',
   telephone: '+91-93105-79571',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Al-habib masjid, near 40 futa road, next to Crumbs of Paris',
-    addressLocality: 'Shaheen Bagh, Okhla',
+    addressLocality: 'Shaheen Bagh, Okhla, New Delhi',
     addressRegion: 'Delhi',
     postalCode: '110025',
     addressCountry: 'IN',

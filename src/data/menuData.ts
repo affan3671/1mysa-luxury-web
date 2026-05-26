@@ -6,8 +6,11 @@ export interface MenuItem {
   descriptionHi: string;
   price: number;
   originalPrice?: number; // Used to show strikethrough/crossed-out old price
-  category: 'coffee' | 'kunafa' | 'baklava' | 'premium_imports';
+  displayPrice?: string; // e.g. "190/120"
+  category: 'coffee' | 'kunafa' | 'baklava' | 'premium_imports' | 'summer_refreshments';
   image?: string;
+  imagePosition?: string; // CSS object-position value like "top" or "50% 20%"
+  imageFit?: 'cover' | 'contain'; // How the image should cover/contain inside the grid
   isPopular?: boolean;
   isNew?: boolean;
 }
@@ -194,6 +197,33 @@ export const menuItems: MenuItem[] = [
   },
 
   //SUMMER SPECIAL REFRESHMENTS
+  {
+    id: 'sr-1',
+    name: 'Tamar Hindi',
+    nameHi: 'तमार हिंदी (इमली शर्बत)',
+    description: 'Traditional cold sweet and sour tamarind drink, perfectly refreshing for summer.',
+    descriptionHi: 'पारंपरिक ठंडा खट्टा-मीठा इमली का पेय, गर्मियों के लिए बेहद ताज़ा।',
+    price: 109,
+    displayPrice: '109/99',
+    category: 'summer_refreshments',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Tamar_Hindi_SR.png?quality=100',
+    imagePosition: 'top',
+    isPopular: true,
+  },
+  {
+    id: 'sr-2',
+    name: 'Peach Ice Tea',
+    nameHi: 'पीच आइस टी',
+    description: 'Chilled sweet black tea infused with luscious peach flavor and fresh mint.',
+    descriptionHi: 'ताज़े पुदीने और रसीले आड़ू (पीच) के स्वाद से भरपूर ठंडी ब्लैक टी।',
+    price: 120,
+    displayPrice: '99/90',
+    category: 'summer_refreshments',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Peach_Ice_Tea_SR.png',
+    imagePosition: 'top',
+    isNew: true,
+  },
+
   // Premium Imports
   {
     id: 'p-1',
@@ -205,6 +235,7 @@ export const menuItems: MenuItem[] = [
     originalPrice: 199,
     category: 'premium_imports',
     image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/MILAF-COLA.webp',
+    imageFit: 'contain',
     isPopular: true,
   },
   {
@@ -217,6 +248,7 @@ export const menuItems: MenuItem[] = [
     originalPrice: 99,
     category: 'premium_imports',
     image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/kinza_lemon.webp',
+    imageFit: 'contain',
     isPopular: true,
   },
   {
@@ -228,7 +260,8 @@ export const menuItems: MenuItem[] = [
     price: 90,
     originalPrice: 99,
     category: 'premium_imports',
-    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/kinza_orange.webp',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/360ml-kinza-cola-carbonated-soft-drink-500x500.webp',
+    imageFit: 'contain',
     isPopular: true,
   },
   {
@@ -241,6 +274,7 @@ export const menuItems: MenuItem[] = [
     originalPrice: 99,
     category: 'premium_imports',
     image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/kinza_diet_cola.webp',
+    imageFit: 'contain',
     isPopular: true,
   },
   {
@@ -253,6 +287,7 @@ export const menuItems: MenuItem[] = [
     originalPrice: 99,
     category: 'premium_imports',
     image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kinza_Cola_BlackCurrent.webp',
+    imageFit: 'contain',
     isPopular: true,
   },
   {
@@ -265,6 +300,7 @@ export const menuItems: MenuItem[] = [
     originalPrice: 99,
     category: 'premium_imports',
     image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kinza_Cola_Lemon_Diet.webp',
+    imageFit: 'contain',
     isPopular: true,
   },
   {
@@ -277,6 +313,7 @@ export const menuItems: MenuItem[] = [
     originalPrice: 99,
     category: 'premium_imports',
     image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kinza_Cola_Pomegranate.webp',
+    imageFit: 'contain',
     isPopular: true,
   },
   {
@@ -289,6 +326,7 @@ export const menuItems: MenuItem[] = [
     originalPrice: 99,
     category: 'premium_imports',
     image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kinza_Cola_Cola.webp',
+    imageFit: 'contain',
     isPopular: true,
   },
   {
@@ -301,6 +339,7 @@ export const menuItems: MenuItem[] = [
     originalPrice: 99,
     category: 'premium_imports',
     image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kinza_Cola_Citrus.avif',
+    imageFit: 'contain',
     isPopular: true,
   },
 ];

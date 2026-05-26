@@ -108,7 +108,9 @@ export default function CartDrawer() {
                         {language === 'en' ? ci.item.name : ci.item.nameHi}
                       </h4>
                       <p className="text-sm font-bold text-primary mt-0.5">
-                        {ci.item.price === 0
+                        {ci.item.displayPrice
+                          ? `₹${ci.item.displayPrice}`
+                          : ci.item.price === 0
                           ? (language === 'en' ? 'Price varies' : 'मूल्य भिन्न')
                           : `₹${ci.item.price}`}
                       </p>

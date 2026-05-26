@@ -269,7 +269,6 @@ function MenuCard({
   index: number;
   language: 'en' | 'hi';
 }) {
-  const [isHovered, setIsHovered] = useState(false);
   const [justAdded, setJustAdded] = useState(false);
   const { addItem } = useCart();
 
@@ -283,15 +282,13 @@ function MenuCard({
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.05 }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      className="group relative bg-card rounded-xl sm:rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-[0_8px_30px_hsl(var(--primary)/0.12)] transition-all duration-400 hover:-translate-y-1"
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ delay: index * 0.03, duration: 0.4, ease: "easeOut" }}
+      className="group relative bg-card rounded-xl sm:rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-[0_8px_30px_hsl(var(--primary)/0.12)] transition-all duration-400 hover:-translate-y-1 will-change-[transform,opacity]"
     >
       {/* Image */}
       <div className="relative h-40 sm:h-48 overflow-hidden">
-        <motion.img
+        <img
           src={item.image || '/placeholder.svg'}
           alt={item.name}
           loading="lazy"
@@ -302,14 +299,15 @@ function MenuCard({
             img.dataset.fallbackApplied = "1";
             img.src = "/placeholder.svg";
           }}
-          className="w-full h-full object-cover"
-          animate={{ scale: isHovered ? 1.1 : 1 }}
-          transition={{ duration: 0.5 }}
+          style={{ objectPosition: item.imagePosition || 'center' }}
+          className={`w-full h-full transition-transform duration-500 ease-out group-hover:scale-110 will-change-transform ${
+            item.imageFit === 'contain' ? 'object-contain p-3' : 'object-cover'
+          }`}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent pointer-events-none" />
         
         {/* Badges */}
-        <div className="absolute top-2 sm:top-3 left-2 sm:left-3 flex gap-1.5 sm:gap-2">
+        <div className="absolute top-2 sm:top-3 left-2 sm:left-3 flex gap-1.5 sm:gap-2 z-10">
           {item.isPopular && (
             <span className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs font-semibold gold-shimmer text-coffee">
               Popular
@@ -323,10 +321,10 @@ function MenuCard({
         </div>
 
         {/* Steam Animation for Coffee */}
-        {item.category === 'coffee' && isHovered && (
-          <div className="absolute top-2 left-1/2 -translate-x-1/2 flex gap-1">
+        {item.category === 'coffee' && (
+          <div className="absolute top-2 left-1/2 -translate-x-1/2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
             {[...Array(3)].map((_, i) => (
-              <motion.div
+              <div
                 key={i}
                 className="w-1 h-8 bg-foreground/20 rounded-full steam-animation"
                 style={{ animationDelay: `${i * 0.3}s` }}
@@ -336,14 +334,10 @@ function MenuCard({
         )}
 
         {/* Sparkle for Kunafa */}
-        {item.category === 'kunafa' && isHovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="absolute top-4 right-4"
-          >
+        {item.category === 'kunafa' && (
+          <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
             <Sparkles className="w-6 h-6 text-primary sparkle" />
-          </motion.div>
+          </div>
         )}
       </div>
 
@@ -364,10 +358,13 @@ function MenuCard({
               </span>
             )}
             <span className="text-lg sm:text-xl font-bold gold-text">
-              {item.price === 0
-                ? (language === 'en' ? 'Price varies' : 'मूल्य भिन्न होता है')
-                : `₹${item.price}`
-              }
+              {item.displayPrice ? (
+                `₹${item.displayPrice}`
+              ) : item.price === 0 ? (
+                language === 'en' ? 'Price varies' : 'मूल्य भिन्न होता है'
+              ) : (
+                `₹${item.price}`
+              )}
             </span>
           </div>
           <div className="flex items-center gap-1.5">
