@@ -178,13 +178,13 @@ export default function Footer() {
             © {new Date().getFullYear()} 1Mysa Café. {t("footer.rights")}
             <br></br>Developed, Designed & Maintained by {""}
             <a
-              href="https://seclynx.netlify.app/"
+              href="https://bootshardlabs.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
             >
               <ShinyText
-  text="Seclynx"
+  text="Bootshard Labs"
   speed={2}
   delay={0.3}
   color="#AD7E1F"
