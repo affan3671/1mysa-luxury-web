@@ -18,6 +18,7 @@ const galleryMedia: MediaItem[] = [
   // Images
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kunafa%20Gallery/Ice_Cream_Kunafa_NEW_POST_1Mysa.webp', category: 'vibe', alt: 'Cafe interior', type: 'image' },
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kunafa%20Gallery/Dubai_Pista_Spred_Kunafa_POST_New_1Mysa.webp', category: 'vibe', alt: 'Cafe vibe', type: 'image' },
+  { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Gallery%20Section/WhatsApp%20Image%202026-06-10%20at%2011.16.12%20PM.jpeg', category: 'food', alt: 'Dubai Pista Spred Kunafa Chocolate', type: 'image' },
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kunafa%20Gallery/1Mysa_Cafe_Post_Lotus_Biscoff_Kunafa_NEW.webp', category: 'vibe', alt: 'Cozy ambience', type: 'image' },
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Kunafa%20Gallery/1Mysa_Cafe_Post_Honey_Syrup_Kunafa_NEW.webp', category: 'vibe', alt: 'Baklava', type: 'image' },
   { src: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Summer%20Special/Peach_Ice_Tea_SUMMER_1Mysa_Cafe_POST_NEW.webp', category: 'vibe', alt: 'Kunafa Preparation', type: 'image' },
