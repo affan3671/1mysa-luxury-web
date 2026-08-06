@@ -112,9 +112,9 @@
                     - link "Order Now" [ref=e143] [cursor=pointer]:
                       - /url: "https://wa.me/919310579571?text=I Would Like To Order: Sand Black Caffeine-Authentic Turkish Coffee"
             - generic [ref=e144]:
-              - img "1 Mysa Beaten Caffeine-More Creamy Coffee" [ref=e146]
+              - img "1Mysa Beaten Caffeine-More Creamy Coffee" [ref=e146]
               - generic [ref=e148]:
-                - heading "1 Mysa Beaten Caffeine-More Creamy Coffee" [level=3] [ref=e149]
+                - heading "1Mysa Beaten Caffeine-More Creamy Coffee" [level=3] [ref=e149]
                 - paragraph [ref=e150]: Smooth, creamy, and well-balanced coffee with a rich, comforting taste.
                 - generic [ref=e151]:
                   - generic [ref=e153]: ₹70
@@ -122,7 +122,7 @@
                     - button "Add to cart" [ref=e155] [cursor=pointer]:
                       - img [ref=e156]
                     - link "Order Now" [ref=e160] [cursor=pointer]:
-                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: 1 Mysa Beaten Caffeine-More Creamy Coffee"
+                      - /url: "https://wa.me/919310579571?text=I Would Like To Order: 1Mysa Beaten Caffeine-More Creamy Coffee"
         - generic [ref=e161]:
           - generic [ref=e162]:
             - generic [ref=e163]:
