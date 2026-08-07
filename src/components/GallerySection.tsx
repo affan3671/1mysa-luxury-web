@@ -58,64 +58,47 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
   const isVideo = (item: MediaItem) => item.type === 'video';
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-16 sm:py-20 md:py-28 bg-background">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         {!hideHeader && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              <span className="gold-text">{t('gallery.title')}</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('gallery.subtitle')}
-            </p>
-          </motion.div>
+          <SectionHeading
+            eyebrow={language === 'en' ? 'Gallery' : 'गैलरी'}
+            title={t('gallery.title')}
+            subtitle={t('gallery.subtitle')}
+          />
         )}
 
         {/* Category Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === cat.id
-                  ? 'gold-shimmer text-coffee'
-                  : 'bg-card text-foreground hover:bg-primary/10 border border-border'
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${activeCategory === cat.id
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-secondary text-foreground border border-border hover:bg-muted'
                 }`}
             >
               {language === 'en' ? cat.label : cat.labelHi}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Masonry Grid */}
-        <motion.div
-          layout
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-        >
-          <AnimatePresence>
-            {filteredMedia.map((item, index) => (
-              <motion.div
-                key={item.src}
-                layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                className={`relative overflow-hidden rounded-2xl cursor-pointer group ${index % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''
-                  }`}
-                onClick={() => setSelectedMedia(item)}
-              >
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+          {filteredMedia.map((item, index) => (
+            <motion.div
+              key={item.src}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: Math.min(index, 4) * 0.05 }}
+              className={`relative overflow-hidden rounded-2xl cursor-pointer group border border-border ${index % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                }`}
+              onClick={() => setSelectedMedia(item)}
+            >
+
                 {isVideo(item) ? (
                   <>
                     {/* Video thumbnail with play icon overlay */}
