@@ -53,13 +53,10 @@ const Index = () => {
           <ContactSection />
         </section>
 
-        <section aria-label="Party & Events Catering">
-          <PartyPage hideHeaderFooter={true} />
-        </section>
-
         <Footer />
         <FloatingButtons />
       </main>
+
     </>
   );
 };
