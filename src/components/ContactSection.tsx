@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, Navigation, MessageCircle, PhoneCall } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SectionHeading from './SectionHeading';
 
 export default function ContactSection() {
   const { t } = useLanguage();
@@ -60,45 +61,38 @@ export default function ContactSection() {
                   <h3 className="font-semibold text-foreground text-sm sm:text-base mb-1">{item.label}</h3>
                   <p className="text-sm sm:text-base text-muted-foreground break-words">{item.value}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
 
             {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
-            >
-              <motion.a
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a
                 href="tel:+919310579571"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary text-primary-foreground text-xs sm:text-sm font-medium transition-colors hover:bg-primary/90"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-primary text-primary-foreground text-sm font-semibold transition-colors hover:bg-primary/90"
               >
-                <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" />
+                <PhoneCall className="w-4 h-4" />
                 {t('contact.callnow')}
-              </motion.a>
+              </a>
               <a
                 href="https://wa.me/919310579571"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg sm:rounded-xl bg-accent text-accent-foreground font-semibold text-sm sm:text-base transition-all hover:scale-105"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-accent text-accent-foreground text-sm font-semibold transition-colors hover:bg-accent/90"
               >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                <MessageCircle className="w-4 h-4" />
                 {t('contact.whatsapp')}
               </a>
               <a
                 href="https://maps.app.goo.gl/kLANE8iK1mekgQ768"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg sm:rounded-xl bg-card border border-border text-foreground font-semibold text-sm sm:text-base transition-all hover:scale-105 hover:bg-primary hover:text-primary-foreground"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-card border border-border text-foreground text-sm font-semibold transition-colors hover:bg-muted"
               >
-                <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Navigation className="w-4 h-4" />
                 {t('contact.directions')}
               </a>
-            </motion.div>
+            </div>
+
           </motion.div>
 
           {/* Map */}
