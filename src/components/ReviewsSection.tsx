@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SectionHeading from './SectionHeading';
 
 const reviews = [
   {
@@ -73,47 +74,30 @@ export default function ReviewsSection({ hideHeader = false }: ReviewsSectionPro
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-secondary/30 relative overflow-hidden">
-      {/* Subtle geometric overlay */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-      {/* Decorative Quote */}
-      <div className="absolute top-10 left-10 opacity-5">
-        <Quote className="w-32 h-32 text-primary" />
-      </div>
-      <div className="absolute bottom-10 right-10 opacity-5 rotate-180">
-        <Quote className="w-32 h-32 text-primary" />
-      </div>
-
-      <div className="container mx-auto px-4">
+    <section className="py-16 sm:py-20 md:py-28 bg-secondary">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         {!hideHeader && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              <span className="gold-text">{t('reviews.title')}</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('reviews.subtitle')}
-            </p>
-          </motion.div>
+          <SectionHeading
+            eyebrow={language === 'en' ? 'Guest words' : 'ग्राहक की राय'}
+            title={t('reviews.title')}
+            subtitle={t('reviews.subtitle')}
+          />
         )}
 
         {/* Reviews Carousel */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentReview}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="bg-card rounded-3xl p-8 md:p-12 shadow-xl border border-border"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                className="bg-card rounded-[1.75rem] p-7 md:p-11 border border-border shadow-[0_30px_60px_-45px_hsl(var(--primary)/0.45)]"
               >
+
                 {/* Stars */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (
