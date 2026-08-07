@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Play } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SectionHeading from './SectionHeading';
 
 // Gallery media items - supports both images and videos
 // For videos: add type: 'video' and use src for video URL
@@ -108,8 +109,8 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
                       muted
                       loop
                       playsInline
-                      preload="metadata"
-                      className="w-full h-full object-cover aspect-square transition-transform duration-500 group-hover:scale-110"
+                      preload="none"
+                      className="w-full h-full object-cover aspect-square transition-transform duration-500 group-hover:scale-105"
                       onMouseEnter={(e) => e.currentTarget.play()}
                       onMouseLeave={(e) => {
                         e.currentTarget.pause();
@@ -117,7 +118,7 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
                       }}
                     />
                     {/* Play icon indicator */}
-                    <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center pointer-events-none">
+                    <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-background/85 backdrop-blur-sm flex items-center justify-center pointer-events-none">
                       <Play className="w-4 h-4 text-primary fill-primary" />
                     </div>
                   </>
@@ -133,18 +134,18 @@ export default function GallerySection({ hideHeader = false }: GallerySectionPro
                       img.dataset.fallbackApplied = "1";
                       img.src = "/placeholder.svg";
                     }}
-                    className="w-full h-full object-cover aspect-square transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover aspect-square transition-transform duration-500 group-hover:scale-105"
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-coffee/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-primary-foreground">
-                    <p className="font-medium">{item.alt}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-coffee/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4 text-coffee-foreground">
+                    <p className="text-sm font-medium">{item.alt}</p>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
+
 
         {/* Lightbox - supports both images and videos */}
         <AnimatePresence>
