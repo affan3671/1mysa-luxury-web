@@ -99,13 +99,13 @@ export default function ReviewsSection({ hideHeader = false }: ReviewsSectionPro
               >
 
                 {/* Stars */}
-                <div className="flex gap-1 mb-6">
+                <div className="flex gap-1 mb-5">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-6 h-6 ${
+                      className={`w-5 h-5 ${
                         i < reviews[currentReview].rating
-                          ? 'text-primary fill-primary'
+                          ? 'text-accent fill-accent'
                           : 'text-muted'
                       }`}
                     />
@@ -113,13 +113,13 @@ export default function ReviewsSection({ hideHeader = false }: ReviewsSectionPro
                 </div>
 
                 {/* Review Text */}
-                <blockquote className="text-lg md:text-xl text-foreground mb-8 leading-relaxed">
-                  "{language === 'en' ? reviews[currentReview].text : reviews[currentReview].textHi}"
+                <blockquote className="font-heading text-xl md:text-2xl text-foreground mb-8 leading-snug">
+                  “{language === 'en' ? reviews[currentReview].text : reviews[currentReview].textHi}”
                 </blockquote>
 
                 {/* Author */}
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full gold-shimmer flex items-center justify-center text-coffee font-bold text-lg">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-semibold">
                     {reviews[currentReview].avatar}
                   </div>
                   <div>
@@ -131,6 +131,7 @@ export default function ReviewsSection({ hideHeader = false }: ReviewsSectionPro
                     </div>
                   </div>
                 </div>
+
               </motion.div>
             </AnimatePresence>
 
@@ -154,15 +155,17 @@ export default function ReviewsSection({ hideHeader = false }: ReviewsSectionPro
             {reviews.map((_, index) => (
               <button
                 key={index}
+                aria-label={`Review ${index + 1}`}
                 onClick={() => setCurrentReview(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   currentReview === index
                     ? 'bg-primary w-8'
-                    : 'bg-muted-foreground/30 hover:bg-primary/50'
+                    : 'bg-primary/20 w-2 hover:bg-primary/40'
                 }`}
               />
             ))}
           </div>
+
         </div>
       </div>
     </section>
