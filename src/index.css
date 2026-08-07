@@ -1,5 +1,6 @@
 /* index.css – complete replacement */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fira+Sans:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -11,57 +12,58 @@
     overflow-x: hidden;
   }
   :root {
-    --background: 45 30% 97%;
-    --foreground: 160 30% 12%;
+    /* Emerald Prestige — ivory canvas, emerald ink, gold accent */
+    --background: 48 44% 97%;
+    --foreground: 162 70% 12%;
 
-    --card: 45 25% 95%;
-    --card-foreground: 160 30% 12%;
+    --card: 48 40% 95%;
+    --card-foreground: 162 70% 12%;
 
-    --popover: 45 30% 97%;
-    --popover-foreground: 160 30% 12%;
+    --popover: 48 44% 97%;
+    --popover-foreground: 162 70% 12%;
 
-    /* Elegant Gold Primary */
-    --primary: 43 74% 49%;
-    --primary-foreground: 45 30% 97%;
+    /* Deep Emerald Primary */
+    --primary: 164 78% 20%;
+    --primary-foreground: 48 50% 96%;
 
-    /* Warm Ivory Secondary */
-    --secondary: 42 22% 91%;
-    --secondary-foreground: 160 30% 15%;
+    /* Soft Ivory Secondary */
+    --secondary: 48 34% 92%;
+    --secondary-foreground: 162 60% 16%;
 
-    /* Soft Muted Tones */
-    --muted: 45 15% 89%;
-    --muted-foreground: 160 12% 42%;
+    --muted: 45 20% 90%;
+    --muted-foreground: 162 12% 40%;
 
-    /* Deep Emerald Accent */
-    --accent: 160 50% 30%;
-    --accent-foreground: 45 30% 97%;
+    /* Gold Accent */
+    --accent: 45 53% 55%;
+    --accent-foreground: 162 70% 12%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 45 30% 97%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 48 50% 96%;
 
-    /* Midnight Navy */
-    --coffee: 220 45% 15%;
-    --coffee-foreground: 45 30% 95%;
+    /* Deep Emerald surface */
+    --coffee: 164 80% 10%;
+    --coffee-foreground: 48 50% 95%;
 
     /* Gold Gradient Colors */
-    --gold-light: 45 80% 65%;
-    --gold-dark: 38 72% 38%;
+    --gold-light: 45 70% 72%;
+    --gold-dark: 40 55% 42%;
 
-    --border: 42 18% 84%;
-    --input: 42 18% 87%;
-    --ring: 43 74% 49%;
-    --radius: 0.75rem;
+    --border: 46 20% 87%;
+    --input: 46 20% 89%;
+    --ring: 45 53% 55%;
+    --radius: 1rem;
 
     /* Sidebar */
-    --sidebar-background: 42 22% 94%;
-    --sidebar-foreground: 160 30% 15%;
-    --sidebar-primary: 43 74% 49%;
-    --sidebar-primary-foreground: 45 30% 97%;
-    --sidebar-accent: 160 50% 30%;
-    --sidebar-accent-foreground: 45 30% 97%;
-    --sidebar-border: 42 18% 84%;
-    --sidebar-ring: 43 74% 49%;
+    --sidebar-background: 48 34% 94%;
+    --sidebar-foreground: 162 60% 16%;
+    --sidebar-primary: 164 78% 20%;
+    --sidebar-primary-foreground: 48 50% 96%;
+    --sidebar-accent: 45 53% 55%;
+    --sidebar-accent-foreground: 162 70% 12%;
+    --sidebar-border: 46 20% 87%;
+    --sidebar-ring: 45 53% 55%;
   }
+
 
   .dark {
     --background: 220 35% 7%;
@@ -153,12 +155,13 @@
   * { @apply border-border; }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
+    font-family: 'Fira Sans', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
     line-height: 1.6;          /* give Hindi ascenders room */
     overflow-x: hidden;
   }
   h1, h2, h3, h4, h5, h6 { @apply font-heading; }
 }
+
 
 @keyframes shimmer {
   0%   { background-position: 200% 0; }
