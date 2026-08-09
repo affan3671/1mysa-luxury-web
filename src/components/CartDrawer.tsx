@@ -65,9 +65,10 @@ export default function CartDrawer() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded-lg hover:bg-muted transition-colors"
+                aria-label={language === 'en' ? 'Close cart' : 'कार्ट बंद करें'}
+                className="flex items-center justify-center w-11 h-11 sm:w-10 sm:h-10 rounded-full border border-border bg-secondary hover:bg-primary hover:text-primary-foreground hover:border-primary active:scale-95 transition-all duration-200 touch-manipulation"
               >
-                <X className="w-5 h-5 text-muted-foreground" />
+                <X className="w-5 h-5" />
               </button>
             </div>
 
