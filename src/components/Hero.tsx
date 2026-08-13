@@ -7,9 +7,9 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const heroImages = [
   "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo3.webp",
-  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo11(1).webp",
+  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo7_crop.jpg",
   "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo2.webp",
-  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Uzbeki_Pilaf.webp",
+  "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/cashew_square_baklava_crop.jpg",
 ];
 
 const features = [
@@ -94,7 +94,7 @@ export default function Hero() {
             >
               {en ? "Turkish " : "तुर्की "}
               <span className="italic text-primary">{en ? "Kunafa" : "कुनाफ़ा"}</span>
-              {en ? ", coffee & pilaf in Delhi" : ", कॉफी और पिलाफ़ दिल्ली में"}
+              {en ? ", Baklava and Coffee in Delhi" : ", बकलावा और कॉफी दिल्ली में"}
             </motion.h1>
 
             <motion.p
@@ -102,8 +102,8 @@ export default function Hero() {
               className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
             >
               {en
-                ? "Sand-brewed coffee, cheese-pulled kunafa and our Indo-Uzbeki pilaf — made fresh every day at 1Mysa Café, Shaheen Bagh."
-                : "रेत पर बनी कॉफी, ताज़ा कुनाफ़ा और हमारा इंडो-उज़्बेकी पिलाफ़ — रोज़ ताज़ा बनता है, 1Mysa Café, शाहीन बाग़।"}
+                ? "Sand-brewed coffee, cheese-pulled kunafa and our inauspicious Baklava — made fresh every day at 1Mysa Café, Shaheen Bagh."
+                : "रेत में उबली हुई कॉफी, पनीर से बने कुनाफा और हमारा अशुभ बकलावा — ये सभी चीजें शाहीन बाग स्थित 1Mysa कैफे में हर दिन ताज़ा बनाई जाती हैं।"}
             </motion.p>
 
             <motion.div
@@ -166,7 +166,7 @@ export default function Hero() {
                   <img
                     key={src}
                     src={src}
-                    alt="1Mysa Café — Turkish kunafa, coffee and pilaf"
+                    alt="1Mysa Café — Turkish Kunafa, Baklava, Coffee in Delhi"
                     loading={i === 0 ? "eager" : "lazy"}
                     fetchPriority={i === 0 ? "high" : "low"}
                     decoding="async"

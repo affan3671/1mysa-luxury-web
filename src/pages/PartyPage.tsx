@@ -124,43 +124,16 @@ export default function PartyPage({ hideHeaderFooter = false }: { hideHeaderFoot
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-3">
                 <span className="gold-text">
-                  {language === 'en' ? 'Get the Full Party Menu' : 'पूरा पार्टी मेन्यू प्राप्त करें'}
+                  {language === 'en' ? 'Get the Full Party Brochure' : 'पूरा पार्टी मेन्यू प्राप्त करें'}
                 </span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto px-2">
                 {language === 'en'
-                  ? 'Explore our complete catering packages, pricing, and menu options — available as a downloadable PDF or presentation.'
+                  ? 'Explore our Brochure To View Our Expertise In This Service, At Different Prestigious Locations And Events. Downloadable Presentation Available.'
                   : 'हमारे संपूर्ण कैटरिंग पैकेज, मूल्य और मेन्यू विकल्प देखें — डाउनलोड करने योग्य PDF या प्रेजेंटेशन के रूप में उपलब्ध।'}
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto">
-                {/* PDF Download Button */}
-                <motion.a
-                  href={brochurePdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  whileHover={{ scale: 1.02, y: -3 }}
-                  whileTap={{ scale: 0.96 }}
-                  className="group relative flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-card border border-border shadow-md hover:shadow-xl hover:border-primary/60 transition-all overflow-hidden text-left"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors flex-shrink-0">
-                    <FileText className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
-                  </div>
-                  <div className="relative flex-1 min-w-0">
-                    <p className="font-heading font-semibold text-base sm:text-lg mb-0.5 truncate">
-                      {language === 'en' ? 'PDF Brochure' : 'PDF ब्रोशर'}
-                    </p>
-                    <p className="text-xs sm:text-sm text-muted-foreground truncate">
-                      {language === 'en' ? 'Best for printing & sharing' : 'प्रिंट और शेयर करने के लिए बेहतरीन'}
-                    </p>
-                  </div>
-                  <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-primary/15 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors flex-shrink-0">
-                    <Download className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
-                  </div>
-                </motion.a>
-
+              <div className="flex justify-center w-full">
                 {/* PPT Download Button */}
                 <motion.a
                   href={brochurePptUrl}
@@ -169,7 +142,7 @@ export default function PartyPage({ hideHeaderFooter = false }: { hideHeaderFoot
                   download
                   whileHover={{ scale: 1.02, y: -3 }}
                   whileTap={{ scale: 0.96 }}
-                  className="group relative flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-card border border-border shadow-md hover:shadow-xl hover:border-primary/60 transition-all overflow-hidden text-left"
+                  className="group relative flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-card border border-border shadow-md hover:shadow-xl hover:border-primary/60 transition-all overflow-hidden text-center"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors flex-shrink-0">
