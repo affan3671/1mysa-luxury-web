@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, Navigation, MessageCircle, PhoneCall } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SectionHeading from './SectionHeading';
 
 export default function ContactSection() {
   const { t } = useLanguage();
@@ -29,86 +30,69 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-secondary/30">
-      <div className="container mx-auto px-3 sm:px-4">
+    <section className="py-16 sm:py-20 md:py-28 bg-secondary">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-10 sm:mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-3 sm:mb-4">
-            <span className="gold-text">{t('contact.title')}</span>
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-            {t('contact.subtitle')}
-          </p>
-        </motion.div>
+        <SectionHeading
+          eyebrow={t('contact.title')}
+          title={t('contact.title')}
+          subtitle={t('contact.subtitle')}
+        />
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-4 sm:space-y-6"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="space-y-4"
           >
             {contactInfo.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex gap-3 sm:gap-4 p-4 sm:p-6 bg-card rounded-xl sm:rounded-2xl border border-border shadow-md"
+                className="flex gap-4 p-5 sm:p-6 bg-card rounded-2xl border border-border"
               >
-                <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl gold-shimmer flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-coffee" />
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-5 h-5 text-primary" />
                 </div>
+
                 <div className="min-w-0">
                   <h3 className="font-semibold text-foreground text-sm sm:text-base mb-1">{item.label}</h3>
                   <p className="text-sm sm:text-base text-muted-foreground break-words">{item.value}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
 
             {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
-            >
-              <motion.a
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a
                 href="tel:+919310579571"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary text-primary-foreground text-xs sm:text-sm font-medium transition-colors hover:bg-primary/90"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-primary text-primary-foreground text-sm font-semibold transition-colors hover:bg-primary/90"
               >
-                <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" />
+                <PhoneCall className="w-4 h-4" />
                 {t('contact.callnow')}
-              </motion.a>
+              </a>
               <a
                 href="https://wa.me/919310579571"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg sm:rounded-xl bg-accent text-accent-foreground font-semibold text-sm sm:text-base transition-all hover:scale-105"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-accent text-accent-foreground text-sm font-semibold transition-colors hover:bg-accent/90"
               >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                <MessageCircle className="w-4 h-4" />
                 {t('contact.whatsapp')}
               </a>
               <a
                 href="https://maps.app.goo.gl/kLANE8iK1mekgQ768"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg sm:rounded-xl bg-card border border-border text-foreground font-semibold text-sm sm:text-base transition-all hover:scale-105 hover:bg-primary hover:text-primary-foreground"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-card border border-border text-foreground text-sm font-semibold transition-colors hover:bg-muted"
               >
-                <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Navigation className="w-4 h-4" />
                 {t('contact.directions')}
               </a>
-            </motion.div>
+            </div>
+
           </motion.div>
 
           {/* Map */}

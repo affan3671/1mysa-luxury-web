@@ -36,7 +36,7 @@ export default function MenuSection({ showAll = false, hideHeader = false }: Men
     : null;
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-secondary/30">
+    <section className="py-12 sm:py-16 md:py-20 bg-secondary">
       <div className="container mx-auto px-3 sm:px-4">
         {/* Header */}
         {!hideHeader && (
@@ -74,7 +74,7 @@ export default function MenuSection({ showAll = false, hideHeader = false }: Men
                   }}
                   className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-medium transition-all duration-300 ${
                     activeCategory === cat.id
-                      ? 'gold-shimmer text-coffee shadow-lg scale-105'
+                      ? 'bg-primary text-primary-foreground shadow-md'
                       : 'bg-card text-foreground hover:bg-primary/10 border border-border'
                   }`}
                 >
@@ -309,7 +309,7 @@ function MenuCard({
         {/* Badges */}
         <div className="absolute top-2 sm:top-3 left-2 sm:left-3 flex gap-1.5 sm:gap-2 z-10">
           {item.isPopular && (
-            <span className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs font-semibold gold-shimmer text-coffee">
+            <span className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs font-semibold bg-accent/15 text-accent border border-accent/25">
               Popular
             </span>
           )}
@@ -357,7 +357,7 @@ function MenuCard({
                 ₹{item.originalPrice}
               </span>
             )}
-            <span className="text-lg sm:text-xl font-bold gold-text">
+            <span className="text-lg sm:text-xl font-bold text-primary">
               {item.displayPrice ? (
                 `₹${item.displayPrice}`
               ) : item.price === 0 ? (

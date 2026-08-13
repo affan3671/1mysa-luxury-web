@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Star, Utensils, Car, Truck, CheckCircle, MessageCircle } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { MapPin, Star, Utensils, Car, Truck, MessageCircle, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const heroImages = [
   "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo3.webp",
@@ -16,219 +18,196 @@ const features = [
   { icon: Truck, label: { en: "Delivery", hi: "डिलीवरी" } },
 ];
 
+const EASE = [0.16, 1, 0.3, 1] as const;
+
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [reviewCount, setReviewCount] = useState(0);
   const { language } = useLanguage();
+  const en = language === "en";
+  const isMobile = useIsMobile();
+  const reduceMotion = useReducedMotion();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  const parallaxY = useTransform(scrollYProgress, [0, 1], ["0%", "14%"]);
+  const parallaxScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
+  const fade = useTransform(scrollYProgress, [0, 0.85], [1, 0.2]);
+  const still = !!reduceMotion || !!isMobile;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    }, 5500);
     return () => clearInterval(interval);
   }, []);
 
-  // Preload all hero images to ensure instant, seamless transitions without flickers
+  // Warm only the next slide — keeps mobile payload light
   useEffect(() => {
-    heroImages.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []);
+    const next = new Image();
+    next.src = heroImages[(currentSlide + 1) % heroImages.length];
+  }, [currentSlide]);
 
-  useEffect(() => {
-    const target = 300;
-    const duration = 1500;
-    const steps = 40;
-    const increment = target / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        setReviewCount(target);
-        clearInterval(timer);
-      } else {
-        setReviewCount(Math.floor(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, []);
+  const container = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
+  };
+  const item = {
+    hidden: { opacity: 0, y: 22, filter: "blur(6px)" },
+    show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.75, ease: EASE } },
+  };
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col overflow-hidden">
-      {/* Main Hero Content */}
-      <div className="flex-1 flex items-center justify-center pt-24 pb-20 md:pt-28 md:pb-24">
-        {/* Background Slider */}
-        <AnimatePresence>
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.8, delay: 0.7, ease: "easeInOut" } }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
-            <img
-              src={heroImages[currentSlide]}
-              alt="1Mysa Cafe"
-              loading="eager"
-              decoding="async"
-              onError={(e) => {
-                const img = e.currentTarget;
-                if (img.dataset.fallbackApplied) return;
-                img.dataset.fallbackApplied = "1";
-                img.src = "https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/photo4.webp";
-              }}
-              className="w-full h-full object-cover"
-            />
-            {/* Premium gradient overlay — emerald to navy */}
-            <div className="absolute inset-0 bg-black/60" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(160,40%,8%)/0.95] via-[hsl(220,45%,10%)/0.85] to-background" />
-          </motion.div>
-        </AnimatePresence>
+    <section ref={sectionRef} className="relative overflow-hidden bg-background">
+      {/* quiet ambient wash */}
+      <div className="pointer-events-none absolute -top-40 -left-32 hidden md:block w-[34rem] h-[34rem] rounded-full bg-primary/[0.05] blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 right-1/4 hidden md:block w-80 h-80 rounded-full bg-accent/[0.07] blur-3xl" />
 
-        {/* Subtle star particles — reduced count for performance */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 rounded-full bg-primary/30"
-              animate={{ opacity: [0.15, 0.7, 0.15] }}
-              transition={{
-                duration: 3 + (i % 3),
-                repeat: Infinity,
-                delay: i * 0.4,
-              }}
-              style={{ left: `${(i * 13) % 95}%`, top: `${(i * 19) % 80}%` }}
-            />
-          ))}
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8 pt-24 pb-14 md:pt-36 md:pb-24">
+        <div className="grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-16 items-center">
+          {/* ── Left: message ─────────────────────────── */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
+            variants={container}
+            initial="hidden"
+            animate="show"
+            style={still ? undefined : { y: textY, opacity: fade }}
+            className="text-center lg:text-left"
           >
-            {/* Rating Badge */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-primary/30 mb-6"
+              variants={item}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-accent/30 bg-accent/[0.07] mb-6"
             >
-              <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary fill-primary" />
-              <span className="font-bold text-white text-sm sm:text-base">
-                4.7
-              </span>
-              <span className="text-white/40">|</span>
-              <span className="text-white/90 text-sm sm:text-base">
-                {reviewCount} {language === "en" ? "Reviews" : "समीक्षाएं"}
+              <Star className="w-4 h-4 text-accent fill-accent" />
+              <span className="text-sm font-semibold text-foreground">4.7</span>
+              <span className="text-border">|</span>
+              <span className="text-sm text-muted-foreground">
+                300+ {en ? "Google reviews" : "गूगल समीक्षाएं"}
               </span>
             </motion.div>
 
-            {/* Main Heading */}
             <motion.h1
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-5 leading-[1.1]"
+              variants={item}
+              className="font-heading text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-7xl text-foreground mb-5"
             >
-              <span className="text-[#FFD700]">
-                {language === "en"
-                  ? "Kunafa, Coffee, Baklava And Pilaf"
-                  : "कुनाफ़ा, कॉफी और बकलावा"}
-              </span>
+              {en ? "Turkish " : "तुर्की "}
+              <span className="italic text-primary">{en ? "Kunafa" : "कुनाफ़ा"}</span>
+              {en ? ", coffee & pilaf in Delhi" : ", कॉफी और पिलाफ़ दिल्ली में"}
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.25 }}
-              className="text-base sm:text-lg md:text-xl text-[#FFD700] mb-8 sm:mb-10 font-light max-w-2xl mx-auto"
+              variants={item}
+              className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
             >
-              {language === "en"
-                ? "Unfold The Culture of Turkish Delights — Kunafa, Coffee, Baklava And Our Special Indo-Uzbeki Pilaf"
-                : "तुर्की व्यंजनों की संस्कृति का आनंद लें — कुनाफ़ा, कॉफी और बकलावा"}
+              {en
+                ? "Sand-brewed coffee, cheese-pulled kunafa and our Indo-Uzbeki pilaf — made fresh every day at 1Mysa Café, Shaheen Bagh."
+                : "रेत पर बनी कॉफी, ताज़ा कुनाफ़ा और हमारा इंडो-उज़्बेकी पिलाफ़ — रोज़ ताज़ा बनता है, 1Mysa Café, शाहीन बाग़।"}
             </motion.p>
 
-            {/* CTA Buttons — with premium glow */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10"
+              variants={item}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 mb-8"
             >
+              <Link
+                to="/menu"
+                className="group px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm sm:text-base flex items-center justify-center gap-2 shadow-[0_10px_30px_-12px_hsl(var(--primary)/0.6)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_38px_-14px_hsl(var(--primary)/0.7)]"
+              >
+                {en ? "View the menu" : "मेन्यू देखें"}
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
               <a
                 href="https://wa.me/919310579571"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#25D366] text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2.5 hover:bg-[#20ba5a] shadow-lg transition-all duration-300"
+                className="px-6 py-3.5 rounded-full border border-border text-foreground font-semibold text-sm sm:text-base flex items-center justify-center gap-2 transition-colors duration-300 hover:bg-secondary"
               >
-                <MessageCircle className="w-5 h-5 flex-shrink-0" />
-                {language === "en" ? "Order on WhatsApp" : "WhatsApp पर ऑर्डर करें"}
+                <MessageCircle className="w-4 h-4 text-primary" />
+                {en ? "Order on WhatsApp" : "WhatsApp पर ऑर्डर"}
               </a>
+            </motion.div>
 
-              <a
-                href="https://www.zomato.com/ncr/1mysa-cafe-jasola-new-delhi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#E23744] text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2.5 hover:bg-[#cb303c] shadow-lg transition-all duration-300"
-              >
-                <span className="w-6 h-6 bg-white rounded flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#E23744] font-bold text-base">Z</span>
+            <motion.div
+              variants={item}
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-sm text-muted-foreground"
+            >
+              {features.map((f) => (
+                <span key={f.label.en} className="inline-flex items-center gap-2">
+                  <f.icon className="w-4 h-4 text-accent" />
+                  {en ? f.label.en : f.label.hi}
                 </span>
-                {language === "en" ? "Order on Zomato" : "Zomato पर ऑर्डर करें"}
-              </a>
-
+              ))}
               <a
                 href="https://maps.app.goo.gl/kLANE8iK1mekgQ768"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white/90 text-foreground font-semibold text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-white shadow-lg transition-all duration-300"
+                className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
               >
-                <MapPin className="w-5 h-5 flex-shrink-0" />
-                {language === "en" ? "Get Directions" : "दिशा-निर्देश"}
+                <MapPin className="w-4 h-4 text-accent" />
+                {en ? "Shaheen Bagh, New Delhi" : "शाहीन बाग़, नई दिल्ली"}
               </a>
             </motion.div>
+          </motion.div>
 
-            {/* Features badges */}
+          {/* ── Right: parallax image ─────────────────── */}
+          <motion.div
+            initial={{ opacity: 0, y: 32, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.9, ease: EASE, delay: 0.1 }}
+            className="relative"
+          >
+            <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-[1.75rem] overflow-hidden bg-secondary shadow-[0_40px_70px_-40px_hsl(var(--primary)/0.5)]">
+              <motion.div
+                className="absolute inset-0 will-change-transform"
+                style={still ? undefined : { y: parallaxY, scale: parallaxScale }}
+              >
+                {heroImages.map((src, i) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt="1Mysa Café — Turkish kunafa, coffee and pilaf"
+                    loading={i === 0 ? "eager" : "lazy"}
+                    fetchPriority={i === 0 ? "high" : "low"}
+                    decoding="async"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-out ${
+                      currentSlide === i ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+              </motion.div>
+              <div className="absolute inset-0 bg-gradient-to-t from-coffee/50 via-transparent to-transparent" />
+
+              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+                {heroImages.map((_, index) => (
+                  <button
+                    key={index}
+                    aria-label={`Slide ${index + 1}`}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`h-1.5 rounded-full transition-all duration-500 ${
+                      currentSlide === index ? "bg-background w-8" : "bg-background/50 w-1.5"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* floating accent card */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.45 }}
-              className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.55 }}
+              className="hidden sm:flex absolute -bottom-6 -left-6 items-center gap-3 px-5 py-4 rounded-2xl bg-card border border-border shadow-xl"
             >
-              {features.map((feature) => (
-                <div
-                  key={feature.label.en}
-                  className="flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15"
-                >
-                  <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0" />
-                  <span className="text-white text-xs sm:text-sm font-medium">
-                    {language === "en" ? feature.label.en : feature.label.hi}
-                  </span>
-                </div>
-              ))}
+              <span className="font-heading text-3xl text-accent">100%</span>
+              <span className="text-xs leading-tight text-muted-foreground">
+                {en ? "Fresh, halal &" : "ताज़ा, हलाल और"}
+                <br />
+                {en ? "house-made daily" : "रोज़ ताज़ा बना"}
+              </span>
             </motion.div>
           </motion.div>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2.5 z-10">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                currentSlide === index
-                  ? "bg-primary w-7"
-                  : "bg-white/30 w-2 hover:bg-white/50"
-              }`}
-            />
-          ))}
         </div>
       </div>
     </section>

@@ -5,7 +5,6 @@ import AboutSection from '@/components/AboutSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import GallerySection from '@/components/GallerySection';
 import ContactSection from '@/components/ContactSection';
-import PartyPage from './PartyPage';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { SEO, kunafaKeywords, locationKeywords } from '@/components/SEO';
@@ -53,13 +52,10 @@ const Index = () => {
           <ContactSection />
         </section>
 
-        <section aria-label="Party & Events Catering">
-          <PartyPage hideHeaderFooter={true} />
-        </section>
-
         <Footer />
         <FloatingButtons />
       </main>
+
     </>
   );
 };

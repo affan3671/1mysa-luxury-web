@@ -17,9 +17,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Cormorant Garamond"', "serif"],
-        body: ["Montserrat", "sans-serif"],
-        sans: ["Inter", "Noto Sans Devanagari", "ui-sans-serif", "system-ui"], // ← Hindi-safe
+        heading: ['"DM Serif Display"', "serif"],
+        body: ['"Fira Sans"', "sans-serif"],
+        sans: ['"Fira Sans"', "Noto Sans Devanagari", "ui-sans-serif", "system-ui"], // ← Hindi-safe
       },
       colors: {
         border: "hsl(var(--border) / <alpha-value>)",
