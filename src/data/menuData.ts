@@ -7,7 +7,7 @@ export interface MenuItem {
   price: number;
   originalPrice?: number; // Used to show strikethrough/crossed-out old price
   displayPrice?: string; // e.g. "190/120"
-  category: 'coffee' | 'kunafa' | 'baklava' | 'premium_imports' | 'summer_refreshments';
+  category: 'coffee' | 'kunafa' | 'baklava' | 'premium_imports' | 'summer_refreshments' | 'affogato';
   image?: string;
   imagePosition?: string; // CSS object-position value like "top" or "50% 20%"
   imageFit?: 'cover' | 'contain'; // How the image should cover/contain inside the grid
@@ -194,6 +194,38 @@ export const menuItems: MenuItem[] = [
     price: 39,
     category: 'baklava',
     image: '/images/baklava/chocolate_square_baklava.jpg',
+  },
+
+  // Affogato
+  {
+    id: 'a-3',
+    name: 'Lotus Biscoff Affogato',
+    nameHi: 'लोटस बिस्कॉफ अफोगाटो',
+    description: 'Crushed Lotus Biscoff layered over vanilla ice cream, kissed with hot espresso.',
+    descriptionHi: 'वनीला आइसक्रीम पर कुचला हुआ लोटस बिस्कॉफ और गरम एस्प्रेसो की एक चुस्की।',
+    price: 0,
+    category: 'affogato',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Affogato/Lotus_Biscoff_Affogato.png',
+  },
+  {
+    id: 'a-2',
+    name: 'Nutella Affogato',
+    nameHi: 'न्यूटेला अफोगाटो',
+    description: 'Silky Nutella swirled into vanilla ice cream, drowned in a shot of hot espresso.',
+    descriptionHi: 'वनीला आइसक्रीम में मखमली न्यूटेला घुमाया गया, जिस पर गरम एस्प्रेसो की शॉट डाली गई।',
+    price: 0,
+    category: 'affogato',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Affogato/Nutella_Affogato.png',
+  },
+  {
+    id: 'a-1',
+    name: 'Pistachio Affogato',
+    nameHi: 'पिस्ता अफोगाटो',
+    description: 'A warm espresso poured over creamy vanilla ice cream, finished with rich pistachio.',
+    descriptionHi: 'मलाईदार वनीला आइसक्रीम पर गरम एस्प्रेसो डाला गया, जिस पर पिस्ता की भरपूर फिनिशिंग।',
+    price: 0,
+    category: 'affogato',
+    image: 'https://zpdbjpaatpydeekemqaz.supabase.co/storage/v1/object/public/photos/Affogato/Pistachio_Affogato.png',
   },
 
   //SUMMER SPECIAL REFRESHMENTS

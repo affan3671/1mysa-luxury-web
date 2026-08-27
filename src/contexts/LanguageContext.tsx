@@ -40,6 +40,7 @@ const translations: Record<Language, Record<string, string>> = {
     'menu.baklava': 'Baklava & Sweets',
     'menu.premium_imports': 'Premium Imports',
     'menu.summer_refreshments': 'Summer Refreshments',
+    'menu.affogato': 'Affogato',
     //*'menu.drinks': 'Beverages',*/
     
     // About
@@ -141,6 +142,7 @@ const translations: Record<Language, Record<string, string>> = {
     'menu.baklava': 'बकलावा और मिठाइयां',
     'menu.premium_imports': 'प्रीमियम इम्पोर्ट्स',
     'menu.summer_refreshments': 'समर रिफ्रेशमेंट्स',
+    'menu.affogato': 'अफोगाटो',
     'menu.drinks': 'पेय पदार्थ',
     
     // About

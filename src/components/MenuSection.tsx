@@ -7,6 +7,7 @@ import { menuItems, MenuItem } from '@/data/menuData';
 import CategoryVideoSection from './CategoryVideoSection';
 
 const categories = [
+  { id: 'affogato', icon: Coffee, key: 'menu.affogato'},
   { id: 'coffee', icon: Coffee, key: 'menu.coffee'},
   { id: 'kunafa', icon: Cake, key: 'menu.kunafa'},
   { id: 'baklava', icon: Cookie, key: 'menu.baklava'},
@@ -20,7 +21,7 @@ interface MenuSectionProps {
 }
 
 export default function MenuSection({ showAll = false, hideHeader = false }: MenuSectionProps) {
-  const [activeCategory, setActiveCategory] = useState<string>('kunafa');
+  const [activeCategory, setActiveCategory] = useState<string>('affogato');
   const [activeTab, setActiveTab] = useState<'menu' | 'videos'>('menu');
   const { t, language } = useLanguage();
 
