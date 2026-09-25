@@ -17,6 +17,8 @@ const CookieBanner = () => {
   const handleAccept = () => {
     localStorage.setItem('1mysa_cookie_consent', 'true');
     setIsVisible(false);
+    // Dispatch a custom event to notify the app that consent was granted
+    window.dispatchEvent(new Event('cookie-consent-updated'));
   };
 
   if (!isVisible) return null;

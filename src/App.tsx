@@ -8,7 +8,7 @@ import { CartProvider } from "@/contexts/CartContext";
 import CartDrawer from "@/components/CartDrawer";
 import CartFloatingButton from "@/components/CartFloatingButton";
 import CookieBanner from "@/components/CookieBanner";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 import Index from "./pages/Index";
@@ -29,12 +29,43 @@ const queryClient = new QueryClient();
 /* 🔹 GA Tracker must be INSIDE Router */
 function GATracker() {
   const location = useLocation();
+  const [hasConsent, setHasConsent] = useState(!!localStorage.getItem('1mysa_cookie_consent'));
 
   useEffect(() => {
+    const handleConsentUpdate = () => {
+      setHasConsent(!!localStorage.getItem('1mysa_cookie_consent'));
+    };
+
+    window.addEventListener('cookie-consent-updated', handleConsentUpdate);
+    return () => window.removeEventListener('cookie-consent-updated', handleConsentUpdate);
+  }, []);
+
+  useEffect(() => {
+    if (!hasConsent) return;
+
+    // Dynamically load GA script if not already present
+    if (!document.getElementById('google-analytics-script')) {
+      const script = document.createElement('script');
+      script.id = 'google-analytics-script';
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script);
+
+      script.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          window.dataLayer.push(arguments);
+        }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      };
+    }
+
     window.gtag?.("config", GA_ID, {
       page_path: location.pathname,
     });
-  }, [location]);
+  }, [location, hasConsent]);
 
   return null;
 }
