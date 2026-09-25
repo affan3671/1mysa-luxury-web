@@ -7,7 +7,9 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CartProvider } from "@/contexts/CartContext";
 import CartDrawer from "@/components/CartDrawer";
 import CartFloatingButton from "@/components/CartFloatingButton";
+import CookieBanner from "@/components/CookieBanner";
 import { useEffect } from "react";
+
 
 import Index from "./pages/Index";
 import MenuPage from "./pages/MenuPage";
@@ -59,6 +61,7 @@ function App() {
               <GATracker />
               <CartDrawer />
               <CartFloatingButton />
+              <CookieBanner />
 
               <Routes>
                 <Route path="/" element={<Index />} />

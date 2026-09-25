@@ -12,6 +12,7 @@ const quickLinks = [
   { key: "nav.faq", path: "/faq" },
   { key: "nav.contact", path: "/contact" },
   { key: "nav.party", path: "/party" },
+  { key: "nav.privacy", path: "/privacy" },
 ];
 
 const socialLinks = [

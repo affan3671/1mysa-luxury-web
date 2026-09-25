@@ -20,6 +20,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.party': 'Party & Events',
     'nav.order': 'Order Online',
     'nav.contact': 'Contact',
+    'nav.privacy': 'Privacy Policy',
     
     // Hero
     'hero.tagline': 'Best Kunafa. Authentic Turkish Coffee. Comfort.',
