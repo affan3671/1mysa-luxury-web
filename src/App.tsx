@@ -19,6 +19,7 @@ import PartyPage from "./pages/PartyPage";
 import OrderPage from "./pages/OrderPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import FAQs from "./pages/FAQs";
 
@@ -73,6 +74,7 @@ function App() {
                 <Route path="/party" element={<PartyPage />} />
                 <Route path="/order" element={<OrderPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>

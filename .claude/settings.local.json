@@ -9,7 +9,8 @@
       "Bash(netstat -ano)",
       "Bash(findstr \"5173\")",
       "Bash(cat public/sitemap-home.xml)",
-      "Bash(echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?> *)"
+      "Bash(echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?> *)",
+      "mcp__code-review-graph__semantic_search_nodes_tool"
     ]
   },
   "enableAllProjectMcpServers": true,
