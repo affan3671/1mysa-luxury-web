@@ -14,8 +14,8 @@ export default function MenuPage() {
   return (
     <>
       <SEO
-        title="Kunafa Menu | Order Best Turkish Kunafa Online in Delhi"
-        description="View our Kunafa menu & prices. Order authentic Turkish Kunafa online with FREE delivery in Delhi. Freshly made with premium ingredients. Best Kunafa in Shaheen Bagh."
+        title="Best Kunafa Menu | Order Authentic Turkish Kunafa Online in Delhi"
+        description="Explore the best Kunafa menu and prices at 1Mysa. Order authentic Turkish Kunafa, Baklava, and Turkish Coffee online with FREE delivery in New Delhi. Best Kunafa in Shaheen Bagh."
         keywords={`${kunafaKeywords}, ${kunafaMenuKeywords}, ${locationKeywords}`}
         canonical="https://www.1mysacafe.com/menu"
         jsonLd={{

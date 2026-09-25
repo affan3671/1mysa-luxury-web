@@ -56,10 +56,10 @@ export function SEO({
 }
 
 // Pre-configured SEO for Kunafa-focused pages
-export const kunafaKeywords = 'Kunafa in Delhi, Kunafa in New Delhi, Kunafa Near Me, Cafe in Delhi, Cafe in New Delhi, Cafe Near Me, Turkish Coffee Near Me, Turkish Coffee in Delhi, Turkish Coffee in New Delhi, Turkish Cafe Near Me, Best Turkish Cafe in Delhi, Kunafa, Turkish Kunafa, Best Kunafa in Delhi, Kunafa Shaheen Bagh, Authentic Kunafa, Turkish Desserts Delhi, Middle Eastern Sweets, Kunafah, Knafeh, كنافة';
+export const kunafaKeywords = 'Best Kunafa in Delhi, Best Turkish Kunafa in New Delhi, Kunafa Near Me, Best Turkish Cafe Delhi, Best Turkish Coffee Near Me, Turkish Coffee in Delhi, Turkish Coffee in New Delhi, Turkish Cafe Near Me, Best Turkish Cafe in Delhi, Kunafa, Turkish Kunafa, Best Kunafa in Delhi, Kunafa Shaheen Bagh, Authentic Kunafa, Turkish Desserts Delhi, Middle Eastern Sweets, Kunafah, Knafeh, كنافة, Famous Turkish Cafe India';
 
-export const kunafaMenuKeywords = 'Kunafa Menu, Turkish Kunafa Price, Order Kunafa Online, Kunafa Delivery Delhi, Fresh Kunafa, Cheese Kunafa, Pistachio Kunafa, Best Kunafa Shop';
+export const kunafaMenuKeywords = 'Kunafa Menu, Best Turkish Kunafa Price, Order Best Kunafa Online, Best Kunafa Delivery Delhi, Fresh Kunafa, Cheese Kunafa, Pistachio Kunafa, Best Kunafa Shop New Delhi, Best Turkish Baklava Price';
 
-export const locationKeywords = 'Kunafa in Shaheen Bagh, Kunafa in Okhla, Kunafa Near Jamia, Kunafa South Delhi, Turkish Cafe Delhi, Kunafa Restaurant Delhi, Cafe in Delhi Near Me, Best Cafe in New Delhi';
+export const locationKeywords = 'Best Kunafa in Shaheen Bagh, Best Kunafa in Okhla, Kunafa Near Jamia, Best Kunafa South Delhi, Best Turkish Cafe Delhi, Best Kunafa Restaurant Delhi, Best Cafe in Delhi Near Me, Best Cafe in New Delhi, Turkish Culture Turkey in India';
 
 export default SEO;

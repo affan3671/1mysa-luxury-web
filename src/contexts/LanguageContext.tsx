@@ -22,8 +22,8 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Contact',
     
     // Hero
-    'hero.tagline': 'Kunafa. Coffee. Comfort.',
-    'hero.subtitle': 'The Heart of Shaheen Bagh',
+    'hero.tagline': 'Best Kunafa. Authentic Turkish Coffee. Comfort.',
+    'hero.subtitle': '1Mysa: The Heart of Shaheen Bagh, New Delhi',
     'hero.cta.order': 'Order on Zomato',
     'hero.cta.directions': 'Get Directions',
     
@@ -34,10 +34,10 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Menu
     'menu.title': 'Our Menu',
-    'menu.subtitle': 'Authentic Turkish & Middle Eastern Delights',
-    'menu.coffee': 'Turkish Coffee & Hot Drinks',
-    'menu.kunafa': 'Kunafa / Knafeh',
-    'menu.baklava': 'Baklava & Sweets',
+    'menu.subtitle': 'The Best Authentic Turkish & Middle Eastern Delights in India',
+    'menu.coffee': 'Best Turkish Coffee & Hot Drinks',
+    'menu.kunafa': 'Best Kunafa / Knafeh',
+    'menu.baklava': 'Best Turkish Baklava & Sweets',
     'menu.premium_imports': 'Premium Imports',
     'menu.summer_refreshments': 'Summer Refreshments',
     'menu.affogato': 'Affogato',
@@ -45,9 +45,9 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About
     'about.title': 'Our Story',
-    'about.subtitle': 'A Taste of Turkey in Delhi',
-    'about.p1': 'Nestled in the vibrant heart of Shaheen Bagh, 1Mysa Café brings the authentic flavors of Turkish and Middle Eastern desserts to Delhi. Our passion lies in crafting the perfect Kunafa - crispy, golden, and dripping with sweet syrup.',
-    'about.p2': 'Our Turkish coffee is sand-boiled the traditional way, creating a rich, aromatic experience that transports you straight to the streets of Istanbul. Every cup tells a story of centuries-old tradition.',
+    'about.subtitle': 'The Best Taste of Turkey in New Delhi, India',
+    'about.p1': 'Nestled in the vibrant heart of Shaheen Bagh, 1Mysa Café brings the authentic flavors of Turkey and Middle Eastern desserts to New Delhi. Our passion lies in crafting the best Kunafa in India - crispy, golden, and dripping with sweet syrup.',
+    'about.p2': 'Our Turkish coffee is sand-boiled the traditional way, creating a rich, aromatic experience that transports you straight to the streets of Istanbul. 1Mysa is famous for bringing the true culture of Turkey to the heart of India.',
     'about.p3': 'At 1Mysa, we believe in warm hospitality and creating a cozy ambiance where every guest feels at home. Come, sit, and savor the sweetness of life.',
     
     // Reviews
@@ -93,7 +93,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     
     // Footer
-    'footer.tagline': 'Baked with Love in Shaheen Bagh.',
+    'footer.tagline': '1Mysa: The Most Famous Turkish Cafe, Baked with Love in Shaheen Bagh, New Delhi.',
     'footer.quicklinks': 'Quick Links',
     'footer.connect': 'Connect With Us',
     'footer.rights': 'All rights reserved. ',

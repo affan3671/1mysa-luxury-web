@@ -12,48 +12,6 @@
   targetPort = 8080
 
 [[redirects]]
-  from = "https://1mysacafe.netlify.app/*"
-  to = "https://www.1mysacafe.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.1mysacafe.com/*"
-  to = "https://www.1mysacafe.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/about/"
-  to = "/about"
-  status = 301
-
-[[redirects]]
-  from = "/menu/"
-  to = "/menu"
-  status = 301
-
-[[redirects]]
-  from = "/contact/"
-  to = "/contact"
-  status = 301
-
-[[redirects]]
-  from = "/faq/"
-  to = "/faq"
-  status = 301
-
-[[redirects]]
-  from = "/gallery/"
-  to = "/gallery"
-  status = 301
-
-[[redirects]]
-  from = "/order/"
-  to = "/order"
-  status = 301
-
-[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

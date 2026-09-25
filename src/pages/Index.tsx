@@ -14,8 +14,8 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Best Kunafa in Delhi | Best Turkish Cafe & Turkish Coffee Near Me"
-        description="Indulge in the No.1 authentic Turkish Kunafa in Delhi & New Delhi at 1Mysa Café. Sand-brewed Turkish coffee, fresh baklava, and premium desserts near you in Shaheen Bagh. Free delivery!"
+        title="Best Kunafa & Turkish Coffee in Delhi | 1Mysa Turkish Cafe"
+        description="Indulge in the No.1 authentic Turkish Kunafa and Best Turkish Coffee in Delhi & New Delhi at 1Mysa Café. Experience the famous culture of Turkey in Shaheen Bagh. Fresh baklava and premium desserts with FREE delivery!"
         keywords={`${kunafaKeywords}, ${locationKeywords}`}
         canonical="https://www.1mysacafe.com"
         jsonLd={{
