@@ -105,7 +105,7 @@ const PrivacyPolicy = () => {
                 <h2 className="text-2xl font-bold text-foreground mb-4">6. Your Rights</h2>
                 <p>
                   You can opt-out of Google Analytics tracking by installing the Google Analytics Opt-out Browser Add-on
-                  or adjusting your Google Account settings for Ad Personalization.
+                  or adjusting your Google Account settings for Ad Personalization OR Pressing/Clicking "X" (Cross) On The Cookie Dialog Banner Upon Visit.
                 </p>
               </section>
 
